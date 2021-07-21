@@ -19,6 +19,41 @@ console.log(myData[2].CIN3_5year_risk);   // mydata[0].CIN3_5year_risk
 
 //inputStr = 'SELECT CIN3_inter_risk, CIN3_5year_risk, management, fudge_factor FROM cervdata WHERE curr_hpv = ? AND curr_hpv_type = ? AND curr_PAP = ? AND recent_prev_result = ? AND recent_res_biopsy = ? AND biopsy_res = ? AND treated = ? AND PAP_before_biopsy = ? AND prev_hpv_result = ? AND prev_PAP_result = ? AND abnormal_result_before = ? AND excl_abnormal_result = ?'
     
+$("#toform").click(function () {
+    $('#form-panel').removeClass('hidden');
+    
+    $('#end-panel, #disclaimer-panel, #home-panel, #screening-panel, #vaccination-panel, #definitions-panel').addClass('hidden');
+});
+
+$("#todisclaimer").click(function () {
+    $('#disclaimer-panel').removeClass('hidden');
+    
+    $('#end-panel, #form-panel, #home-panel, #screening-panel, #vaccination-panel, #definitions-panel').addClass('hidden');
+});
+
+$("#tohome").click(function () {
+    $('#home-panel').removeClass('hidden');
+    
+    $('#end-panel, #disclaimer-panel, #form-panel, #screening-panel, #vaccination-panel, #definitions-panel').addClass('hidden');
+});
+
+$("#toscreening").click(function () {
+    $('#screening-panel').removeClass('hidden');
+    
+    $('#end-panel, #disclaimer-panel, #home-panel, #form-panel, #vaccination-panel, #definitions-panel').addClass('hidden');
+});
+
+$("#tovaccination").click(function () {
+    $('#vaccination-panel').removeClass('hidden');
+    
+    $('#end-panel, #disclaimer-panel, #home-panel, #screening-panel, #form-panel, #definitions-panel').addClass('hidden');
+});
+
+$("#todefinitions").click(function () {
+    $('#definitions-panel').toggleClass('hidden');
+    
+    $('#end-panel, #disclaimer-panel, #home-panel, #screening-panel, #vaccination-panel, #form-panel').addClass('hidden');
+});
 
 function next() {
     var answer =  $('input[name="question"]:checked').val();
@@ -70,8 +105,8 @@ function back() {
 
 function end() {
     //CIN3_inter_risk, CIN3_5year_risk, management, fudge_factor
-    $('.container-box').toggleClass('hidden');
-    $('.container-end').toggleClass('hidden');
+    $('#form-panel').addClass('hidden');
+    $('#end-panel').removeClass('hidden');
     if(!database) {
         $('#management').html(getEnd());
     } else {
