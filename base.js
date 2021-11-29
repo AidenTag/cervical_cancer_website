@@ -49,10 +49,11 @@ $("#tovaccination").click(function () {
     $('#end-panel, #disclaimer-panel, #home-panel, #screening-panel, #form-panel, #definitions-panel').addClass('hidden');
 });
 
-$("#todefinitions").click(function () {
+$(".todefinitions").click(function () {
     $('#definitions-panel').toggleClass('hidden');
     
     $('#end-panel, #disclaimer-panel, #home-panel, #screening-panel, #vaccination-panel, #form-panel').addClass('hidden');
+    
 });
 
 function next() {
@@ -87,7 +88,7 @@ function back() {
     var oldQuestion = Number($('#questionNum').val());
     var questionNum = pastQuestions[pastQuestions.length-1];
     if (typeof questionNum == "undefined") {
-        window.location.replace("disclaimer.html");
+        $("#todisclaimer").click();
         return;
     }
     console.log(questionNum);
@@ -165,7 +166,7 @@ function renderQuestion(nextQuestion) {
     }
     $("#questionText").text(questions[nextQuestion]['text']);
     $("#questionNum").attr('value', nextQuestion);
-    $("ul.form-check").html(newHTML);
+    $("ul#radios").html(newHTML);
     $("#display").html(displayHTML);
     $('[data-toggle="popover"]').popover()
 }
@@ -173,31 +174,31 @@ function renderQuestion(nextQuestion) {
 function generateAnswerHTML(answerText, i){
     newRadio = '<li><input id="' + i + '" name="question" type="radio" value="' + i + '">\n<label for="' + i + '">' + answerText +'</label>';
     if(answerText=="LSIL") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="LSIL stands for Low-grade Squamous Intraepithelial Lesion. Note that some results say: Low-grade Squamous Intraepithelial Lesion, a higher grade lesion may be present. If you have this result, please enter ASC-H, not LSIL.">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="LSIL significa lesión intraepitelial escamosa de bajo grado. Tenga en cuenta que algunos resultados dicen: Lesión intraepitelial escamosa de grado bajo, puede haber una lesión de grado más alto. Si tiene este resultado, ingrese ASC-H, no LSIL.">ⓘ</a>';
     } else if(answerText=="High Grade") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="High grade biopsy results include: HSIL (High-grade Squamous Intraepithelial Lesion), CIN 2 (Cervical Intraepithelial Neoplasia grade 2), CIN3 (Cervical Intraepithelial Neoplasia grade 3), or AIS (adenocarcinoma in situ).">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Los resultados de biopsia de alto grado incluyen: HSIL (Lesión intraepitelial escamosa de alto grado), CIN 2 (Neoplasia intraepitelial cervical grado 2), CIN3 (Neoplasia intraepitelial cervical grado 3) o AIS (adenocarcinoma in situ).">ⓘ</a>';
     } else if(answerText=="Low Grade") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Low grade biopsy results include: normal, negative for dysplasia, CIN 1 (Cervical Intraepithelial Neoplasia grade 1) or LSIL (Low-grade Squamous Intraepithelial Lesion).">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Los resultados de la biopsia de bajo grado incluyen: normal, negativo para displasia, CIN 1 (Neoplasia intraepitelial cervical grado 1) o LSIL (Lesión intraepitelial escamosa de bajo grado).">ⓘ</a>';
     } else if(answerText=="Normal/NILM") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="NILM stands for Negative for Intraepithelial Lesion or Malignancy and indicates a normal result.">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Negativo para lesión intraepitelial o malignidad (NILM por sus siglas en inglés):Esto significa que su prueba de Papanicolaou fue normal.">ⓘ</a>';
     } else if(answerText=="Normal") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Pathology result might say Negative for Dysplasia, which indicates a normal result.">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="El resultado de la patología puede indicar negativo para displasia, lo que indica un resultado normal.">ⓘ</a>';
     } else if(answerText=="CIN1") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN1 stands for Cervical Intraepithelial Neoplasia grade 1, and could also be called Low-Grade Squamous Intraepithelial Lesion (LSIL)">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN1 significa neoplasia intraepitelial cervical grado 1, y también se puede llamar lesión intraepitelial escamosa de bajo grado (LSIL)])">ⓘ</a>';
     } else if(answerText=="CIN2") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN2 stands for Cervical Intraepithelial Neoplasia grade 2.">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN2 stands for Cervical Intraepithelial Neoplasia Grade 2.">ⓘ</a>';
     } else if(answerText=="CIN3 or HSIL") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN3 stands for Cervical Intraepithelial Neoplasia grade 3 and could also be called Cervical Intraepithelial Neoplasia grade 2/3 (CIN2/3), or High Grade Squamous Intraepithelial Lesion.">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN3 stands for Cervical Intraepithelial Neoplasia grade 3, and can also be called Cervical Intraepithelial Neoplasia grade 2/3 or High-grade Squamous Intraepithelial Lesion (HSIL)].">ⓘ</a>';
     } else if(answerText=="AIS") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="AIS stands for Adenocarcinoma In Situ">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="AIS significa  Adenocarcinoma In Situ">ⓘ</a>';
     } else if(answerText=="ASC-US") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="ASC-US stands for Atypical Squamous Cells of Undetermined Significance">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="ASC-US significa células escamosas atípicas de significado indeterminado">ⓘ</a>';
     } else if(answerText=="AGC") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="AGC stands for Atypical Glandular Cells">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="AGC significa células glandulares atípicas">ⓘ</a>';
     } else if(answerText=="HSIL") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="HSIL stands for High-grade Squamous Intraepithelial Lesion">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="HSIL significa lesión intraepitelial escamosa de alto grado">ⓘ</a>';
     } else if(answerText=="ASC-H") {
-        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="ASC-H stands for Atypical Squamous Cells cannot exclude High Grade Lesion">ⓘ</a>';
+        newRadio += ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="ASC-H significa células escamosas atípicas sin poder excluir una lesión de alto grado">ⓘ</a>';
     }
     newRadio+="</li>";
     return newRadio
@@ -205,67 +206,67 @@ function generateAnswerHTML(answerText, i){
 
 function getEnd() {
     if (endNum == 'end1') {
-        return 'You had a low grade Pap test result, and your colposcopy confirmed that you have only low grade changes. These results are very reassuring that you do not have any high grade or precancerous changes. Your healthcare provider will likely recommend that you return in 1 year for a repeat Pap and/or HPV test. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Tuvo un resultado de prueba de Papanicolaou de bajo grado y su colposcopia confirmó que solo tiene cambios de bajo grado. Estos resultados dan seguridad de que no tiene ningún cambio de alto grado o precanceroso. Es probable que su proveedor de atención médica le recomiende que regrese en 1 año para repetir la prueba de Papanicolaou y / o VPH. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end2') {
-        return 'Your Pap test result showed atypical glandular cells, but your colposcopy showed only a low grade change. If the pathologist who looked at your Pap test thought that your atypical glandular cells were concerning for a pre-cancer or cancer, your healthcare provider may recommend an additional procedure called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP Procedure</a>. If the pathologist who looked at your Pap test thought the cells looked mostly benign (normal), your healthcare provider will likely recommend a Pap test and HPV test (called a cotest) in 1 year. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'El resultado de su prueba de Papanicolaou mostró células glandulares atípicas, pero su colposcopia mostró solo un cambio de bajo grado. Si el patólogo que examinó su prueba de Papanicolaou pensó que sus células glandulares atípicas eran preocupantes con relación a un precáncer o cáncer, su proveedor de atención médica puede recomendarle un procedimiento adicional llamado LEEP <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP Procedure</a>. Si el patólogo que examinó su prueba de Papanicolaou pensó que las células parecían en su mayoría benignas (normales), es probable que su proveedor de atención médica le recomiende una prueba de Papanicolaou y una prueba de VPH (llamada co-prueba) en 1 año. El seguimiento descrito se basa en: <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end3') {
-        return 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. At your age, these changes often go away by themselves. Your healthcare provider will likely recommend a Pap test in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Aunque su prueba de Papanicolaou mostró que pudo haber habido un cambio precanceroso, su proveedor no encontró ningún cambio en su colposcopia. A su edad, estos cambios suelen desaparecer por sí solos. Es probable que su proveedor de atención médica le recomiende una prueba de Papanicolaou en 1 año para ver si las células anormales han desaparecido. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end4') {
-        return 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. These changes may go away by themselves. Your healthcare provider will likely recommend an HPV test with or without a Pap test in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Aunque su prueba de Papanicolaou mostró que pudo haber habido un cambio precanceroso, su proveedor no encontró ningún cambio en su colposcopia. Estos cambios pueden desaparecer por sí solos. Es probable que su proveedor de atención médica le recomiende una prueba de VPH con o sin una prueba de Papanicolaou en 1 año para ver si las células anormales han desaparecido. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end5') {
-        return 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. At your age, these changes may go away by themselves. Your healthcare provider will likely recommend a Pap test and colposcopy in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Aunque su prueba de Papanicolaou mostró que pudo haber habido un cambio precanceroso, su proveedor no encontró ningún cambio en su colposcopia. A su edad, estos cambios suelen desaparecer por sí solos. Es probable que su proveedor de atención médica le recomiende una prueba de Papanicolaou en 1 año para ver si las células anormales han desaparecido. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end6') {
-        return 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. These changes can sometimes go away by themselves. Your healthcare provider will likely recommend an HPV test with or without a Pap test and a colposcopy in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Aunque su prueba de Papanicolaou mostró que pudo haber habido un cambio precanceroso, su proveedor no encontró ningún cambio en su colposcopia. Estos cambios pueden desaparecer por sí solos. Es probable que su proveedor de atención médica le recomiende una prueba de VPH con o sin una prueba de Papanicolaou en 1 año para ver si las células anormales han desaparecido. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end7') {
-        return 'Your biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia. At your age, these abnormal changes often go away without treatment. Your healthcare provider will likely recommend that you have another colposcopy exam and Pap test in 6 months. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Su biopsia mostró un resultado de alto grado llamado Lesión intraepitelial cervical de grado 2 (CIN2), a veces llamado displasia moderada. A su edad, estos cambios anormales suelen desaparecer sin tratamiento. Es probable que su proveedor de atención médica le recomiende que se realice otro examen de colposcopia y una prueba de Papanicolaou en 6 meses. El seguimiento descrito se basa en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end8') {
-        return 'Your biopsy shows a high-grade result, which would usually be treated if you were not pregnant. Because you are pregnant, your healthcare provider will likely follow you with colposcopy examinations during your pregnancy. Treatment will likely not be recommended during pregnancy. It is very important to see your healthcare provider after you have the baby to see if you need treatment at that time. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Su biopsia muestra un resultado de alto grado, el cual se trataría si no estuviera embarazada. Debido a que está embarazada, su proveedor de atención médica probablemente la seguirá con exámenes de colposcopia durante su embarazo. Es probable que no se recomiende el tratamiento durante el embarazo. Es muy importante que consulte a su proveedor de atención médica después de tener al bebé para ver si necesita tratamiento en ese momento. El seguimiento descrito se basa en las  <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end9') {
-        return 'Your biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia. Sometimes these abnormal changes go away without treatment, and other times they are treated with a  <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. A LEEP works over 90% of the time to prevent cancer. Some studies show that women who get pregnant after they have recovered from their LEEP are a little more likely to have a premature baby. However, other studies did not show any pregnancy complications after having a LEEP. Your healthcare provider may offer you a choice of whether to have a LEEP right away or whether to come back in 6 months for another Pap test, HPV test, and colposcopy with biopsy. If you choose observation, you will come back every 6 months for testing. If your results go back to normal, your testing will become less frequent. If you continue to have CIN2 for 2 years, a LEEP will likely be recommended. If your biopsy worsens (a result of CIN3 or severe dysplasia), then a LEEP would likely be recommended sooner. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Su biopsia mostró un resultado de alto grado llamado Lesión intraepitelial cervical de grado 2 (CIN2), a veces llamado displasia moderada. A veces, estos cambios anormales desaparecen sin tratamiento y otras veces se tratan con un procedimiento llamado LEEP <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. Un LEEP funciona más del 90% de las veces para prevenir el cáncer. Algunos estudios muestran que las mujeres que quedan embarazadas después de haberse recuperado de su LEEP tienen un poco más de probabilidad de tener un bebé prematuro. Sin embargo, otros estudios no mostraron complicaciones durante el embarazo después de un LEEP. Su proveedor de atención médica puede ofrecerle la opción de hacerse un LEEP de inmediato o regresar en 6 meses para otra prueba de Papanicolaou, prueba de VPH y colposcopia con biopsia. Si elige la observación, volverá cada 6 meses para hacerse la prueba. Si sus resultados vuelven a la normalidad, sus pruebas serán menos frecuentes. Si continúa teniendo CIN2 durante 2 años, es probable que se recomiende un LEEP. Si su biopsia empeora (como resultado de CIN3 o displasia grave), es probable que se recomiende un LEEP antes. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end10') {
-        return 'Your biopsy showed high-grade precancer, which can be called histologic high-grade squamous intrepithelial lesion (HSIL),  Cervical Intraepithelial Neoplasia Grade 2 or 3 (CIN2 or CIN3) or moderate to severe dysplasia. Unless you are pregnant, your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Su biopsia mostró un precáncer de alto grado, que se puede llamar lesión intraepitelial escamosa histológica de alto grado (HSIL), neoplasia intraepitelial cervical de grado 2 (CIN2) o displasia moderada. Dado que actualmente no está embarazada y no desea quedar embarazada en el futuro, es probable que su proveedor de atención médica le recomiende un procedimiento de tratamiento para eliminar las células anormales. Este procedimiento se llama escisión electroquirúrgica con asa, o “LEEP”  por sus siglas en inglés.  <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a>. El seguimiento descrito se basa en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end11') {
-        return 'Your biopsy showed high-grade precancer, which can be called histologic high-grade squamous intraepithelial lesion (HSIL), Cervical Intraepithelial Neoplasia Grade 2 (CIN2) or moderate dysplasia. Since you are not currently pregnant and do not desire pregnancy in the future, your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Su biopsia mostró un precáncer de alto grado, que se puede llamar lesión intraepitelial escamosa histológica de alto grado (HSIL), neoplasia intraepitelial cervical de grado 2 (CIN2) o displasia moderada. Dado que actualmente no está embarazada y no desea quedar embarazada en el futuro, es probable que su proveedor de atención médica le recomiende un procedimiento de tratamiento para eliminar las células anormales. Este procedimiento se llama escisión electroquirúrgica con asa, o <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. El seguimiento descrito se basa en las  <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (endNum == 'end12') {
-        return 'Your biopsy showed high-grade precancer called Adenocarcinoma in Situ (AIS). Your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a> or cold knife conization (cone) procedure. A cold knife conization procedure is similar to a LEEP but is typically done in the operating room using a scalpel instead of electrocautery. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+        return 'Su biopsia mostró un precáncer de alto grado llamado adenocarcinoma in situ (AIS). Es probable que su proveedor de atención médica le recomiende un procedimiento de tratamiento para eliminar las células anormales. Este procedimiento se llama procedimiento <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a> o de conización (cono) con bisturí frío. Un procedimiento de conización con bisturí frío es similar a un LEEP, pero generalmente se realiza en el quirófano con un bisturí en lugar de un electrocauterio. El seguimiento descrito se basa en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (endNum == 'end13') {
-        return 'These are considered low-grade results, and can be repeated up to 3 times over a 2 year period before colposcopy is recommended. However, if you ever had a <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="High-grade pap test results include: ASC-H (Atypical Squamous Cells cannot exclude High-Grade Lesion), AGC (Atypical Glandular Cells), or HSIL (High-grade Squamous Intraepithelial Lesion). High grade biopsy results include: HSIL (High-grade Squamous Intraepithelial Lesion, CIN 2 (Cervical Intraepithelial Neoplasia grade 2, moderate dysplasia), CIN3 (Cervical Intraepithelial Neoplasia grade 3, severe dysplasia), or AIS (adenocarcinoma in situ).">high-grade result</a> your provider may recommend colposcopy.  The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+        return 'Estos se consideran resultados de bajo grado y pueden repetirse hasta 3 veces durante un período de 2 años antes de que se recomiende la colposcopia. Sin embargo, si alguna vez tuvo un resultado de alto grado <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Los resultados de la prueba de Papanicolaou de alto grado incluyen: ASC-H (células escamosas atípicas no pueden excluir una lesión de alto grado), AGC (células glandulares atípicas) o HSIL (lesión intraepitelial escamosa de alto grado).">high-grade result</a> su proveedor puede recomendarle una colposcopia. Las recomendaciones para el seguimiento después de una anomalía se basan en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (endNum == 'end14') {
-        return 'These are considered high-grade results, and your healthcare provider will likely recommend that you have a procedure called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+        return 'Estos se consideran resultados de alto grado y es probable que su proveedor de atención médica le recomiende que se someta a un procedimiento llamado colposcopia.  <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. Las recomendaciones para el seguimiento después de una anomalía se basan en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (endNum == 'end15') {
-        return 'This is a normal screening test result. If you have not had an abnormal result in the past, you can have your next screening test in 3 years. Recommendations for routine screening are based on the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a>. <br> If you had abnormal results in the past, your healthcare provider may recommend repeating your Pap test in 1 year. Recommendations for follow-up after an abnormality are based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>';
+        return 'Este es un resultado de prueba de detección normal. Si no ha tenido un resultado anormal en el pasado, puede realizarse su próxima prueba de detección en 3 años. Las recomendaciones para la detección de rutina se basan en el <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a>. <br> Si tuvo resultados anormales en el pasado, su proveedor de atención médica puede recomendarle que repita su prueba de Papanicolaou en 1 año. Las recomendaciones para el seguimiento después de una anomalía se basan en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>';
     }
 }
 
 function getFudgeFactorText(dataText) {
     if (dataText == 'not risk') {
-        return 'Exact risk estmates are not available for the results you entered. Management is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+        return 'No hay estimados de riesgo exactos para los resultados que ingresó. El seguimiento se basa en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (dataText == 'prior abnormal') {
-        return 'Exact risk estmates are not available for the results you entered. The management described assumes that you had an abnormal result in the past but no high grade abnormality or precancer. If you had a high-grade result in the past, please talk to your healthcare provider about whether or not you need to come back sooner or have additional testing. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+        return 'No hay estimados de riesgo exactos para los resultados que ingresó. El tratamiento descrito asume que tuvo un resultado anormal en el pasado, pero no una anormalidad de alto grado o precáncer. Si tuvo un resultado de alto grado en el pasado, hable con su proveedor de atención médica sobre si debe regresar antes o si debe realizarse pruebas adicionales. El seguimiento descrito se basa en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (dataText == 'HPVx2') {
-        return 'Exact risk estmates are not available for the results you entered. Colposcopy usually is recommended because you had 2 positive HPV tests in a row. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+        return 'No hay estimados de riesgo exactos para los resultados que ingresó. La colposcopia generalmente se recomienda después de 2 pruebas de VPH positivas seguidas.  El seguimiento descrito se basa en las directrices de consenso de seguimiento basado en riesgo de la ASCCP de 2019: <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (dataText == 'highgradelowgrade') {
-        return 'Exact risk estmates are not available for the results you entered. Follow-up in 1 year is recommended by the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. You indicated that you had a high-grade abnormal Pap test followed by a colposcopy that did not find pre-cancer. In this situation, HPV testing with or without Pap testing is recommended 1 and 2 years following your diagnosis and then every 3 years for 25 years. After 25 years you can return to routine screening every 5 years.'
+        return 'No hay estimados de riesgo exactos para los resultados que ingresó. Se recomienda seguimiento en 1 año de acuerdo con las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. Usted indicó que tuvo una prueba de Papanicolaou de alto grado anormal seguida por una colposcopia que no encontró precáncer. En esta situación, se recomienda la prueba del VPH con o sin Papanicolaou 1 y 2 años después de su diagnóstico y luego cada 3 años durante 25 años. Después de 25 años, puede volver a las pruebas de detección de rutina cada 5 años.'
     } else if (dataText == 'only pap') {
-        return 'Follow-up is recommended more often for pap tests if they are used alone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Se recomienda un seguimiento más frecuente de las pruebas de Papanicolaou si se usan sin la prueba del VPH. El seguimiento descrito se basa en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (dataText == 'USPSTF') {
-        return 'The <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a> and <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a> cervical cancer screening guidelines recommends screening every 3 years if Pap tests are used alone.'
+        return 'The <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a> and <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a> El Grupo de Trabajo de Servicios Preventivos de USA y las pautas de detección del cáncer de cuello uterino del Colegio Estadounidense de Obstetras y Ginecólogos recomiendan pruebas de detección de cáncer del cuello uterino cada 3 años si las pruebas de Papanicolaou se usan solas.'
     } else if (dataText == '2012') {
-        return 'The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/23635684/">2012 ASCCP guidelines</a>.'
+        return 'El seguimiento descrito se basa en las directrices de consenso de seguimiento basado en las  <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/23635684/">2012 ASCCP guidelines</a>.'
     } else if (dataText == '2019') {
-        return 'The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. Note, risks may be higher <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/33035473/">if you have not been screened in more than 5 years</a>. Risks may also be higher if your last result was a colposocpy with biopsy done more than 1 year ago.'
+        return 'El seguimiento descrito se basa en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. Tenga en cuenta que los riesgos pueden ser más altos <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/33035473/">si no ha sido examinada en más de 5 años</a>. Los riesgos también pueden ser más altos si su último resultado fue una colposcopia con biopsia realizada hace más de 1 año.'
     } else if (dataText == 'screening') {
-        return 'The recommendation for routine screening using HPV testing or cotesting every 5 years for people without abnormal results in the past is based on the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventative Services Task Force</a>, <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines</a>, and <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a>.'
+        return 'La recomendación sobre la detección de rutina mediante la prueba del VPH o la prueba simultánea (VPH y prueba de Papanicolaou) cada 5 años para las personas sin resultados anormales en el pasado se basa en las pautas del Grupo de Trabajo de Servicios Preventivos de USA <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventative Services Task Force</a>, <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines</a>, and <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a>.'
     } else if (dataText == '2019fudge') {
-        return 'Risks are lower if your most recent test was a negative HPV test or normal colposcopy. Risks are higher if your most recent HPV test was positive, you recently had a biopsy showing precancer, or if you have not been screened in more than 5 years. The management described is based on the <a  target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Los riesgos son menores si su prueba más reciente fue una prueba de VPH negativa o una colposcopia normal. Los riesgos son mayores si su prueba de VPH más reciente fue positiva, si recientemente se le realizó una biopsia que mostró precáncer o si no se le ha realizado una prueba de detección en más de 5 años. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a  target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (dataText == '2019HPV18') {
-        return 'HPV18 or HPV45 can be associated with precancerous abnormalities of the inside of the cervix. For this reason, colposcopy is always recommended when HPV18 or HPV45 is present. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. '
+        return 'Tenga en cuenta que el VPH 18 o 45 pueden asociarse con anomalías precancerosas del interior del cuello uterino. Por esta razón, siempre se recomienda la colposcopia cuando se presenta HPV18 o HPV 45. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. '
     } else if (dataText == 'Err1 (1 vs 3 yr)') {
-        return 'Depending on prior results, the most likely recommendation would be to return for an HPV test, with or without a Pap test, in 1 year or 3 years. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+        return 'Dependiendo de los resultados anteriores, la recomendación más probable sería regresar para una prueba de VPH, con o sin prueba de Papanicolaou, en 1 año o 3 años. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
     } else if (dataText == 'Err1 (colpo vs 1yr)') {
-        return 'Depending on prior results, the most likely recommendation would be to return in 1 year or have a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
+        return 'Dependiendo de los resultados anteriores, la recomendación más probable sería regresar en 1 año o hacerse una colposcopia. <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino">colposcopy</a>. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
     } else if (dataText == 'Err1 (colpo)') {
-        return 'Depending on prior results, your provider may recommend a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
+        return 'Dependiendo de los resultados anteriores, su proveedor puede recomendar una colposcopia. <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino">colposcopy</a>. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
     } else if (dataText == '') {
         return '';
     }
@@ -273,35 +274,35 @@ function getFudgeFactorText(dataText) {
 
 function getManagementText(dataText){
     if (dataText == '5-year follow-up') {
-        return '<h5>5-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 5 years. It is safe to wait 5 years because your risk of developing a pre-cancer or cancer over the next 5 years is less than 1 in 1000.'
+        return '<h5>5-year Follow-up</h5> Según los resultados que ingresó, su proveedor de atención médica probablemente le recomendará que se haga su próxima prueba de VPH (con o sin prueba de Papanicolaou) en 5 años. Es seguro esperar 5 años porque su riesgo de desarrollar un precáncer o cáncer en los próximos 5 años es menos de 1 en 1000.'
     } else if (dataText == '3-year follow-up') {
-        return '<h5>3-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 3 years. It is safe to wait 3 years because your risk of developing a pre-cancer or cancer over the next 5 years is less than 1 in 200.'
+        return '<h5>3-year Follow-up</h5> Según los resultados que ingresó, su proveedor de atención médica probablemente le recomendará que se haga su próxima prueba de VPH (con o sin prueba de Papanicolaou) en 3 años. Es seguro esperar 3 años porque su riesgo de desarrollar un precáncer o cáncer en los próximos 5 años es menos de 1 en 200.'
     } else if (dataText == '1-year follow-up') {
-        return '<h5>1-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 1 year. It is very important that you return in 1 year for your next exam. If you switch healthcare providers during this time, make sure you tell them that you had abnormal results and you need to be re-tested in 1 year.'
+        return '<h5>1-year Follow-up</h5> Según los resultados que ingresó, su proveedor de atención médica probablemente le recomendará que se realice su próxima prueba de VPH (con o sin una prueba de Papanicolaou) en 1 año. Es muy importante que regrese en 1 año para su próximo examen. Si cambia de proveedor de atención médica durante este tiempo, asegúrese de decirles que tuvo resultados anormales y que debe volver a hacerse la prueba en 1 año.'
     } else if (dataText == 'Colposcopy') {
-        return '<h5>Colposcopy</h5> The results you have entered indicate that your healthcare provider will likely recommend that you have a procedure called a colposcopy. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.'
+        return '<h5>Colposcopy</h5> The results you have entered indicate that your healthcare provider will likely recommend that you have a procedure called a colposcopy. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.'
     } else if (dataText == 'Colposcopy/Treatment') {
-        return '<h5>Colposcopy or Treatment</h5> The results that you entered indicate that you may have precancer. They do not indicate cancer, but your healthcare provider may recommend doing a either a diagnostic procedure, called a colposcopy, or a treatment procedure, called a LEEP. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure. For a LEEP, your provider will use local anesthesia and remove a small piece of the cervix where the abnormal cells are located. A LEEP provides the information of a biopsy (making sure you don’t have cancer) and will also treat your precancer at the same time. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">here</a> for more information about a LEEP procedure.'
+        return '<h5>Colposcopy or Treatment</h5> Los resultados que ingresó indican que puede tener precáncer. No indican cáncer, pero su proveedor de atención médica puede recomendarle realizar un procedimiento de diagnóstico, llamado colposcopia, o un procedimiento de tratamiento, llamado LEEP. Una colposcopia es un examen en el consultorio donde su proveedor examinará el cuello uterino usando un lente de aumento y puede tomar una pequeña biopsia. Haga clic aquí  <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> para más información: Para un LEEP, su proveedor usará anestesia local y extraerá una pequeña parte del cuello uterino donde se encuentran las células anormales. Un LEEP proporciona la información de una biopsia (asegurándose de que no tenga cáncer) y también tratará su precáncer al mismo tiempo. Haga clic aquí <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">here</a> más información.'
     } else if (dataText == 'Treatment') {
-        return '<h5>Treatment</h5> The results that you entered indicate that you probably have precancer. They do not indicate cancer, but your healthcare provider may recommend doing a treatment procedure, called a LEEP. The LEEP will both provide the information of a biopsy (making sure you don’t have cancer) and will also treat your precancer at the same time. A LEEP procedure is usually done in the office using local anesthesia. If you prefer, you may have a colposcopy with biopsy first. Click for more information about a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a> or <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>.'
+        return '<h5>Treatment</h5> Los resultados que ingresó indican que probablemente tenga precáncer. No indican cáncer, pero su proveedor de atención médica puede recomendarle realizar un procedimiento de tratamiento, llamado LEEP. El LEEP proporcionará la información de una biopsia (asegurándose de que no tenga cáncer) y también tratará su precáncer al mismo tiempo. Un procedimiento LEEP generalmente se realiza en el consultorio con anestesia local. Si lo prefiere, puede hacerse una colposcopia con biopsia primero. Haga clic aquí para más información: <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a> or <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>.'
     } else if (dataText == 'AGC') {
-        return 'The results that you entered indicate atypical glandular cells. These can sometimes indicate precancer in the inside of the cervix or in the uterus. Your provider may recommend a colposcopy. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. If you have risk factors for precancer or cancer of the uterus, like diabetes, high blood pressure, irregular periods, or being overweight, your provider may recommend taking a sample of the cells inside the uterus, called an endometrial biospsy. An endometrial biopsy is done by inserting a small instrument into the uterus that gently removes the cells. Click <a target="_blank" target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.'
+        return 'Los resultados que ingresó indican células glandulares atípicas. A veces, estos pueden indicar precáncer en el interior del cuello uterino o en el útero. Su proveedor puede recomendarle una colposcopia. Una colposcopia es un examen en el consultorio donde su proveedor examinará el cuello uterino con un lente de aumento y puede tomar una pequeña biopsia. Si tiene factores de riesgo de precáncer o cáncer de útero, como diabetes, presión arterial alta, períodos irregulares o sobrepeso, su proveedor puede recomendar tomar una muestra de las células dentro del útero, llamada biopsia endometrial. Una biopsia endometrial se realiza insertando un pequeño instrumento en el útero que extrae las células. Haga clic aquí para más información: <a target="_blank" target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a>'
     } else if (dataText == 'CIN2') {
-        return 'You indicated that you had a biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia, and you chose not to undergo treatment. If you do not choose treatment, your provider will likely recommend that you come back 6 months and 1 year after you had the biopsy showing CIN2 for another Pap test, HPV test, and colposcopy with biopsy. If your results go back to normal, you can have an HPV test with or without a Pap test every year for the next 3 years. If your Pap or HPV test is abnormal, a colposcopy is recommended. If you continue to have CIN2 for 2 years, a LEEP will likely be recommended. If your biopsy worsens (a result of CIN3 or severe dysplasia), then a LEEP would likely be recommended at that time. You can choose to have a LEEP at anytime. A LEEP works over 90% of the time to prevent cancer. Some studies show that women who get pregnant after they have recovered from their LEEP are a little more likely to have a premature baby. However, other studies did not show any pregnancy complications after having a LEEP. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">here</a> for more information on LEEP.'
+        return 'Usted indicó que su biopsia mostró un resultado de alto grado llamado Lesión intraepitelial cervical de grado 2 (CIN2), a veces llamado displasia moderada, y decidió no someterse a tratamiento. Si no elige el tratamiento, es probable que su proveedor le recomiende que regrese 6 meses y 1 año después su biopsia con CIN2 para otra prueba de Papanicolaou, prueba de VPH y colposcopia con biopsia. Si sus resultados vuelven a la normalidad, puede realizarse una prueba de VPH (con o sin una prueba de Papanicolaou) una vez al año durante los próximos 3 años. Si su prueba de Papanicolaou o VPH es anormal, se recomienda una colposcopia. Si continúa teniendo CIN2 durante 2 años, es probable que se recomiende un LEEP. Si su biopsia empeora (un resultado de CIN3 o displasia severa), entonces probablemente se recomendaría un LEEP en ese momento. Puede elegir tener un LEEP en cualquier momento. Un LEEP funciona más del 90% de las veces para prevenir el cáncer. Algunos estudios muestran que las mujeres que quedan embarazadas después de haberse recuperado de su LEEP tienen un poco más de probabilidad de tener un bebé prematuro. Sin embargo, otros estudios no mostraron complicaciones durante el embarazo después de un LEEP. Haga clic aquí  <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">here</a> para más información.'
     } else if (dataText == 'Error 1 (missing data)') {
-        return 'The results you entered do not give a management recommendation because a key piece of information is missing. Please use your patient portal or contact your provider to get your records.'
+        return 'Los resultados que ingresó no brindan una recomendación de seguimiento porque falta una pieza clave de información. Utilice su portal para pacientes o comuníquese con su proveedor para obtener sus registros.'
     } else if (dataText == 'Error 2 (colposcopy previously indicated)') {
-        return 'You entered a past result that is normally managed with colposcopy, but you did not indicate that you had a colposcopy. Please talk to your provider about whether you should have a colposcopy now. Colposcopy is usually recommended if you have 2 positive HPV tests in a row. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.'
+        return 'Ingresó un resultado anterior que normalmente se maneja con colposcopia, pero no indicó que se sometió a una colposcopia. Hable con su proveedor sobre si debe realizar una colposcopia ahora. Por lo general, se recomienda la colposcopia si tiene 2 pruebas de VPH positivas seguidas. Una colposcopia es un examen en el consultorio donde su proveedor examinará el cuello uterino con un lente de aumento y puede tomar una pequeña biopsia. Haga clic aquí <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> para más información.'
     } else if (dataText == 'Error 3 (lack of precision)') {
-        return 'You have entered results that could be managed differently depending on whether you have HPV or not. Talk to your provider about whether an HPV test would be helpful to see what your follow-up should be.'
+        return 'Ingresó resultados que podrían manejarse de manera diferente dependiendo de si tiene VPH o no. Hable con su proveedor sobre si una prueba de VPH sería útil para ver cuál debería ser su seguimiento.'
     } else if (dataText == 'HPV testing or repeat Pap in 1 year') {
-        return 'You have entered results that your provider may manage with either an HPV test now or a repeat Pap test in 1 year.'
+        return 'Ingresó resultados que su proveedor puede manejar con una prueba de VPH ahora o con una nueva prueba de Papanicolaou en 1 año.'
     } else if (dataText == '6-month follow up') {
-        return 'You indicated that you had treatment for a pre-cancer and you are being followed with Pap tests without HPV tests. When Pap tests are used alone, they need to be repeated every 6 months until you have 5 negative results in a row. Then you will need your Pap test done every year until 25 years have passed since your procedure. If HPV tests are used, your follow-up can be less frequent.'
+        return 'Usted indicó que recibió tratamiento para un precáncer y que se le realiza un seguimiento con pruebas de Papanicolaou sin pruebas de VPH. Cuando las pruebas de Papanicolaou se usan solas, deben repetirse cada 6 meses hasta que se obtengan 5 resultados negativos seguidos. Luego, necesitará que le realicen una prueba de Papanicolaou cada año hasta que hayan pasado 25 años desde su procedimiento. Si se utilizan pruebas de VPH, su seguimiento puede ser menos frecuente.'
     } else if (dataText == 'ASCUSnoHPV') {
-        return 'Exact risk estimates are not available for this combination of results. Your provider may recommend either colposcopy or to repeat an HPV test (with or without a Pap test) in 1 year.'
+        return 'No hay estimados de riesgo exactos disponibles para esta combinación de resultados. Su proveedor puede recomendar una colposcopia o repetir una prueba de VPH (con o sin prueba de Papanicolaou) en 1 año.'
     } else if (dataText == 'Pap needed') {
-        return 'You indicated that your most recent result was a positive HPV test, but no Pap test was done. To accurately estimate your risk of precancer, a Pap test is needed. Please discuss wtih your provider about having a Pap test or other additional testing. If you had a previous abnormal result, your provider may recommend colposcopy and a Pap test at the same time.'
+        return 'Indicó que su resultado más reciente fue una prueba de VPH positiva, pero no se realizó ninguna prueba de Papanicolaou. Para estimar con precisión su riesgo de precáncer, se necesita una prueba de Papanicolaou. Hable con su proveedor sobre la posibilidad de realizarse una prueba de Papanicolaou u otras pruebas adicionales. Si tuvo un resultado anormal anterior, su proveedor puede recomendarle una colposcopia y una prueba de Papanicolaou al mismo tiempo.'
     }
 }
 
@@ -317,15 +318,15 @@ $('#back').click(back);
 
 var questions = [
     //0
-    {'text': 'For which result type do you want a recommendation?',
-    'short': 'Recommendation Result Type',
+    {'text': '¿Para qué tipo de resultado desea una recomendación?',
+    'short': 'Tipo de Prueba',
     'answers': [
-        {'text': 'HPV Test/Pap Test', 'nextQuestion': 7},
-        {'text': 'Cervical Biopsy (Colposcopy)', 'nextQuestion': 1}
+        {'text': 'Prueba de VPH / prueba de Papanicolaou', 'nextQuestion': 7},
+        {'text': 'Biopsia cervical (colposcopia)', 'nextQuestion': 1}
     ]},
     //1
-    {'text': 'What is your current biopsy result?',
-    'short': 'Current Biopsy Result',
+    {'text': '¿Cuál es el resultado de su biopsia actual?',
+    'short': 'Resultado actual de biopsia',
     'answers': [
         {'text': 'Normal', 'nextQuestion': 2},
         {'text': 'CIN1', 'nextQuestion': 2},
@@ -334,8 +335,8 @@ var questions = [
         {'text': 'AIS', 'nextQuestion': 'end12'}
     ]},
     //2
-    {'text': 'What was your Pap result before the biopsy?',
-    'short': 'Pap Result Before Biopsy',
+    {'text': '¿Cuál fue su resultado de Papanicolaou antes de la biopsia?',
+    'short': 'Resultado Papanicolaou antes de Biopsia',
     'answers': [
         {'text': 'Normal/NILM', 'nextQuestion': 'end1'},
         {'text': 'ASC-US', 'nextQuestion': 'end1'},
@@ -345,44 +346,44 @@ var questions = [
         {'text': 'ASC-H', 'nextQuestion': 3}
     ]},
     //3
-    {'text': 'How old are you?',
-    'short': 'Age',
+    {'text': '¿Cuántos años tiene usted?',
+    'short': 'Edad',
     'answers': [
-        {'text': 'Under 25 years old', 'nextQuestion': 'end3'},
-        {'text': '25 years old or over', 'nextQuestion': 'end4'}
+        {'text': 'Menor de 25 años', 'nextQuestion': 'end3'},
+        {'text': '25 años y mayor', 'nextQuestion': 'end4'}
     ]},
     //4
-    {'text': 'How old are you?',
-    'short': 'Age',
+    {'text': '¿Cuántos años tiene usted?',
+    'short': 'Edad',
     'answers': [
-        {'text': 'Under 25 years old', 'nextQuestion': 'end5'},
-        {'text': '25 years old or over', 'nextQuestion': 'end6'}
+        {'text': 'Menor de 25 años', 'nextQuestion': 'end5'},
+        {'text': '25 años y mayor', 'nextQuestion': 'end6'}
     ]},
     //5
-    {'text': 'How old are you?',
-    'short': 'Age',
+    {'text': '¿Cuántos años tiene usted?',
+    'short': 'Edad',
     'answers': [
-        {'text': 'Under 25 years old', 'nextQuestion': 'end7'},
-        {'text': '25 years old or over', 'nextQuestion': 6}
+        {'text': 'Menor de 25 años', 'nextQuestion': 'end7'},
+        {'text': '25 años y mayor', 'nextQuestion': 6}
     ]},
     //6
-    {'text': 'Are you pregnant?',
-    'short': 'Pregnant',
+    {'text': 'Está embarazada?',
+    'short': 'Embarazada',
     'answers': [
-        {'text': 'Yes', 'nextQuestion': 'end8'},
-        {'text': 'Not currently but maybe in the future', 'nextQuestion': 'end9'},
-        {'text': 'Not currently or in the future', 'nextQuestion': 'end11'}
+        {'text': 'Si', 'nextQuestion': 'end8'},
+        {'text': 'No actualmente, pero tal vez en el futuro', 'nextQuestion': 'end9'},
+        {'text': 'No actualmente, pero tal vez en el futuro', 'nextQuestion': 'end11'}
     ]},
     //7
-    {'text': 'How old are you?',
-    'short': 'Age',
+    {'text': '¿Cuántos años tiene usted?',
+    'short': 'Edad',
     'answers': [
-        {'text': 'Under 25 years old', 'nextQuestion': 8},
-        {'text': '25 years old or over', 'nextQuestion': 'database'}
+        {'text': 'Menor de 25 años', 'nextQuestion': 8},
+        {'text': '25 años y mayor', 'nextQuestion': 'database'}
     ]},
     //8
-    {'text': 'What is your current Pap result?',
-    'short': 'Current Pap Result',
+    {'text': '¿Cuál es su resultado actual de Papanicolaou?',
+    'short': 'Resultado actual de Papanicolaou',
     'answers': [
         {'text': 'Normal/NILM', 'nextQuestion': 'end15'},
         {'text': 'ASC-US', 'nextQuestion': 'end13'},
@@ -392,25 +393,25 @@ var questions = [
         {'text': 'ASC-H', 'nextQuestion': 'end14'}
     ]},
     //9
-    {'text': 'What is your current HPV result?',
-    'short': 'Current HPV Result',
+    {'text': '¿Cuál es su resultado actual de VPH?',
+    'short': 'Resultado actual de VPH',
     'answers': [
-        {'text': 'Positive', 'nextQuestion': 10, 'dataVal': 1},
-        {'text': 'Negative', 'nextQuestion': 11, 'dataVal': 0},
-        {'text': 'No Test', 'nextQuestion': 11, 'dataVal': -1} 
+        {'text': 'Positivo', 'nextQuestion': 10, 'dataVal': 1},
+        {'text': 'Negativo', 'nextQuestion': 11, 'dataVal': 0},
+        {'text': 'Sin prueba', 'nextQuestion': 11, 'dataVal': -1} 
     ]},
     //10
-    {'text': 'What is the HPV type?',
-    'short': 'Current HPV Type',
+    {'text': '¿Cual es el tipo de VPH?',
+    'short': 'Tipo actual de VPH',
     'answers': [
         {'text': '16', 'nextQuestion': 12, 'dataVal': 16},
         {'text': '18 or 45', 'nextQuestion': 12, 'dataVal': 18},
-        {'text': 'Other', 'nextQuestion': 11, 'dataVal': 0},
-        {'text': "I don't know/Not typed", 'nextQuestion': 11, 'dataVal': -1}
+        {'text': 'Otro', 'nextQuestion': 11, 'dataVal': 0},
+        {'text': "No sé / no fue determinado", 'nextQuestion': 11, 'dataVal': -1}
     ]},
     //11
-    {'text': 'What is your current Pap result?',
-    'short': 'Current Pap',
+    {'text': '¿Cuál es su resultado actual de Papanicolaou?',
+    'short': 'Resultado actual de Papanicolaou',
     'answers': [
         {'text': 'Normal/NILM', 'nextQuestion': 13, 'dataVal': 'NILM'},
         {'text': 'ASC-US', 'nextQuestion': 13, 'dataVal': 'ASCUS'},
@@ -418,11 +419,11 @@ var questions = [
         {'text': 'AGC', 'nextQuestion': 'end', 'dataVal': 'AGC'},
         {'text': 'HSIL', 'nextQuestion': 'end', 'dataVal': 'HSIL'},
         {'text': 'ASC-H', 'nextQuestion': 'end', 'dataVal': 'ASCH'},
-        {'text': 'Not Available/No Test', 'nextQuestion': 13, 'dataVal': 'None'}
+        {'text': 'No disponible/Sin prueba', 'nextQuestion': 13, 'dataVal': 'None'}
     ]},
     //12
-    {'text': 'What is your current Pap result?',
-    'short': 'Current Pap',
+    {'text': '¿Cuál es su resultado actual de Papanicolaou?',
+    'short': 'Resultado actual de Papanicolaou',
     'answers': [
         {'text': 'Normal/NILM', 'nextQuestion': 'end', 'dataVal': 'NILM'},
         {'text': 'ASC-US', 'nextQuestion': 'end', 'dataVal': 'ASCUS'},
@@ -430,42 +431,42 @@ var questions = [
         {'text': 'AGC', 'nextQuestion': 'end', 'dataVal': 'AGC'},
         {'text': 'HSIL', 'nextQuestion': 'end', 'dataVal': 'HSIL'},
         {'text': 'ASC-H', 'nextQuestion': 'end', 'dataVal': 'ASCH'},
-        {'text': 'Not Available/No Test', 'nextQuestion': 'end', 'dataVal': 'None'}
+        {'text': 'No disponible/Sin prueba', 'nextQuestion': 'end', 'dataVal': 'None'}
     ]},
     //13
-    {'text': 'Do you have a record of your most recent previous result?',
-    'short': 'Has Previous Result',
+    {'text': '¿Tiene un comprobante de su resultado más reciente?',
+    'short': 'Tiene resultado más reciente',
     'answers': [
-        {'text': 'Yes', 'nextQuestion': 14, 'dataVal': 1},
+        {'text': 'Si', 'nextQuestion': 14, 'dataVal': 1},
         {'text': 'No', 'nextQuestion': 22, 'dataVal': 0}
     ]},
     //14
-    {'text': 'Was your most recent previous result a biopsy?',
-    'short': 'Previous Result was Biopsy',
+    {'text': '¿Su resultado más reciente fue una biopsia?',
+    'short': 'Resultado anterior fue biopsia',
     'answers': [
-        {'text': 'Yes', 'nextQuestion': 15, 'dataVal': 1},
+        {'text': 'Sí', 'nextQuestion': 15, 'dataVal': 1},
         {'text': 'No', 'nextQuestion': 18, 'dataVal': 0}
     ]},
     //15
-    {'text': 'What was that biopsy result?',
-    'short': 'Biopsy Result',
+    {'text': '¿Cuál fue el resultado de la biopsia?',
+    'short': 'Resultado de biopsia',
     'answers': [
-        {'text': 'High Grade', 'nextQuestion': 16, 'dataVal': 'high grade'},
+        {'text': 'Alto grado', 'nextQuestion': 16, 'dataVal': 'high grade'},
         {'text': 'Normal', 'nextQuestion': 17, 'dataVal': 'normal'},
-        {'text': 'Low Grade', 'nextQuestion': 17, 'dataVal': 'low grade'},
-        {'text': 'Not Sure', 'nextQuestion': 17, 'dataVal': 'not sure'},
-        {'text': 'Not Recorded', 'nextQuestion': 17, 'dataVal': 'no records'}
+        {'text': 'Bajo grado', 'nextQuestion': 17, 'dataVal': 'low grade'},
+        {'text': 'No estoy segura', 'nextQuestion': 17, 'dataVal': 'not sure'},
+        {'text': 'No registrado', 'nextQuestion': 17, 'dataVal': 'no records'}
     ]},
     //16
-    {'text': 'Were you treated?',
-    'short': 'Treated',
+    {'text': '¿Tuvo tratamiento?',
+    'short': 'Tratamiento',
     'answers': [
-        {'text': 'Yes', 'nextQuestion': 'end', 'dataVal': 1},
+        {'text': 'Sí', 'nextQuestion': 'end', 'dataVal': 1},
         {'text': 'No', 'nextQuestion': 'end', 'dataVal': 0}
     ]},
     //17
-    {'text': 'What was your Pap result before the biopsy?',
-    'short': 'Pap Result before Biopsy',
+    {'text': '¿Cuál fue su resultado de Papanicolaou antes de la biopsia?',
+    'short': 'Resultado Papanicolaou antes de Biopsia',
     'answers': [
         {'text': 'Normal/NILM', 'nextQuestion': 'end', 'dataVal': 'NILM'},
         {'text': 'ASC-US', 'nextQuestion': 'end', 'dataVal': 'ASCUS'},
@@ -473,19 +474,19 @@ var questions = [
         {'text': 'AGC', 'nextQuestion': 'end', 'dataVal': 'AGC'},
         {'text': 'HSIL', 'nextQuestion': 'end', 'dataVal': 'HSIL'},
         {'text': 'ASC-H', 'nextQuestion': 'end', 'dataVal': 'ASCH'},
-        {'text': 'Not Available/No Test', 'nextQuestion': 'end', 'dataVal': 'None'}
+        {'text': 'No disponible/Sin prueba', 'nextQuestion': 'end', 'dataVal': 'None'}
     ]},
     //18
-    {'text': 'What was your previous HPV result?',
-    'short': 'Previous HPV Result',
+    {'text': '¿Cuál fue su resultado anterior de VPH?',
+    'short': 'Resultado anterior de VPH',
     'answers': [
-        {'text': 'Positive', 'nextQuestion': 20, 'dataVal': 1},
-        {'text': 'Negative', 'nextQuestion': 19, 'dataVal': 0},
-        {'text': 'No Test', 'nextQuestion': 23, 'dataVal': -1}
+        {'text': 'Positivo', 'nextQuestion': 20, 'dataVal': 1},
+        {'text': 'Negativo', 'nextQuestion': 19, 'dataVal': 0},
+        {'text': 'Sin prueba', 'nextQuestion': 23, 'dataVal': -1}
     ]},
     //19
-    {'text': 'What was your previous Pap result?',
-    'short': 'Previous Pap Result',
+    {'text': '¿Cuál fue su resultado anterior de Papanicolaou?',
+    'short': 'Resultado anterior de Papanicolaou',
     'answers': [
         {'text': 'Normal/NILM', 'nextQuestion': 21, 'dataVal': 'NILM'},
         {'text': 'ASC-US', 'nextQuestion': 'end', 'dataVal': 'ASCUS'},
@@ -493,11 +494,11 @@ var questions = [
         {'text': 'AGC', 'nextQuestion': 'end', 'dataVal': 'AGC'},
         {'text': 'HSIL', 'nextQuestion': 'end', 'dataVal': 'HSIL'},
         {'text': 'ASC-H', 'nextQuestion': 'end', 'dataVal': 'ASCH'},
-        {'text': 'Not Available/No Test', 'nextQuestion': 21, 'dataVal': 'None'}
+        {'text': 'No disponible/Sin prueba', 'nextQuestion': 21, 'dataVal': 'None'}
     ]},
     //20
-    {'text': 'What was your previous Pap result?',
-    'short': 'Previous Pap Result',
+    {'text': '¿Cuál fue su resultado anterior de Papanicolaou?',
+    'short': 'Resultado anterior de Papanicolaou',
     'answers': [
         {'text': 'Normal/NILM', 'nextQuestion': 'end', 'dataVal': 'NILM'},
         {'text': 'ASC-US', 'nextQuestion': 'end', 'dataVal': 'ASCUS'},
@@ -505,33 +506,33 @@ var questions = [
         {'text': 'AGC', 'nextQuestion': 'end', 'dataVal': 'AGC'},
         {'text': 'HSIL', 'nextQuestion': 'end', 'dataVal': 'HSIL'},
         {'text': 'ASC-H', 'nextQuestion': 'end', 'dataVal': 'ASCH'},
-        {'text': 'Not Available/No Test', 'nextQuestion': 'end', 'dataVal': 'None'}
+        {'text': 'No disponible/Sin prueba', 'nextQuestion': 'end', 'dataVal': 'None'}
     ]},
     //21
-    {'text': 'Have you had an abnormal result before this one in the past 7 years or a treatment for precancer in the past 25 years?',
-    'short': 'Abnormal Result Previously',
+    {'text': '¿Ha tenido un resultado anormal en los últimos 7 años o un tratamiento para el precáncer en los últimos 25 años?',
+    'short': 'Tiene resultado abnormal anterior',
     'answers': [
-        {'text': 'Yes', 'nextQuestion': 'end', 'dataVal': 1},
+        {'text': 'Sí', 'nextQuestion': 'end', 'dataVal': 1},
         {'text': 'No', 'nextQuestion': 'end', 'dataVal': 0}
     ]},
     //22
-    {'text': 'Excluding any answer you provided earlier, have you had an abnormal result in the past 7 years or a treatment for precancer in the past 25 years?',
-    'short': 'Abnormal Result Past Ten Years',
+    {'text': 'Excluyendo cualquier respuesta que proporcionó anteriormente, ¿ha tenido un resultado anormal en los últimos 7 años o un tratamiento para el precáncer en los últimos 25 años?',
+    'short': 'Resultado abnormal en los 7 años anterior',
     'answers': [
-        {'text': 'Yes', 'nextQuestion': 'end', 'dataVal': 1},
+        {'text': 'Sí', 'nextQuestion': 'end', 'dataVal': 1},
         {'text': 'No', 'nextQuestion': 'end', 'dataVal': 0}
     ]},
     //23
-    {'text': 'What was your previous Pap result?',
-    'short': 'Previous Pap Result',
+    {'text': '¿Cuál fue su resultado anterior de Papanicolaou?',
+    'short': 'Resultado anterior de Papanicolaou',
     'answers': [
-        {'text': 'Normal/NILM', 'nextQuestion': 21, 'dataVal': 'NILM'}, //nextq was previously end, needs database corrections before it will work
+        {'text': 'Normal/NILM', 'nextQuestion': 21, 'dataVal': 'NILM'},
         {'text': 'ASC-US', 'nextQuestion': 'end', 'dataVal': 'ASCUS'},
         {'text': 'LSIL', 'nextQuestion': 'end', 'dataVal': 'LSIL'},
         {'text': 'AGC', 'nextQuestion': 'end', 'dataVal': 'AGC'},
         {'text': 'HSIL', 'nextQuestion': 'end', 'dataVal': 'HSIL'},
         {'text': 'ASC-H', 'nextQuestion': 'end', 'dataVal': 'ASCH'},
-        {'text': 'Not Available/No Test', 'nextQuestion': 22, 'dataVal': 'None'}
+        {'text': 'No disponible/Sin prueba', 'nextQuestion': 22, 'dataVal': 'None'}
     ]}
 ]
 
