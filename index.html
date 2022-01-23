@@ -18,13 +18,20 @@
                     <h2>Cervical Cancer Screening Information for Patients</h2>
                     <br>
                     <h4>Welcome</h4>
-                    <p>This website provides information designed for patients and the general public to better understand cervical cancer screening and HPV vaccination.</p>
+                    <p>This website is designed to help you understand cervical cancer screening and what the next steps are after an abnormal
+                    result. The <b>Personalized Risk Assessment Tool</b> will walk you through
+                    the steps that a doctor or healthcare provider may use when deciding management after an abnormal result.</p>
+                    <p> To use this
+                    tool, you must have had a Pap test or HPV test in the past. You will need to look at your medical record (either using
+                    paper records or a patient portal) to use the tool because you need to enter exact medical terms. You can use the "Additional Information" 
+                    buttons to learn more about HPV and Pap tests, and HPV vaccination even if you do not have your medical record.</p>
                 </div>
-                <h4>Please choose one of the following options:</h4>
+                <h4>Please choose the green button for the personalized risk assessment. If you do not have your medical record and want to
+                learn more information, click one of the additional information buttons.</h4>
                 <div class="buttons" style="text-align: center; margin-top: 2rem;">
-                    <a class="btn btn-primary" style="margin: 0.5rem 0rem;" id="todisclaimer" role="button">Personalized Risk Assessment</a>
-                    <a class="btn btn-secondary" style="margin: 0.5rem 0rem;" id="toscreening" role="button">HPV and Pap Test Information</a>
-                    <a class="btn btn-tertiary" style="margin: 0.5rem 0rem;" id="tovaccination" role="button">HPV Vaccine Information</a>
+                    <a class="btn btn-primary" style="margin: 0.5rem 0rem;" id="todisclaimer" role="button">Take the Personalized Risk Assessment</a>
+                    <a class="btn btn-tertiary" style="margin: 0.5rem 0rem;" id="toscreening" role="button">Additional Information: HPV and Pap Tests</a>
+                    <a class="btn btn-tertiary" style="margin: 0.5rem 0rem;" id="tovaccination" role="button">Additional Information: HPV Vaccine</a>
                     
                 </div>
             </div>
@@ -33,37 +40,42 @@
         <div class="container-end hidden" id="disclaimer-panel">
           <div class="box">
               <h2>Personalized Risk Assessment</h2>
-              The following questions will ask about your abnormal test results and provide your risk of precancer and the next steps in management based on what you entered.
+              The tool will take all of your past results related to cervical cancer prevention and tell you what the next steps are for you.  To use the tool, you must have had at least one screening test in the past (like a Pap test or an HPV test).  You will need to look at your medical records (either paper records or through the patient portal) so you can enter the exact terms of your past results.  At the end of the tool, you will be provided with the next steps based on national guidelines.  You can discuss these with your healthcare provider.  Please review the disclaimer below before proceeding.
               <br>
               <br>
-              <h4 id="disclaimer">DISCLAIMER:</h4>
-              <ul>
+              <br>
+                <a class="btn btn-secondary" href="index.html">Home</a>
+                <a class="btn btn-primary next_btn" role="button" id="toform">Proceed</a>
+              <br>
+              <br>
+              <h5 id="disclaimer">DISCLAIMER:</h4>
+              <ul class="ul-disclaimer">
                   <li>The intention of this website is to make the new guidelines for management of abnormal Pap test results, HPV test results, and cervix biopsy results (colposcopy) understandable to patients. 
                       This website will walk you through the steps that your doctor or healthcare provider may use when deciding the next steps in management after abnormal results. 
                       This website does not provide medical advice.</li>
                   <br>
-                  <li>To use this website, you will need access to your medical record as you will need to enter exact medical terms.</li>
-                  <br>
-                  <li>Note that recommendations may be different if you are <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="If you have HIV or immunosuppression for another reason, your provider will likely recommend colposcopy for any abnormal result, and screening at 3-year intervals. ">immunosuppressed</a>, <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Pregnancy does not change your risk of having precancer, and you should still have a colposcopy if that is recommended. However, your provider may not take biopsies, and usually you would not be recommended for treatment until after you had the baby.">pregnant</a>, or have had a <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="If you had a hysterectomy with removal of the cervix, you probably do not need screening anymore. If your hysterectomy was done because of pre-cancer, or cancer, then you shoud continue having screening with HPV testing for at least 25 years after your diagnosis.  If your cervix was not removed (sometimes called a supracervical hysterectomy) then you do need to continue to have screening.">hysterectomy</a>.</li>
-                  <br>
                   <li>
-                      Note that risk numbers are for people who regularly have cervical cancer screening. If you have not been screened in more than 5 years, your risks may be <a href="https://pubmed.ncbi.nlm.nih.gov/33035473/">higher</a>. 
+                      Risk numbers are for people who regularly have cervical cancer screening. If you have not been screened in more than 5 years, your risks may be <a href="https://pubmed.ncbi.nlm.nih.gov/33035473/">higher</a>. Note that recommendations may be different if you are <a tabindex="0" data-toggle="popover" data-trigger="focus"
+                        data-content="If you have HIV or immunosuppression for another reason, your provider will likely recommend colposcopy for any abnormal result, and screening at 3-year intervals. ">immunosuppressed</a>,
+                    <a tabindex="0" data-toggle="popover" data-trigger="focus"
+                        data-content="Pregnancy does not change your risk of having precancer, and you should still have a colposcopy if that is recommended. However, your provider may not take biopsies, and usually you would not be recommended for treatment until after you had the baby.">pregnant</a>,
+                    or have had a <a tabindex="0" data-toggle="popover" data-trigger="focus"
+                        data-content="If you had a hysterectomy with removal of the cervix, you probably do not need screening anymore. If your hysterectomy was done because of pre-cancer, or cancer, then you shoud continue having screening with HPV testing for at least 25 years after your diagnosis.  If your cervix was not removed (sometimes called a supracervical hysterectomy) then you do need to continue to have screening.">hysterectomy</a>.
                   </li>
                   <br>
-                  <li>For more information on immunosuppresion and cervical cancer screening click <a target="_blank" href="https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/human-papillomavirus-disease?view=full">here</a>.</li>
-                  <li>For more information on managing cervical cancer screening results in pregnancy or after hysterectomy, click <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">here</a></li>
-                  <li>For more information on cervical cancer screening after hysterectomy please visit the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">USPSTF guidelines</a> and <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines.</a></li>
+                  <li>For more information on immunosuppresion and cervical cancer screening click <a target="_blank" href="https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/human-papillomavirus-disease?view=full">here</a>.
+                   For more information on managing cervical cancer screening results in pregnancy or after hysterectomy, click <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">here</a>
+                   For more information on cervical cancer screening after hysterectomy please visit the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">USPSTF guidelines</a> and <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines.</a></li>
                   <br>
                   <li>Click for our <a id="todefinitions">Glossary</a> of medical terms.</li>
               </ul>
-              <a class="btn btn-secondary" href="index.html">Home</a>
-              <a class="btn btn-primary next_btn" role="button" id="toform">Proceed</a>
+              
           </div>
       </div> 
       <!-- FORM -->
       <div class="container-box hidden" id="form-panel">
         <div class="box">
-                <label for="radios" id="questionText" class="font-size-md font-weight-bold" style="margin: 0rem;">For which result type do you want a recommendation?</label> 
+                <label for="radios" id="questionText" class="font-size-md font-weight-bold" style="margin: 0rem;">Which of the following was your most recent test? <br><span style="font-size: 0.75em; font-weight: normal">Please have your medical record available</span></label> 
                 <input hidden id="questionNum" value="0">
                 <hr class="line">
                 <ul class="form-check" id="radios">
@@ -92,7 +104,7 @@
           <div class="box" style="display: grid; align-content: center;">
               <div>
                   <div>   
-                      <p class="font-size-md" style="margin: 0rem;">Management</p> 
+                      <p class="font-size-md" style="margin: 0rem;">What to do next</p> 
                       <hr class="line">
                       <p id="management"></p>
                   </div>
@@ -107,6 +119,7 @@
                       
                   <h5 class="hidden five-year-risk">Precancer Risk Over Next 5 Years: <span id="five-year-risk"></span></h5>
                   <p class="">Click for our <a id="todefinitions">Glossary</a> of medical terms.</p>
+                  <p>Please talk to your healthcare provider if you have any questions about what to do next.</p>
                   <br>
                   <a class="btn btn-secondary button next-btn" href="index.html" role="button">Home</a>
               </div>
