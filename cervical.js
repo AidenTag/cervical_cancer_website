@@ -214,7 +214,7 @@
         );
       }
     }
-    $("#questionText").text(questions[nextQuestion]["text"]);
+    $("#questionText").html(questions[nextQuestion]["text"]);
     $("#questionNum").attr("value", nextQuestion);
     $("ul.form-check").html(newHTML);
     $("#display").html(displayHTML);
@@ -302,9 +302,9 @@
     } else if (endNum == "end12") {
       return 'Your biopsy showed high-grade precancer called Adenocarcinoma in Situ (AIS). Your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a> or cold knife conization (cone) procedure. A cold knife conization procedure is similar to a LEEP but is typically done in the operating room using a scalpel instead of electrocautery. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (endNum == "end13") {
-      return 'These are considered low-grade results, and can be repeated up to 3 times over a 2 year period before colposcopy is recommended. However, if you ever had a <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="High-grade pap test results include: ASC-H (Atypical Squamous Cells cannot exclude High-Grade Lesion), AGC (Atypical Glandular Cells), or HSIL (High-grade Squamous Intraepithelial Lesion). High grade biopsy results include: HSIL (High-grade Squamous Intraepithelial Lesion, CIN 2 (Cervical Intraepithelial Neoplasia grade 2, moderate dysplasia), CIN3 (Cervical Intraepithelial Neoplasia grade 3, severe dysplasia), or AIS (adenocarcinoma in situ).">high-grade result</a> your provider may recommend colposcopy.  The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return 'The results you have entered are considered low risk, and the tests can be repeated up to 3 times over a 2 year period before a colposcopy is recommended. However, if you ever had a <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="High-grade pap test results include: ASC-H (Atypical Squamous Cells cannot exclude High-Grade Lesion), AGC (Atypical Glandular Cells), or HSIL (High-grade Squamous Intraepithelial Lesion). High grade biopsy results include: HSIL (High-grade Squamous Intraepithelial Lesion, CIN 2 (Cervical Intraepithelial Neoplasia grade 2, moderate dysplasia), CIN3 (Cervical Intraepithelial Neoplasia grade 3, severe dysplasia), or AIS (adenocarcinoma in situ).">high-grade result</a> your provider may recommend <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (endNum == "end14") {
-      return 'These are considered high-grade results, and your healthcare provider will likely recommend that you have a procedure called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return 'The results you have entered are considered high risk, and your healthcare provider will likely recommend that you have a procedure called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
     } else if (endNum == "end15") {
       return 'This is a normal screening test result. If you have not had an abnormal result in the past, you can have your next screening test in 3 years. Recommendations for routine screening are based on the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a>. <br> If you had abnormal results in the past, your healthcare provider may recommend repeating your Pap test in 1 year. Recommendations for follow-up after an abnormality are based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>';
     }
@@ -400,7 +400,7 @@
     },
     //1
     {
-      text: "What is your current biopsy result?",
+      text: 'What is your current biopsy result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
       short: "Current Biopsy Result",
       answers: [
         { text: "Normal", nextQuestion: 2 },
@@ -471,7 +471,7 @@
     },
     //8
     {
-      text: "What is your current Pap result?",
+      text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
       short: "Current Pap Result",
       answers: [
         { text: "Normal/NILM", nextQuestion: "end15" },
@@ -484,7 +484,7 @@
     },
     //9
     {
-      text: "What is your current HPV result?",
+      text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
       short: "Current HPV Result",
       answers: [
         { text: "Positive", nextQuestion: 10, dataVal: 1 },
@@ -505,7 +505,7 @@
     },
     //11
     {
-      text: "What is your current Pap result?",
+      text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
       short: "Current Pap",
       answers: [
         { text: "Normal/NILM", nextQuestion: 13, dataVal: "NILM" },
@@ -519,7 +519,7 @@
     },
     //12
     {
-      text: "What is your current Pap result?",
+      text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
       short: "Current Pap",
       answers: [
         { text: "Normal/NILM", nextQuestion: "end", dataVal: "NILM" },
@@ -533,7 +533,7 @@
     },
     //13
     {
-      text: "Do you have a record of your most recent previous result?",
+      text: 'Do you have a record of your most recent previous result?<br><span style="font-size: 0.75em; font-weight: normal"">If your most recent result was a biopsy that was more than 12 months ago or an HPV test alone, or Pap/HPV cotest that was more than 5 years ago, please select "No."</span>',
       short: "Has Previous Result",
       answers: [
         { text: "Yes", nextQuestion: 14, dataVal: 1 },
@@ -639,7 +639,7 @@
       short: "Abnormal Result Past Ten Years",
       answers: [
         { text: "Yes", nextQuestion: "end", dataVal: 1 },
-        { text: "No", nextQuestion: "end", dataVal: 0 },
+        { text: "No/Not sure", nextQuestion: "end", dataVal: 0 },
       ],
     },
     //23
