@@ -1,0 +1,411 @@
+home_button: Página de inicio
+proceed: Continuar
+back_button: Regresar
+next_button: Adelante
+glossary: Haga clic para <a class="todefinitions">Glosario:</a> definiciones y abreviaturas.
+home:
+  title: Bienvenidos/as
+  intro:
+    <p>Este sitio web está diseñado para ayudarle a entender la detección del cáncer de cuello uterino y cuáles son los siguientes pasos después de un resultado anormal. La <b>Herramienta de Evaluación de Riesgo Personalizada</b> la guiará a través de los pasos que un médico o proveedor de atención médica puede seguir al decidir el tratamiento después de un resultado anormal.
+    </p>
+    <p>Para usar esta herramienta, debe haberse realizado una prueba de Papanicolaou o una prueba de VPH en el pasado. Deberá consultar su registro médico (ya sea utilizando registros en papel o un portal de pacientes) para usar la herramienta porque necesita ingresar términos médicos exactos.
+    </p>
+    <p><b>Haga clic en el botón verde para la evaluación de riesgos personalizada. Si no tiene su registro médico, o si solo desea obtener más información sobre la detección y la vacunación, haga clic en uno de los botones de información adicional.</b></p>
+  risk_button: Realice la Evaluación de Riesgo Personalizada
+  pap_button: "Información Adicional: Pruebas de VPH y Papanicolaou"
+  vaccine_button: "Información Adicional: Vacuna Contra el VPH"
+disclaimer:
+  title: Evaluación de Riesgo Personalizada
+  intro: La herramienta tomará todos sus resultados anteriores relacionados con la prevención del cáncer de cuello uterino y le dirá cuáles son los próximos pasos para usted. Para usar la herramienta, debe haberse realizado al menos una prueba de detección en el pasado (como una prueba de Papanicolaou o una prueba de VPH). Deberá consultar sus registros médicos (ya sea en papel o a través del portal del paciente) para poder ingresar los términos exactos de sus resultados anteriores. Al final de la herramienta, se le proporcionarán los siguientes pasos según las pautas nacionales. Puede discutir esto con su proveedor de atención médica. Por favor, revise el descargo de responsabilidad a continuación antes de continuar.
+  disclaimer_title: DESCARGO DE RESPONSABILIDAD
+  disclaimer:
+    <li>La intención de este sitio web es hacer que las nuevas pautas para el manejo de los resultados anormales de la prueba de Papanicolaou, los resultados de la prueba del VPH y los resultados de la biopsia de cuello uterino (colposcopia) sean comprensibles para los pacientes. Este sitio web lo guiará a través de los pasos que su médico o proveedor de atención médica puede seguir para decidir los próximos pasos en el manejo después de resultados anormales. Este sitio web no proporciona consejos médicos.</li>
+    <br>
+    <li>
+    Las cifras de riesgo son para personas que hacen regularmente los exámenes de detección de cáncer de cuello uterino. Si no ha sido examinada en más de 5 años, sus riesgos pueden ser <a href="https://pubmed.ncbi.nlm.nih.gov/33035473/">mayores</a>.
+    Tenga en cuenta que las recomendaciones pueden ser diferentes si está <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Si tiene VIH o inmunosupresión por otra razón, es probable que su proveedor le recomiende una colposcopia para cualquier resultado anormal y exámenes de detección en intervalos de 3 años.">immunodeprmida</a>,
+    <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="El embarazo no cambia su riesgo de tener lesiones precancerosas, y aun así debe hacerse una colposcopía si se recomienda. Sin embargo, es posible que su proveedor no tome biopsias y, por lo general, no se le recomendará un tratamiento hasta después de haber tenido el bebé.">embarazada</a>,
+    o ha tenido<a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Si se sometió a una histerectomía con extirpación del cuello uterino, probablemente ya no necesite exámenes de detección. Si su histerectomía se realizó debido a un precáncer o cáncer, entonces debe continuar haciéndose las pruebas de detección del VPH durante al menos 25 años después de su diagnóstico. Si no se extirpó el cuello uterino (lo que a veces se denomina histerectomía supracervical), entonces debe continuar haciéndose las pruebas de detección."> histerectomía</a>.
+    </li>
+    <br>
+    <li>Para obtener más información sobre inmunosupresión y detección de cáncer de cuello uterino, haga clic <a target="_blank" href="https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/human-papillomavirus-disease?view=full">aquí</a>.
+    Para obtener más información sobre cómo manejar los resultados de las pruebas de detección del cáncer de cuello uterino durante el embarazo o después de una histerectomía, haga clic <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">aquí</a>.
+    Para obtener más información sobre la detección del cáncer de cuello uterino después de la histerectomía, por favor visite las <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">pautas de la USPSTF</a> y <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">las pautas de la Sociedad Americana del Cáncer.</a></li>
+assessment:
+  which_test: ¿Cuál de las siguientes fue su prueba más reciente?
+  have_record: Por favor tenga su historial médico disponible
+  hpv: Prueba de VPH/prueba de Papanicolaou
+  colposcopy: Biopsia cervical (colposcopia)
+  previous: Respuestas anteriores
+results:
+  what_do: Que Hacer Despues
+  note: Tenga en Cuenta
+  risk: Riesgo de Precancer Actual
+  five_year: Riesgo de Precancer Durante Los Próximos 5 Años
+  talk: Hable con su proveedor de atención médica si tiene alguna pregunta sobre qué hacer a continuación.
+screening:
+  "<h2>Detección de Cáncer de Cuello Uterino: VPH y Pruebas de Papanicolaou</h2>
+  <h4>¿Qué causa el cáncer de cuello uterino?</h4>
+  Cervical El cáncer de cuello uterino es causado por una infección del virus de papiloma humano (VPH). El VPH generalmente se transmite  durante las relaciones sexuales, pero también se puede transmitir al tocar los genitales (de una persona infectada). La mayoría de las personas serán expuestas al VPH en algún momento de sus vidas. Por lo general, el sistema inmunológico de su cuerpo puede combatir la infección del VPH, pero a veces no lo hace. El cáncer de cuello uterino puede desarrollarse si las células del cuello uterino (la parte inferior del útero o matriz) están infectadas con el VPH, su cuerpo no combate la infección y la infección no se detecta durante más de 5 años.
+  <h4>
+  ¿Cuál es el propósito de los exámenes de detección del cáncer de cuello uterino?
+  </h4>
+  Los exámenes de detección del cáncer de cuello uterino detectan el precáncer. Los precánceres de cuello uterino son células anormales que pueden convertirse en cáncer si no se tratan. Sin tratamiento, del 30 al 50% de los precánceres se convertirán en cáncer. Los términos médicos utilizados para describir el precáncer de cuello uterino incluyen displasia de cuello uterino, lesiones de alto grado o neoplasia intraepitelial cervical de grado 2 o 3. Los exámenes de detección nos permiten encontrar y tratar el pre cáncer de cuello uterino para que no se desarrolle el cáncer.
+
+  <h4>
+  ¿Cómo se realizan las pruebas de detección del cáncer de cuello uterino?
+  </h4>
+  La detección del cáncer de cuello uterino se puede realizar con una prueba de VPH, una prueba de Papanicolaou o una prueba de VPH y Papanicolaou juntas.
+
+  <p>
+  Se recomienda una prueba del VPH cada 5 años a partir de los 25-30 años hasta los 65 años. La prueba del VPH la realiza su proveedor de atención médica, quien le hará un examen y tomará una muestra del cuello uterino. Si tiene un precáncer, la prueba del VPH lo detectará más del 90% de las veces. Si tiene una prueba de VPH positiva, eso no siempre significa que tenga precáncer. Su proveedor de atención médica generalmente recomendará otras pruebas para verificar si tiene precáncer. Si tiene un resultado negativo en la prueba del VPH, su probabilidad de desarrollar un precáncer en los próximos 5 años es menos de 1 en 1000. Debido a que el riesgo es tan bajo, es seguro esperar 5 años para su próxima prueba después de un resultado negativo.
+  </p>
+
+  <p>
+  Se recomienda una prueba de Papanicolaou cada 3 años a partir de los 21 años hasta los 65. La prueba de Papanicolaou la realiza su proveedor de atención médica, quien le hará un examen y tomará una muestra del cuello uterino. Si tiene un precáncer, la prueba de Papanicolaou lo detectará entre el 50% y el 70% de las veces. Si tiene una prueba de Papanicolaou anormal, eso no siempre significa que tenga precáncer. Su proveedor de atención médica generalmente recomendará otras pruebas para verificar si tiene precáncer. Si tiene un resultado negativo en la prueba de Papanicolaou, su probabilidad de desarrollar un precáncer en los próximos 5 años es menos de 1 en 200. Se recomiendan las pruebas de Papanicolaou cada 3 años.
+  </p>
+
+  <p>
+  Entre las edades de 30 y 65 años, la detección también se puede realizar con una prueba de VPH y una prueba de Papanicolaou juntas cada 5 años. A esto se le llama co-prueba.
+  </p>
+  <p>
+  Para obtener más información sobre las pruebas de detección del cáncer de cuello uterino, visite <a target='_blank' href='https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening'>USPSTF guidelines</a>, <a target='_blank' href='https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628'>American Cancer Society Guidelines</a> and the <a target='_blank' href='https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines'>American College of Obstetricians and Gynecologists</a>.
+  </p>"
+vaccination: "<h2>Vacunación Contra el VPH</h2>
+          <h4>¿Qué es el VPH?</h4>
+ El virus del papiloma humano (VPH) es un virus que típicamente se transmite durante las relaciones sexuales, pero también se puede transmitir al tocar los genitales sin tener relaciones sexuales. La mayoría de las personas estarán expuestas al VPH en algún momento de sus vidas. Por lo general, el sistema inmunológico de su cuerpo puede combatir la infección del VPH, pero a veces no lo hace. El VPH puede causar cánceres, verrugas genitales y una enfermedad poco común llamada <a target='_blank' href='https://www.nidcd.nih.gov/es/espanol/papilomatosis-respiratoria-recurrente'>papilomatosis respiratoria recurrente (PRR)</a>. El VPH puede causar cáncer de cuello uterino (parte inferior del útero o matriz), vagina, vulva, pene, ano,  boca y garganta (generalmente las amígdalas y la lengua). En los Estados Unidos se diagnostican más de 35,000 cánceres causados por el VPH cada año. Los científicos estiman que podemos prevenir casi el 90% de estos cánceres con la vacuna contra el VPH.
+
+<h4>¿Cómo funcionan las vacunas contra el VPH?</h4>
+Las vacunas contra el VPH previenen los tipos de VPH con mayor probabilidad de causar cáncer, verrugas genitales y papilomatosis respiratoria recurrente. Las vacunas no contienen el virus, por lo cual no pueden transmitir el VPH y no pueden causar cáncer. Las vacunas contra el VPH contienen una pequeña parte de la capa exterior del virus que le enseñan a su cuerpo a reconocer el virus y matarlo antes de que pueda causarle daño.
+
+<h4>¿Son efectivas las vacunas contra el VPH?</h4>
+¡SÍ! Las personas que han recibido vacunas contra el VPH tienen un 90 % menos de probabilidades de contraer una infección por VPH que las personas que no están vacunadas. También hemos visto disminuciones en el precáncer de cuello uterino y el cáncer de cuello uterino en mujeres jóvenes desde que comenzamos a administrar la vacuna contra el VPH de manera rutinaria.
+
+<h4>¿Son seguras las vacunas contra el VPH?</h4>
+¡SÍ! Las vacunas contra el VPH estuvieron disponibles por primera vez en 2006. Se han utilizado en todo el mundo desde entonces y su seguridad se controla continuamente en más de 180 países. Se han administrado más de 270 millones de dosis en todo el mundo, con más de 120 millones de dosis administradas en los EE. UU. No se han encontrado efectos secundarios graves. Los efectos secundarios comunes de las vacunas contra el VPH son similares a los de otras vacunas e incluyen dolor en el brazo y, ocasionalmente, fatiga o dolor de cabeza leve. Estos generalmente desaparecen después de uno o dos días.
+
+<h4>
+¿Quién debe vacunarse contra el VPH?
+</h4>
+Se recomienda que todos los niños reciban 2 dosis de la vacuna contra el VPH antes de cumplir 13 años. Se suele iniciar la serie entre los 9 y los 12 años. Las dosis de la vacuna contra el VPH se administran con una diferencia de 6 a 12 meses. Las series de vacunas que se inician después de los 13 años se consideran \"tardías\", pero aún pueden ser eficaces para prevenir las infecciones por VPH. Se requieren tres dosis si se inicia la serie después de los 15 años. Se recomienda la vacunación tardía o de recuperación para todas las personas hasta los 26 años.
+
+<h4>
+¿Mi seguro pagará la vacuna contra el VPH?
+</h4>
+La vacunación contra el VPH será cubierta por el seguro para todos los niños y adolescentes hasta los 18 años. Después de los 18 años, la cobertura depende de cada compañía de seguros.
+
+<h4>
+¿Qué tan efectiva es la vacuna contra el VPH entre los 27 y los 45 años?
+</h4>
+<p>
+Los CDC estima que el 80% de las infecciones por VPH que luego causarán cáncer se adquieren antes de los 26 años. Por esta razón, los estudios en personas de 27 a 45 años no mostraron una disminución significativa en el precáncer o el cáncer. Los CDC recomienda que hable con su proveedor de atención médica si está considerando vacunarse contra el VPH. A esto se le llama la toma de decisiones compartida. Lo más probable es que se beneficie de la vacuna contra el VPH entre los 27 y los 45 años si solo ha tenido 1 o 2 parejas sexuales de por vida, y  puede estar expuesto al VPH en una nueva relación. Algunos datos indican que la vacunación contra el VPH puede ayudar a prevenir la recurrencia del precáncer después del tratamiento.
+</p>
+<p>
+Para obtener más información sobre las vacunas contra el VPH, visite: <a target='_blank' href='https://www.cdc.gov/spanish/cancer/hpv/index.htm'>CDC</a>.
+</p>"
+glossary_page: "<h2>Glosario: Definiciones y Abreviaturas</h2>
+        <h4>
+            Cuello uterino:
+        </h4> The El cuello uterino es la parte inferior del útero. El cuello uterino se encuentra en la parte superior de la vagina. El cuello uterino está diseñado para sostener a un bebé dentro del útero durante el embarazo. El cuello uterino se abre durante el parto vaginal para permitir que salga el bebé. El cuello uterino tiene riesgo de desarrollar cáncer si no se realizan exámenes de detección con regularidad.
+        <h4>
+            Virus del papiloma humano (VPH):
+        </h4> El VPH es el virus que causa el cáncer de cuello uterino. La mayoría de las personas entre 30 y 65 años reciben exámenes de detección del cáncer de cuello uterino usando la prueba del VPH.
+
+        <h4>
+            Prueba de VPH negativa:
+        </h4> Un resultado negativo de la prueba significa que no se encontró VPH y su riesgo de desarrollar cáncer de cuello uterino en los próximos años es muy bajo.
+
+        <h4>
+            Prueba de VPH positiva:
+        </h4> Una prueba positiva significa que se encontró el VPH y es posible que necesite pruebas adicionales.
+        <h4>
+            Procedimiento de escisión electroquirúrgica con asa (LEEP, por sus siglas en inglés):
+        </h4> Este es un procedimiento de tratamiento para tratar CIN2, CIN3 o HSIL hallados en una biopsia. Se utiliza un bucle de alambre caliente para eliminar las células anormales. Por lo general, esto se puede hacer en el consultorio con anestesia local.
+        
+        <H4>
+            Conización con bisturí frío:
+        </H4> Este es un procedimiento para tratar el adenocarcinoma in situ (AIS). Se usa un bisturí para eliminar las células anormales. Por lo general, esto se hace en el quirófano con anestesia general.
+        
+        <H4>
+            Histerectomía:
+        </H4> Una histerectomía es una cirugía para extirpar el útero (matriz). A veces, se extrae el cuello uterino, lo que se denomina histerectomía total. A veces, no se extrae el cuello uterino, lo que se denomina histerectomía parcial o supracervical.
+        
+        <h4>
+            Inmunosupresión:
+        </h4> Las células que luchan contra las infecciones en su cuerpo se denominan sistema inmunológico.  Ser inmunodeprimida significa que su sistema inmunológico no combate muy bien las infecciones. Esto puede suceder debido a una infección por el VIH o debido a ciertos medicamentos. Los medicamentos comunes que disminuyen el sistema inmunológico son medicamentos que se toman para enfermedades autoinmunes como el lupus o la artritis reumatoide. Otros medicamentos son algunos tipos de quimioterapia para el cáncer o medicamentos que se toman después de un trasplante de órganos. Usted tiene un mayor riesgo de cáncer de cuello uterino si está inmunodeprimida porque su cuerpo no puede combatir muy bien una infección por VPH. Si está inmunodeprimida, las pautas recomiendan una prueba de Papanicolaou cada año durante 3 años después de su diagnóstico o primera actividad sexual, y luego una prueba de Papanicolaou cada 3 años. Las pruebas de Papanicolaou y del VPH juntas cada 3 años se pueden usar a partir de los 30 años.
+    </div>
+    
+    <div class='box'>
+        <h3>
+            Prueba de Papanicolaou:
+        </h3> 
+        <p>
+        La prueba de Papanicolaou (Papanicolaou) consiste en tomar una muestra de células del cuello uterino con un cepillo suave o un hisopo de algodón para detectar anomalías. 
+        </p>
+        <p>
+            Las pruebas de Papanicolaou pueden tener varios resultados:
+        </p>
+    
+        <h4>
+            1. Negativo para lesión intraepitelial o malignidad (NILM por sus siglas en inglés):
+        </h4>Esto significa que su prueba de Papanicolaou fue normal.
+        
+        <h4>
+        2. Células escamosas atípicas de importancia indeterminada (ASC-US por sus siglas en inglés):
+        </h4>Esto significa que se encontraron algunas células levemente anormales. A veces, se realiza una prueba de VPH para ayudar a guiar el manejo. Por lo general, si la prueba del VPH es positiva, se recomiendan pruebas adicionales. Si la prueba del VPH es negativa, se recomienda repetir la prueba en uno o tres años.
+        
+        <h4>
+        3. Lesión intraepitelial escamosa (LIE) de bajo grado (LSIL por sus siglas en inglés):
+        </h4> Esto significa que se encontraron algunas células levemente anormales. A veces, se realiza una prueba de VPH para ayudar a guiar el manejo. Por lo general, si la prueba del VPH es positiva, se recomiendan pruebas adicionales. Si la prueba del VPH es negativa, se recomienda repetir la prueba en un año.
+        
+        <h4>
+        4. Lesión intraepitelial escamosa (LIE) de alto grado (HSIL por sus siglas en inglés):
+        </h4> Esto significa que se encontraron algunas células muy anormales. Se recomiendan pruebas adicionales. Por lo general, se trata de una colposcopia.
+        
+        <h4>
+        5. Células escamosas atípicas sin poder excluir alto grado (ASC-H por sus siglas en inglés):
+        </h4> Esto significa que se encontraron algunas células muy anormales, pero la mayoría de las células eran solo levemente anormales. Se recomiendan pruebas adicionales. Por lo general, se trata de una colposcopia.
+        
+        <h4>
+        6. Células glandulares atípicas:
+        </h4> Esto significa que se encontraron células anormales que pueden provenir de más arriba en el cuello uterino o el útero. Se recomiendan pruebas adicionales. Por lo general, se trata de una colposcopia. A veces también se recomienda una prueba en el útero.
+     </div>
+     <div class='box'>
+        <h3>
+            Colposcopia:
+        </h3> 
+        <p>
+        A menudo, se recomienda la colposcopia si hay resultados anormales en las pruebas de detección. La colposcopia consiste en examinar el cuello uterino con magnificación y, por lo general, tomar dos o tres pequeños trozos de tejido (biopsias) para verificar si hay precáncer.
+        </p>
+        <p>
+          Las biopsias tomadas en la colposcopia pueden tener varios resultados:
+        </p>
+        <h4>
+        1. Normal:
+        </h4> No se encontraron células anormales. Por lo general, se recomiendan pruebas de seguimiento en un año.
+        
+        <h4>
+        2. Lesión intraepitelial cervical grado 1 (NIC1) / neoplasia intraepitelial cervical 1 / (CIN1 por sus siglas en inglés):
+        </h4> Se encontraron células levemente anormales. Por lo general, se recomiendan pruebas de seguimiento en un año.
+        
+        <h4>
+        3. Lesión intraepitelial cervical grado 2 (NIC2) / neoplasia intraepitelial cervical 2 / CIN2 por sus siglas en inglés):
+        </h4> Se encontraron células anormales más severas. Por lo general, se recomienda un tratamiento para prevenir el cáncer de cuello uterino.
+        
+        <h4>
+        4. Lesión intraepitelial cervical grado 3 (NIC3) / neoplasia intraepitelial cervical 3/ CIN3 por sus siglas en inglés):
+        </h4>Se encontraron células severamente anormales. Casi siempre se recomienda tratamiento para prevenir el cáncer de cuello uterino.
+        
+        <h4>
+        5. Lesión intraepitelial escamosa (LIE) de alto grado (HSIL por sus siglas en inglés):
+        </h4> Se encontraron células severamente anormales. Casi siempre se recomienda el tratamiento para prevenir el cáncer de cuello uterino.
+        
+        <h4>
+        6. Adenocarcinoma in Situ (AIS):
+        </h4> Este es un precáncer de alto grado y generalmente lo maneja un especialista. Casi siempre se recomienda el tratamiento para prevenir el cáncer de cuello uterino.
+     "
+help_text:
+  lsil: "LSIL significa lesión intraepitelial escamosa de bajo grado. Tenga en cuenta que algunos resultados dicen: Lesión intraepitelial escamosa de grado bajo, puede haber una lesión de grado más alto. Si tiene este resultado, ingrese ASC-H, no LSIL."
+  high_grade: "Los resultados de biopsia de alto grado incluyen: HSIL (Lesión intraepitelial escamosa de alto grado), CIN 2 (Neoplasia intraepitelial cervical grado 2), CIN3 (Neoplasia intraepitelial cervical grado 3) o AIS (adenocarcinoma in situ)."
+  low_grade: "Los resultados de la biopsia de bajo grado incluyen: normal, negativo para displasia, CIN 1 (Neoplasia intraepitelial cervical grado 1) o LSIL (Lesión intraepitelial escamosa de bajo grado)."
+  nilm: "Negativo para lesión intraepitelial o malignidad (NILM por sus siglas en inglés):Esto significa que su prueba de Papanicolaou fue normal."
+  normal: "El resultado de la patología puede indicar negativo para displasia, lo que indica un resultado normal."
+  c1n1: CIN1 significa neoplasia intraepitelial cervical grado 1, y también se puede llamar lesión intraepitelial escamosa de bajo grado (LSIL)])
+  c1n2: CIN2 significa neoplasia intraepitelial cervical grado 2.
+  c1n3: CIN3 significa neoplasia intraepitelial cervical grado 3, y también se puede llamar neoplasia intraepitelial cervical grado 2/3 (CIN2/3), o lesión intraepitelial escamosa de alto grado.
+  ais: AIS significa Adenocarcinoma In Situ
+  asc_us: ASC-US significa células escamosas atípicas de significado indeterminado
+  agc: AGC significa células glandulares atípicas
+  hsil: HSIL significa lesión intraepitelial escamosa de alto grado
+  asc_h: ASC-H significa células escamosas atípicas sin poder excluir una lesión de alto grado
+result:
+  1: 'Tuvo un resultado de prueba de Papanicolaou de bajo grado y su colposcopia confirmó que solo tiene cambios de bajo grado. Estos resultados dan seguridad de que no tiene ningún cambio de alto grado o precanceroso. Es probable que su proveedor de atención médica le recomiende que regrese en 1 año para repetir la prueba de Papanicolaou y / o VPH. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  2: 'El resultado de su prueba de Papanicolaou mostró células glandulares atípicas, pero su colposcopia mostró solo un cambio de bajo grado. Si el patólogo que examinó su prueba de Papanicolaou pensó que sus células glandulares atípicas eran preocupantes con relación a un precáncer o cáncer, su proveedor de atención médica puede recomendarle un procedimiento adicional llamado LEEP <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP Procedure</a>. Si el patólogo que examinó su prueba de Papanicolaou pensó que las células parecían en su mayoría benignas (normales), es probable que su proveedor de atención médica le recomiende una prueba de Papanicolaou y una prueba de VPH (llamada co-prueba) en 1 año. El seguimiento descrito se basa en: <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  3: 'Aunque su prueba de Papanicolaou mostró que pudo haber habido un cambio precanceroso, su proveedor no encontró ningún cambio en su colposcopia. A su edad, estos cambios suelen desaparecer por sí solos. Es probable que su proveedor de atención médica le recomiende una prueba de Papanicolaou en 1 año para ver si las células anormales han desaparecido. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  4: 'Aunque su prueba de Papanicolaou mostró que pudo haber habido un cambio precanceroso, su proveedor no encontró ningún cambio en su colposcopia. Estos cambios pueden desaparecer por sí solos. Es probable que su proveedor de atención médica le recomiende una prueba de VPH con o sin una prueba de Papanicolaou en 1 año para ver si las células anormales han desaparecido. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  5: 'Aunque su prueba de Papanicolaou mostró que pudo haber habido un cambio precanceroso, su proveedor no encontró ningún cambio en su colposcopia. A su edad, estos cambios suelen desaparecer por sí solos. Es probable que su proveedor de atención médica le recomiende una prueba de Papanicolaou en 1 año para ver si las células anormales han desaparecido. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  6: 'Aunque su prueba de Papanicolaou mostró que pudo haber habido un cambio precanceroso, su proveedor no encontró ningún cambio en su colposcopia. Estos cambios pueden desaparecer por sí solos. Es probable que su proveedor de atención médica le recomiende una prueba de VPH con o sin una prueba de Papanicolaou en 1 año para ver si las células anormales han desaparecido. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  7: 'Su biopsia mostró un resultado de alto grado llamado Lesión intraepitelial cervical de grado 2 (CIN2), a veces llamado displasia moderada. A su edad, estos cambios anormales suelen desaparecer sin tratamiento. Es probable que su proveedor de atención médica le recomiende que se realice otro examen de colposcopia y una prueba de Papanicolaou en 6 meses. El seguimiento descrito se basa en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  8: 'Su biopsia muestra un resultado de alto grado, el cual se trataría si no estuviera embarazada. Debido a que está embarazada, su proveedor de atención médica probablemente la seguirá con exámenes de colposcopia durante su embarazo. Es probable que no se recomiende el tratamiento durante el embarazo. Es muy importante que consulte a su proveedor de atención médica después de tener al bebé para ver si necesita tratamiento en ese momento. El seguimiento descrito se basa en las  <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  9: 'Su biopsia mostró un resultado de alto grado llamado Lesión intraepitelial cervical de grado 2 (CIN2), a veces llamado displasia moderada. A veces, estos cambios anormales desaparecen sin tratamiento y otras veces se tratan con un procedimiento llamado LEEP <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. Un LEEP funciona más del 90% de las veces para prevenir el cáncer. Algunos estudios muestran que las mujeres que quedan embarazadas después de haberse recuperado de su LEEP tienen un poco más de probabilidad de tener un bebé prematuro. Sin embargo, otros estudios no mostraron complicaciones durante el embarazo después de un LEEP. Su proveedor de atención médica puede ofrecerle la opción de hacerse un LEEP de inmediato o regresar en 6 meses para otra prueba de Papanicolaou, prueba de VPH y colposcopia con biopsia. Si elige la observación, volverá cada 6 meses para hacerse la prueba. Si sus resultados vuelven a la normalidad, sus pruebas serán menos frecuentes. Si continúa teniendo CIN2 durante 2 años, es probable que se recomiende un LEEP. Si su biopsia empeora (como resultado de CIN3 o displasia grave), es probable que se recomiende un LEEP antes. El seguimiento descrito se basa en <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  10: 'Su biopsia mostró un precáncer de alto grado, que se puede llamar lesión intraepitelial escamosa histológica de alto grado (HSIL), neoplasia intraepitelial cervical de grado 2 (CIN2) o displasia moderada. Dado que actualmente no está embarazada y no desea quedar embarazada en el futuro, es probable que su proveedor de atención médica le recomiende un procedimiento de tratamiento para eliminar las células anormales. Este procedimiento se llama escisión electroquirúrgica con asa, o “LEEP”  por sus siglas en inglés.  <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a>. El seguimiento descrito se basa en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  11: 'Su biopsia mostró un precáncer de alto grado, que se puede llamar lesión intraepitelial escamosa histológica de alto grado (HSIL), neoplasia intraepitelial cervical de grado 2 (CIN2) o displasia moderada. Dado que actualmente no está embarazada y no desea quedar embarazada en el futuro, es probable que su proveedor de atención médica le recomiende un procedimiento de tratamiento para eliminar las células anormales. Este procedimiento se llama escisión electroquirúrgica con asa, o <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. El seguimiento descrito se basa en las  <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  12: 'Su biopsia mostró un precáncer de alto grado llamado adenocarcinoma in situ (AIS). Es probable que su proveedor de atención médica le recomiende un procedimiento de tratamiento para eliminar las células anormales. Este procedimiento se llama procedimiento <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a> o de conización (cono) con bisturí frío. Un procedimiento de conización con bisturí frío es similar a un LEEP, pero generalmente se realiza en el quirófano con un bisturí en lugar de un electrocauterio. El seguimiento descrito se basa en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  13: 'Estos se consideran resultados de bajo grado y pueden repetirse hasta 3 veces durante un período de 2 años antes de que se recomiende la colposcopia. Sin embargo, si alguna vez tuvo un resultado de alto grado <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Los resultados de la prueba de Papanicolaou de alto grado incluyen: ASC-H (células escamosas atípicas no pueden excluir una lesión de alto grado), AGC (células glandulares atípicas) o HSIL (lesión intraepitelial escamosa de alto grado).">high-grade result</a> su proveedor puede recomendarle una colposcopia. Las recomendaciones para el seguimiento después de una anomalía se basan en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  14: 'Estos se consideran resultados de alto grado y es probable que su proveedor de atención médica le recomiende que se someta a un procedimiento llamado colposcopia.  <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. Las recomendaciones para el seguimiento después de una anomalía se basan en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  15: 'Este es un resultado de prueba de detección normal. Si no ha tenido un resultado anormal en el pasado, puede realizarse su próxima prueba de detección en 3 años. Las recomendaciones para la detección de rutina se basan en el <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a>. <br> Si tuvo resultados anormales en el pasado, su proveedor de atención médica puede recomendarle que repita su prueba de Papanicolaou en 1 año. Las recomendaciones para el seguimiento después de una anomalía se basan en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
+fudge:
+  not_risk: 'No hay estimados de riesgo exactos para los resultados que ingresó. El seguimiento se basa en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  prior_abnormal: 'No hay estimados de riesgo exactos para los resultados que ingresó. El tratamiento descrito asume que tuvo un resultado anormal en el pasado, pero no una anormalidad de alto grado o precáncer. Si tuvo un resultado de alto grado en el pasado, hable con su proveedor de atención médica sobre si debe regresar antes o si debe realizarse pruebas adicionales. El seguimiento descrito se basa en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  hpvx2: "No hay estimados de riesgo exactos para los resultados que ingresó. La colposcopia generalmente se recomienda después de 2 pruebas de VPH positivas seguidas.  El seguimiento descrito se basa en las directrices de consenso de seguimiento basado en riesgo de la ASCCP de 2019: <a target='_blank' href='https://pubmed.ncbi.nlm.nih.gov/32243307/'>2019 ASCCP Risk-Based Management Consensus Guidelines</a>."
+  highgradelowgrade: 'No hay estimados de riesgo exactos para los resultados que ingresó. Se recomienda seguimiento en 1 año de acuerdo con las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. Usted indicó que tuvo una prueba de Papanicolaou de alto grado anormal seguida por una colposcopia que no encontró precáncer. En esta situación, se recomienda la prueba del VPH con o sin Papanicolaou 1 y 2 años después de su diagnóstico y luego cada 3 años durante 25 años. Después de 25 años, puede volver a las pruebas de detección de rutina cada 5 años.'
+  only_pap: 'Se recomienda un seguimiento más frecuente de las pruebas de Papanicolaou si se usan sin la prueba del VPH. El seguimiento descrito se basa en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  uspstf: 'El <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">Grupo de Trabajo de Servicios Preventivos de USA</a> y <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">las pautas de detección del cáncer de cuello uterino del Colegio Estadounidense de Obstetras y Ginecólogos</a> recomiendan pruebas de detección de cáncer del cuello uterino cada 3 años si las pruebas de Papanicolaou se usan solas.'
+  _2012: 'El seguimiento descrito se basa en las directrices de consenso de seguimiento basado en las  <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/23635684/">2012 ASCCP guidelines</a>.'
+  _2019: 'El seguimiento descrito se basa en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. Tenga en cuenta que los riesgos pueden ser más altos <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/33035473/">si no ha sido examinada en más de 5 años</a>. Los riesgos también pueden ser más altos si su último resultado fue una colposcopia con biopsia realizada hace más de 1 año.'
+  screening: 'La recomendación sobre la detección de rutina mediante la prueba del VPH o la prueba simultánea (VPH y prueba de Papanicolaou) cada 5 años para las personas sin resultados anormales en el pasado se basa en las pautas del Grupo de Trabajo de Servicios Preventivos de USA <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventative Services Task Force</a>, <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines</a>, y <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a>.'
+  _2019fudge: 'Los riesgos son menores si su prueba más reciente fue una prueba de VPH negativa o una colposcopia normal. Los riesgos son mayores si su prueba de VPH más reciente fue positiva, si recientemente se le realizó una biopsia que mostró precáncer o si no se le ha realizado una prueba de detección en más de 5 años. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a  target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  _2019hpv18: 'Tenga en cuenta que el VPH 18 o 45 pueden asociarse con anomalías precancerosas del interior del cuello uterino. Por esta razón, siempre se recomienda la colposcopia cuando se presenta HPV18 o HPV 45. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. '
+  err11vs3: 'Dependiendo de los resultados anteriores, la recomendación más probable sería regresar para una prueba de VPH, con o sin prueba de Papanicolaou, en 1 año o 3 años. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  err1colpovs1: 'Dependiendo de los resultados anteriores, la recomendación más probable sería regresar en 1 año o hacerse una colposcopia. <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino">colposcopy</a>. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
+  err1colpo: 'Dependiendo de los resultados anteriores, su proveedor puede recomendar una colposcopia. <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino">colposcopy</a>. El seguimiento descrito es basado en las directrices de consenso de seguimiento basado en las <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
+management:
+  _5yearfollowup: '<h5>Seguimiento en 5 años</h5> Según los resultados que ingresó, su proveedor de atención médica probablemente le recomendará que se haga su próxima prueba de VPH (con o sin prueba de Papanicolaou) en 5 años. Es seguro esperar 5 años porque su riesgo de desarrollar un precáncer o cáncer en los próximos 5 años es menos de 1 en 1000.'
+  _3yearfollowup: '<h5>Seguimiento en 3 años</h5> Según los resultados que ingresó, su proveedor de atención médica probablemente le recomendará que se haga su próxima prueba de VPH (con o sin prueba de Papanicolaou) en 3 años. Es seguro esperar 3 años porque su riesgo de desarrollar un precáncer o cáncer en los próximos 5 años es menos de 1 en 200.'
+  _1yearfollowup: '<h5>Seguimiento en 1 año</h5> Según los resultados que ingresó, su proveedor de atención médica probablemente le recomendará que se realice su próxima prueba de VPH (con o sin una prueba de Papanicolaou) en 1 año. Es muy importante que regrese en 1 año para su próximo examen. Si cambia de proveedor de atención médica durante este tiempo, asegúrese de decirles que tuvo resultados anormales y que debe volver a hacerse la prueba en 1 año.'
+  colposcopy: '<h5>Colposcopia</h5> Los resultados que ingresó indican que su proveedor de atención médica probablemente recomendará que se realice un procedimiento llamado colposcopia. Una colposcopia es un examen en el consultorio en el que su proveedor examinará el cuello uterino con aumento y puede tomar una pequeña biopsia. Haga clic <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">aquí</a> para obtener más información sobre un procedimiento de colposcopia.'
+  colposcopy_treatment: '<h5>Colposcopia o Tratamiento</h5> Los resultados que ingresó indican que puede tener precáncer. No indican cáncer, pero su proveedor de atención médica puede recomendarle realizar un procedimiento de diagnóstico, llamado colposcopia, o un procedimiento de tratamiento, llamado LEEP. Una colposcopia es un examen en el consultorio donde su proveedor examinará el cuello uterino usando un lente de aumento y puede tomar una pequeña biopsia. Haga clic <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> para más información: Para un LEEP, su proveedor usará anestesia local y extraerá una pequeña parte del cuello uterino donde se encuentran las células anormales. Un LEEP proporciona la información de una biopsia (asegurándose de que no tenga cáncer) y también tratará su precáncer al mismo tiempo. Haga clic <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">aquí</a> para obtener más información sobre un procedimiento de LEEP.'
+  treatment: '<h5>Tratamiento</h5> Los resultados que ingresó indican que probablemente tenga precáncer. No indican cáncer, pero su proveedor de atención médica puede recomendarle realizar un procedimiento de tratamiento, llamado LEEP. El LEEP proporcionará la información de una biopsia (asegurándose de que no tenga cáncer) y también tratará su precáncer al mismo tiempo. Un procedimiento LEEP generalmente se realiza en el consultorio con anestesia local. Si lo prefiere, puede hacerse una colposcopia con biopsia primero. Haga clic aquí para más información: <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopia</a> o <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">procedimiento de LEEP</a>.'
+  agc: 'Los resultados que ingresó indican células glandulares atípicas. A veces, estos pueden indicar precáncer en el interior del cuello uterino o en el útero. Su proveedor puede recomendarle una colposcopia. Una colposcopia es un examen en el consultorio donde su proveedor examinará el cuello uterino con un lente de aumento y puede tomar una pequeña biopsia. Si tiene factores de riesgo de precáncer o cáncer de útero, como diabetes, presión arterial alta, períodos irregulares o sobrepeso, su proveedor puede recomendar tomar una muestra de las células dentro del útero, llamada biopsia endometrial. Una biopsia endometrial se realiza insertando un pequeño instrumento en el útero que extrae las células. Haga clic <a target="_blank" target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">aquí</a> para más información.'
+  cin2: 'Usted indicó que su biopsia mostró un resultado de alto grado llamado Lesión intraepitelial cervical de grado 2 (CIN2), a veces llamado displasia moderada, y decidió no someterse a tratamiento. Si no elige el tratamiento, es probable que su proveedor le recomiende que regrese 6 meses y 1 año después su biopsia con CIN2 para otra prueba de Papanicolaou, prueba de VPH y colposcopia con biopsia. Si sus resultados vuelven a la normalidad, puede realizarse una prueba de VPH (con o sin una prueba de Papanicolaou) una vez al año durante los próximos 3 años. Si su prueba de Papanicolaou o VPH es anormal, se recomienda una colposcopia. Si continúa teniendo CIN2 durante 2 años, es probable que se recomiende un LEEP. Si su biopsia empeora (un resultado de CIN3 o displasia severa), entonces probablemente se recomendaría un LEEP en ese momento. Puede elegir tener un LEEP en cualquier momento. Un LEEP funciona más del 90% de las veces para prevenir el cáncer. Algunos estudios muestran que las mujeres que quedan embarazadas después de haberse recuperado de su LEEP tienen un poco más de probabilidad de tener un bebé prematuro. Sin embargo, otros estudios no mostraron complicaciones durante el embarazo después de un LEEP. Haga clic aquí  <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#treatment-for-high-grade-cervical-cell-changesnbsp">aquí</a> para más información.'
+  err1_missing_data: 'Los resultados que ingresó no brindan una recomendación de seguimiento porque falta una pieza clave de información. Utilice su portal para pacientes o comuníquese con su proveedor para obtener sus registros.'
+  err2_colpo_prev: 'Ingresó un resultado anterior que normalmente se maneja con colposcopia, pero no indicó que se sometió a una colposcopia. Hable con su proveedor sobre si debe realizar una colposcopia ahora. Por lo general, se recomienda la colposcopia si tiene 2 pruebas de VPH positivas seguidas. Una colposcopia es un examen en el consultorio donde su proveedor examinará el cuello uterino con un lente de aumento y puede tomar una pequeña biopsia. Haga clic <a target="_blank" href="https://https://www.cancer.gov/espanol/tipos/cuello-uterino/significado-cambios-en-cuello-uterino#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">aquí</a> para más información.'
+  err3_lack_prec: 'Ingresó resultados que podrían manejarse de manera diferente dependiendo de si tiene VPH o no. Hable con su proveedor sobre si una prueba de VPH sería útil para ver cuál debería ser su seguimiento.'
+  hpv_test: 'Ingresó resultados que su proveedor puede manejar con una prueba de VPH ahora o con una nueva prueba de Papanicolaou en 1 año.'
+  _6month_followup: 'Usted indicó que recibió tratamiento para un precáncer y que se le realiza un seguimiento con pruebas de Papanicolaou sin pruebas de VPH. Cuando las pruebas de Papanicolaou se usan solas, deben repetirse cada 6 meses hasta que se obtengan 5 resultados negativos seguidos. Luego, necesitará que le realicen una prueba de Papanicolaou cada año hasta que hayan pasado 25 años desde su procedimiento. Si se utilizan pruebas de VPH, su seguimiento puede ser menos frecuente.'
+  ascusnohpv: 'No hay estimados de riesgo exactos disponibles para esta combinación de resultados. Su proveedor puede recomendar una colposcopia o repetir una prueba de VPH (con o sin prueba de Papanicolaou) en 1 año.'
+  pap_needed: 'Indicó que su resultado más reciente fue una prueba de VPH positiva, pero no se realizó ninguna prueba de Papanicolaou. Para estimar con precisión su riesgo de precáncer, se necesita una prueba de Papanicolaou. Hable con su proveedor sobre la posibilidad de realizarse una prueba de Papanicolaou u otras pruebas adicionales. Si tuvo un resultado anormal anterior, su proveedor puede recomendarle una colposcopia y una prueba de Papanicolaou al mismo tiempo.'
+questions:
+  0:
+    text: "¿Cuál de las siguientes fue su prueba más reciente?"
+    short: 'Tipo de Prueba'
+    answers:
+        0: 'Prueba de VPH / prueba de Papanicolaou'
+        1: 'Biopsia cervical (colposcopia)'
+  1:
+    text: '¿Cuál es el resultado de su biopsia actual? <br><span style="font-size: 0.75em; font-weight: normal">Haga clic en ⓘ para más información</span>'
+    short: 'Resultado actual de biopsia'
+    answers:
+        0: "Normal"
+        1: "CIN1"
+        2: "CIN2"
+        3: "CIN3 o HSIL"
+        4: "AIS"
+  2:
+    text: '¿Cuál fue su resultado de Papanicolaou antes de la biopsia?'
+    short: 'Resultado Papanicolaou antes de Biopsia'
+    answers:
+        0: "Normal/NILM"
+        1: "ASC-US"
+        2: "LSIL"
+        3: "AGC"
+        4: "HSIL"
+        5: "ASC-H"
+  3:
+    text: '¿Cuántos años tiene usted?'
+    short: "Edad"
+    answers:
+        0: 'Menor de 25 años'
+        1: '25 años y mayor'
+  6:
+    text: 'Está embarazada?'
+    short: "Embarazada"
+    answers:
+        0: "Sí"
+        1: 'No actualmente, pero tal vez en el futuro'
+        2: "No actualmente o en el futuro"
+  8:
+    text: '¿Cuál es su resultado actual de Papanicolaou? <br><span style="font-size: 0.75em; font-weight: normal">Haga clic en ⓘ para más información</span>'
+    short: 'Resultado actual de Papanicolaou'
+    answers:
+        0: "Normal/NILM"
+        1: "ASC-US"
+        2: "LSIL"
+        3: "AGC"
+        4: "HSIL"
+        5: "ASC-H"
+  9:
+    text: '¿Cuál es su resultado actual de VPH? <br><span style="font-size: 0.75em; font-weight: normal">Haga clic en ⓘ para más información</span>'
+    short: 'Resultado actual de VPH'
+    answers:
+        0: "Positivo"
+        1: "Negativo"
+        2: "Sin prueba"
+  10:
+    text: '¿Cual es el tipo de VPH?'
+    short: 'Tipo actual de VPH'
+    answers:
+        0: "16"
+        1: "18 o 45"
+        2: "Otro"
+        3: "No sé / no fue determinado"
+  11: 
+    text: '¿Cuál es su resultado actual de Papanicolaou? <br><span style="font-size: 0.75em; font-weight: normal">Haga clic en ⓘ para más información</span>'
+    short: 'Resultado actual de Papanicolaou'
+    answers:
+      0: "Normal/NILM"
+      1: "ASC-US"
+      2: "LSIL"
+      3: "AGC"
+      4: "HSIL"
+      5: "ASC-H"
+      6: "No disponible/Sin prueba"
+  13:
+    text: '¿Tiene un comprobante de su resultado más reciente?<br><span style="font-size: 0.75em; font-weight: normal"">Si su resultado más reciente fue una biopsia que se realizó hace más de 12 meses o una prueba de VPH sola, o una prueba conjunta de Papanicolaou/VPH que se realizó hace más de 5 años, seleccione "No".</span>'
+    short: 'Tiene resultado más reciente'
+    answers:
+      0: "Sí"
+      1: "No"
+  14:
+    text: '¿Su resultado más reciente fue una biopsia?'
+    short: 'Resultado anterior fue biopsia'
+    answers:
+      0: "Sí"
+      1: "No"
+  15:
+    text: '¿Cuál fue el resultado de la biopsia?'
+    short: 'Resultado de biopsia'
+    answers:
+      0: "Alto grado"
+      1: "Normal"
+      2: "Bajo grado"
+      3: "No estoy segura"
+      4: "No registrado"
+  16: 
+    text: '¿Tuvo tratamiento?'
+    short: 'Tratamiento'
+    answers:
+      0: "Sí"
+      1: "No"
+  17:
+    text: '¿Cuál fue su resultado de Papanicolaou antes de la biopsia?'
+    short: 'Resultado Papanicolaou antes de Biopsia'
+    answers:
+      0: "Normal/NILM"
+      1: "ASC-US"
+      2: "LSIL"
+      3: "AGC"
+      4: "HSIL"
+      5: "ASC-H"
+      6: 'No disponible/Sin prueba'
+  18:
+    text: '¿Cuál fue su resultado anterior de VPH?'
+    short: 'Resultado anterior de VPH'
+    answers:
+      0: "Positivo"
+      1: "Negativo"
+      2: "Sin prueba"
+  19: 
+    text: '¿Cuál fue su resultado anterior de Papanicolaou?'
+    short: 'Resultado anterior de Papanicolaou'
+    answers:
+      0: "Normal/NILM"
+      1: "ASC-US"
+      2: "LSIL"
+      3: "AGC"
+      4: "HSIL"
+      5: "ASC-H"
+      6: "No disponible/Sin prueba"
+  21:
+    text: '¿Ha tenido un resultado anormal en los últimos 7 años o un tratamiento para el precáncer en los últimos 25 años?'
+    short: 'Tiene resultado abnormal anterior'
+    answers:
+      0: "Sí"
+      1: "No"
+  22:
+    text: 'Excluyendo cualquier respuesta que proporcionó anteriormente, ¿ha tenido un resultado anormal en los últimos 7 años o un tratamiento para el precáncer en los últimos 25 años?'
+    short: 'Resultado abnormal en los 7 años anterior'
+    answers:
+      0: "Sí"
+      1: "No/No estoy segura"
+      

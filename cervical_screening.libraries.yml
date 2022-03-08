@@ -1,0 +1,11 @@
+cervical:
+  version: 3.1
+  css:
+    theme:
+      css/cervical.css: {}
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js: {}
+    https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js: {}
+    js/cervical.js: {}
+  dependencies:
+    - core/jquery

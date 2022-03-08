@@ -1,0 +1,409 @@
+home_button: Home
+proceed: Proceed
+back_button: Back
+next_button: Next
+glossary: Click for our <a class="todefinitions">Glossary</a> of medical terms.
+home:
+  title: Welcome
+  intro:
+    <p>This website is designed to help you understand cervical cancer screening and what the next steps are after an abnormal result. The <b>Personalized Risk Assessment Tool</b> will walk you through the steps that a doctor or healthcare provider may use when deciding management after an abnormal result.
+    </p>
+    <p>To use this tool, you must have had a Pap test or HPV test in the past. You will need to look at your medical record (either using paper records or a patient portal) to use the tool because you need to enter exact medical terms.
+    </p>
+    <p><b>Please choose the green button for the personalized risk assessment. If you do not have your medical record, or if you just want to learn more about screening and vaccination, click one of the additional information buttons.</b></p>
+  risk_button: Take the Personalized Risk Assessment
+  pap_button: "Additional Information: HPV and Pap Tests"
+  vaccine_button: "Additional Information: HPV Vaccine"
+disclaimer:
+  title: Personalized Risk Assessment
+  intro: The tool will take all of your past results related to cervical cancer prevention and tell you what the next steps are for you. To use the tool, you must have had at least one screening test in the past (like a Pap test or an HPV test). You will need to look at your medical records (either paper records or through the patient portal) so you can enter the exact terms of your past results. At the end of the tool, you will be provided with the next steps based on national guidelines. You can discuss these with your healthcare provider. Please review the disclaimer below before proceeding.
+  disclaimer_title: DISCLAIMER
+  disclaimer:
+    <li>The intention of this website is to make the new guidelines for management of abnormal Pap test results, HPV test results, and cervix biopsy results (colposcopy) understandable to patients.
+    This website will walk you through the steps that your doctor or healthcare provider may use when deciding the next steps in management after abnormal results.
+    This website does not provide medical advice.</li>
+    <br>
+    <li>
+    Risk numbers are for people who regularly have cervical cancer screening. If you have not been screened in more than 5 years, your risks may be <a href="https://pubmed.ncbi.nlm.nih.gov/33035473/">higher</a>. Note that recommendations may be different if you are <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="If you have HIV or immunosuppression for another reason, your provider will likely recommend colposcopy for any abnormal result, and screening at 3-year intervals. ">immunosuppressed</a>, <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Pregnancy does not change your risk of having precancer, and you should still have a colposcopy if that is recommended. However, your provider may not take biopsies, and usually you would not be recommended for treatment until after you had the baby.">pregnant</a>, or have had a <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="If you had a hysterectomy with removal of the cervix, you probably do not need screening anymore. If your hysterectomy was done because of pre-cancer, or cancer, then you shoud continue having screening with HPV testing for at least 25 years after your diagnosis.  If your cervix was not removed (sometimes called a supracervical hysterectomy) then you do need to continue to have screening.">hysterectomy</a>.
+    </li>
+    <br>
+    <li>For more information on immunosuppresion and cervical cancer screening click <a target="_blank" href="https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/human-papillomavirus-disease?view=full">here</a>.
+    For more information on managing cervical cancer screening results in pregnancy or after hysterectomy, click <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">here</a>.
+    For more information on cervical cancer screening after hysterectomy please visit the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">USPSTF guidelines</a> and <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines.</a></li>
+assessment:
+  which_test: Which of the following was your most recent test?
+  have_record: Please have your medical record available
+  hpv: HPV Test/Pap Test
+  colposcopy: Cervical Biopsy (Colposcopy)
+  previous: Previous Answers
+results:
+  what_do: What to Do Next
+  note: Note
+  risk: Current Precancer Risk
+  five_year: Precancer Risk Over Next 5 Years
+  talk: Please talk to your healthcare provider if you have any questions about what to do next.
+screening: "<h2>Cervical Cancer Screening: HPV and Pap Tests</h2>
+  <h4>What causes cervical cancer?</h4>
+  Cervical cancer is caused by infection with Human Papillomavirus (HPV). HPV is usually transmitted between sexual partners during intercourse, but can also be spread by touching genitals without sex. Most people will be exposed to HPV at some point during their lives. Usually, your body’s immune system can fight off the HPV infection, but sometimes it doesn’t. Cervical cancer can develop if the cells of the cervix (the bottom part of the uterus or womb) are infected with HPV, your body does not fight off the infection, and the infection is not detected for more than 5 years.
+
+  <h4>
+  What is the purpose of cervical cancer screening?
+  </h4>
+  Cervical cancer screening detects pre-cancer. Cervical pre-cancers are abnormal cells that can go on to become cancer if they are not treated. Without treatment, 30-50% of precancers will become cancer. The medical terms used to describe cervical pre-cancer include cervical dysplasia, high-grade lesions, or Cervical Intraepithelial Neoplasia grades 2 or 3. Screening allows us to find and treat cervical pre-cancer so cancer does not develop.
+
+  <h4>
+  How is cervical cancer screening done?
+  </h4>
+  Cervical cancer screening can be done with an HPV test, a Pap test, or an HPV and Pap test together.
+
+  <p>
+  An HPV test is recommended every 5 years starting at age 25-30 years until the age of 65 years. An HPV test is done by your healthcare provider, who will do an exam and take a sample from the cervix. If you have a pre-cancer, the HPV test will find it more than 90% of the time. If you have a positive HPV test, that does not always mean that you have pre-cancer. Your healthcare provider will usually recommend other tests to check if you have precancer. If you have a negative HPV test result, your chance of developing a pre-cancer in the next 5 years is less than 1 in 1000. Because the risk is so low, it is safe to wait 5 years for your next test after a negative result.
+  </p>
+  <p>
+  A Pap test is recommended every 3 years starting at age 21 until the age of 65.  A Pap test is done by your healthcare provider, who will do an exam and take a sample from the cervix. If you have a pre-cancer, the Pap test will find it 50%-70% of the time. If you have an abnormal Pap test, that does not always mean that you have pre-cancer. Your healthcare provider will usually recommend other tests to check if you have precancer. If you have a negative Pap test result, your chance of developing a pre-cancer in the next 5 years is less than 1 in 200. Pap tests are recommended every 3 years.
+  </p>
+
+  <p>
+  Between the ages of 30 and 65 years, screening can also be done with an HPV test and Pap test together every 5 years. This is called co-testing.
+  </p>
+  <p>
+  For more information on cervical cancer screening, please visit the <a target='_blank' href='https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening'>USPSTF guidelines</a>, <a target='_blank' href='https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628'>American Cancer Society Guidelines</a> and the <a target='blank' href='https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines'>American College of Obstetricians and Gynecologists</a>.
+  </p>"
+vaccination: "<h2>HPV Vaccination</h2>
+          <h4>What is HPV?</h4>
+Human Papillomavirus (HPV) is a virus. HPV is usually passed between sexual partners during intercourse, but can also be spread by touching genitals without sex. Most people will be exposed to HPV at some point during their lives. Usually, your body’s immune system can fight off the HPV infection, but sometimes it doesn’t. HPV can cause cancers, genital warts, and a rare disease called <a target='_blank' href='https://www.nidcd.nih.gov/health/recurrent-respiratory-papillomatosis'>recurrent respiratory papillomatosis</a>. HPV can cause cancer of the cervix (lower part of the uterus or womb), vagina, vulva, penis, anus, and mouth and throat (usually the tonsils and tongue). Over 35,000 cancers caused by HPV are diagnosed in the US every year. Scientists estimate that we can prevent almost 90% of these cancers with HPV vaccination.
+
+<h4>How do HPV vaccines work?</h4>
+HPV vaccines prevent the types of HPV most likely to cause cancer, genital warts, and recurrent respiratory papillomatosis. The vaccines do not contain the virus, so they cannot give you HPV and they cannot cause cancer. HPV vaccines contain a small piece of the virus’s outer shell. They teach your body to recognize the virus and kill it before it can cause damage to your body.
+
+<h4>Are HPV vaccines effective?</h4>
+YES! People who have received HPV vaccines are 90% less likely to get an HPV infection than people who are not vaccinated.  We have also seen decreases in cervical pre-cancer and cervical cancer in young women since we have started routinely giving HPV vaccination.
+
+<h4>Are HPV vaccines safe?</h4>
+YES! HPV vaccines first became available in 2006. They have been used around the world since that time and are monitored continuously for safety in over 180 countries. More than 270 million doses have been given worldwide, with more than 120 million doses given in the US. No serious side effects have been found. The common side effects for HPV vaccines are similar to other vaccines and include a sore arm, and occasionally fatigue or a mild headache. These usually go away after a day or two.
+
+<h4>
+Who should get an HPV vaccine?
+</h4>
+It is recommended that all children receive 2 doses of HPV vaccine before their 13th birthday. The series is usually started at age 9-12 years. HPV vaccine doses are given 6-12 months apart.
+Vaccine series started after the 13th birthday are considered “late,” but can still be effective to prevent HPV infections. Three doses are required if the series is started after the 15th birthday. Late or catch-up vaccination is recommended for everyone through age 26 years.
+
+<h4>
+Will my insurance pay for the HPV vaccine?
+</h4>
+HPV vaccination will be covered by insurance for all children and adolescents through the age of 18. After the age of 18, coverage depends on the individual insurance carrier.
+
+<h4>
+How effective is HPV vaccination at age 27-45 years?
+</h4>
+The CDC estimates that 80% of HPV infections that will go on to cause cancer are acquired by age 26. For this reason, studies in 27-45 year olds did not show a significant decrease in pre-cancer or cancer. The CDC recommends that you talk to your healthcare provider if you are considering HPV vaccination. This is called shared decision-making. You are most likely benefit from HPV vaccination between the age of 27 and 45 if you have had only 1 or 2 lifetime sexual partners but may be exposed to HPV in a new relationship. Some data indicate that HPV vaccination can help to prevent recurrence of pre-cancer after treatment.
+
+<br>
+<br>
+<p>
+For more information on HPV vaccines, please visit: <a target='_blank' href='https://www.cdc.gov/hpv/parents/vaccine.html'>CDC</a>, <a target='_blank' href='https://www.acog.org/womens-health/faqs/hpv-vaccination'>American College of Obstetricians and Gynecologists</a>, or <a target='_blank' href='https://www.cancer.org/healthy/hpv-vaccine.html'>American Cancer Society</a>.
+</p>"
+glossary_page: "<h2>Glossary: Definitions and Abbreviations</h2>
+        <h4>
+            Cervix:
+        </h4> The cervix is the bottom part of the uterus. The cervix is located at the top of the vagina. The cervix is designed to hold a baby inside the uterus during pregnancy. The cervix opens during vaginal birth to allow the baby to come out. The cervix is at risk for developing cancer if screening is not done regularly.
+        <h4>
+            Human Papillomavirus (HPV):
+        </h4> HPV is the virus that causes cervical cancer. Most individuals aged 30-65 are screened for cervical cancer with HPV testing.
+
+        <h4>
+            Negative HPV Test:
+        </h4> A negative test result means that no HPV was found, and your risk of developing cervical cancer in the next few years is very low.
+
+        <h4>
+            Positive HPV test:
+        </h4> A positive test means that HPV was found, and you may need additional testing.
+        <h4>
+            Loop Electrosurgical Excision Procedure (LEEP):
+        </h4> This is a treatment procedure to treat CIN2, CIN3 or HSIL found on a biopsy. A hot wire loop is used to remove the abnormal cells. This can usually be done in the office using local anesthesia.
+        
+        <H4>
+            Cold Knife Conization:
+        </H4> This is a treatment procedure to treat adenocarcinoma in situ (AIS). A scalpel is used to remove the abnormal cells. This is usually done in the operating room using general anesthesia.
+        
+        <H4>
+            Hysterectomy:
+        </H4> A hysterectomy is surgery to remove the uterus (womb). Sometimes the cervix is removed, which is called a total hysterectomy. Sometimes the cervix is not removed, which is called a partial or supracervical hysterectomy.
+        
+        <h4>
+            Immunosuppression:
+        </h4> The cells that fight infections in your body are called your immune system. Immunosuppressed means that your immune system does not fight infections very well. This can happen because of infection with HIV or because of certain medications. Common medications that lower the immune system are medications taken for auto-immune diseases like lupus or rheumatoid arthritis. Other medications are some types of chemotherapy for cancer, or medicines taken after an organ transplant. You are at higher risk for cervical cancer if you are immunosuppressed because your body can't fight off an HPV infection very well. If you are immunosuppressed, guidelines recommend a Pap test every year for 3 years after your diagnosis or first sexual activity, and then a Pap test every 3 years. Pap and HPV tests together every 3 years can be used over the age of 30.
+    </div>
+    <div class='box'>
+        <h3>
+            Pap Testing:
+        </h3> 
+        <p>
+        Papanicolaou (Pap) testing involves taking a sample of cells from the cervix using a soft brush or swab to check for abnormalities.
+         </p>
+         <p>
+            Pap tests can have several different results:
+        </p>
+    
+        <h4>
+            1. Negative for Intraepithelial Lesion or Malignancy (NILM):
+        </h4>This means your Pap test was normal.
+        
+        <h4>
+        2. Atypical Squamous Cells of Uncertain Significance (ASC-US):
+        </h4>This means some mildly abnormal cells were found. Sometimes an HPV test is performed to help guide management. Usually, if the HPV test is positive, additional testing is recommended. If the HPV test is negative, repeat testing in one or three years is recommended.
+        
+        <h4>
+        3. Low Grade Squamous Intraepithelial Lesion (LSIL):
+        </h4> This means some mildly abnormal cells were found. Sometimes an HPV test is performed to help guide management. Usually, if the HPV test is positive, additional testing is recommended. If the HPV test is negative, repeat testing in one year is recommended.
+        
+        <h4>
+        4. High Grade Squamous Intraepithelial Lesion (HSIL):
+        </h4> This means some very abnormal cells were found. Additional testing is recommended. Usually this is a colposcopy.
+        
+        <h4>
+        5. Atypical Squamous Cells cannot exclude High Grade (ASC-H):
+        </h4> This means a few very abnormal cells were found, but most of the cells were only mildly abnormal. Additional testing is recommended. Usually this is a colposcopy.
+        
+        <h4>
+        6. Atypical Glandular Cells:
+        </h4> This means that abnormal cells were found that may be coming from higher up in the cervix or uterus. Additional testing is recommended. Usually this is a colposcopy. Sometimes a test of the uterus is also recommended.
+     </div>
+     <div class='box'>
+        <h3>
+            Colposcopy:
+        </h3> 
+        <p>Colposcopy is often recommended after abnormal screening test results. Colposcopy involves examining the cervix with magnification and usually taking two or three small pieces of skin (biopsies) to check for precancer. 
+        </p>
+        <p>
+            Biopsies taken at colposcopy can have several different results:
+        </p>
+        <h4>
+        1. Normal:
+        </h4> No abnormal cells were found. Usually, follow-up testing is recommended in one year.
+        
+        <h4>
+        2. Cervical Intraepithelial Lesion grade 1 (CIN1):
+        </h4> Mildly abnormal cells were found. Usually, follow-up testing is recommended in one year.
+        
+        <h4>
+        3. Cervical Intraepithelial Lesion grade 2 (CIN2):
+        </h4> More severely abnormal cells were found. Usually, treatment is recommended to prevent cervical cancer.
+        
+        <h4>
+        4. Cervical Intraepithelial Lesion grade 3 (CIN3):
+        </h4>Severely abnormal cells were found. Treatment is almost always recommended to prevent cervical cancer.
+        
+        <h4>
+        5. High Grade Squamous Intraepithelial Lesion (HSIL):
+        </h4> Severely abnormal cells were found. Treatment is almost always recommended to prevent cervical cancer.
+        
+        <h4>
+        6. Adenocarcinoma in Situ (AIS):
+        </h4> This is a high-grade precancer and is usually managed by a specialist. Treatment is almost always recommended to prevent cervical cancer.
+     "
+help_text:
+    lsil: "LSIL stands for Low-grade Squamous Intraepithelial Lesion. Note that some results say: Low-grade Squamous Intraepithelial Lesion, a higher grade lesion may be present. If you have this result, please enter ASC-H, not LSIL."
+    high_grade: "High grade biopsy results include: HSIL (High-grade Squamous Intraepithelial Lesion), CIN 2 (Cervical Intraepithelial Neoplasia grade 2), CIN3 (Cervical Intraepithelial Neoplasia grade 3), or AIS (adenocarcinoma in situ)."
+    low_grade: "Low grade biopsy results include: normal, negative for dysplasia, CIN 1 (Cervical Intraepithelial Neoplasia grade 1) or LSIL (Low-grade Squamous Intraepithelial Lesion)."
+    nilm: "NILM stands for Negative for Intraepithelial Lesion or Malignancy and indicates a normal result."
+    normal: "Pathology result might say Negative for Dysplasia, which indicates a normal result."
+    c1n1: CIN1 stands for Cervical Intraepithelial Neoplasia grade 1, and could also be called Low-Grade Squamous Intraepithelial Lesion (LSIL)
+    c1n2: CIN2 stands for Cervical Intraepithelial Neoplasia grade 2.
+    c1n3: CIN3 stands for Cervical Intraepithelial Neoplasia grade 3 and could also be called Cervical Intraepithelial Neoplasia grade 2/3 (CIN2/3), or High Grade Squamous Intraepithelial Lesion.
+    ais: AIS stands for Adenocarcinoma In Situ
+    asc_us: ASC-US stands for Atypical Squamous Cells of Undetermined Significance
+    agc: AGC stands for Atypical Glandular Cells
+    hsil: HSIL stands for High-grade Squamous Intraepithelial Lesion
+    asc_h: ASC-H stands for Atypical Squamous Cells cannot exclude High Grade Lesion
+result:
+  1: 'You had a low grade Pap test result, and your colposcopy confirmed that you have only low grade changes. These results are very reassuring that you do not have any high grade or precancerous changes. Your healthcare provider will likely recommend that you return in 1 year for a repeat Pap and/or HPV test. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  2: 'Your Pap test result showed atypical glandular cells, but your colposcopy showed only a low grade change. If the pathologist who looked at your Pap test thought that your atypical glandular cells were concerning for a pre-cancer or cancer, your healthcare provider may recommend an additional procedure called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP Procedure</a>. If the pathologist who looked at your Pap test thought the cells looked mostly benign (normal), your healthcare provider will likely recommend a Pap test and HPV test (called a cotest) in 1 year. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  3: 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. At your age, these changes often go away by themselves. Your healthcare provider will likely recommend a Pap test in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  4: 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. These changes may go away by themselves. Your healthcare provider will likely recommend an HPV test with or without a Pap test in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  5: 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. At your age, these changes may go away by themselves. Your healthcare provider will likely recommend a Pap test and colposcopy in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  6: 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. These changes can sometimes go away by themselves. Your healthcare provider will likely recommend an HPV test with or without a Pap test and a colposcopy in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  7: 'Your biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia. At your age, these abnormal changes often go away without treatment. Your healthcare provider will likely recommend that you have another colposcopy exam and Pap test in 6 months. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  8: 'Your biopsy shows a high-grade result, which would usually be treated if you were not pregnant. Because you are pregnant, your healthcare provider will likely follow you with colposcopy examinations during your pregnancy. Treatment will likely not be recommended during pregnancy. It is very important to see your healthcare provider after you have the baby to see if you need treatment at that time. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  9: 'Your biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia. Sometimes these abnormal changes go away without treatment, and other times they are treated with a  <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. A LEEP works over 90% of the time to prevent cancer. Some studies show that women who get pregnant after they have recovered from their LEEP are a little more likely to have a premature baby. However, other studies did not show any pregnancy complications after having a LEEP. Your healthcare provider may offer you a choice of whether to have a LEEP right away or whether to come back in 6 months for another Pap test, HPV test, and colposcopy with biopsy. If you choose observation, you will come back every 6 months for testing. If your results go back to normal, your testing will become less frequent. If you continue to have CIN2 for 2 years, a LEEP will likely be recommended. If your biopsy worsens (a result of CIN3 or severe dysplasia), then a LEEP would likely be recommended sooner. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  10: 'Your biopsy showed high-grade precancer, which can be called histologic high-grade squamous intrepithelial lesion (HSIL),  Cervical Intraepithelial Neoplasia Grade 2 or 3 (CIN2 or CIN3) or moderate to severe dysplasia. Unless you are pregnant, your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  11: 'Your biopsy showed high-grade precancer, which can be called histologic high-grade squamous intraepithelial lesion (HSIL), Cervical Intraepithelial Neoplasia Grade 2 (CIN2) or moderate dysplasia. Since you are not currently pregnant and do not desire pregnancy in the future, your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  12: 'Your biopsy showed high-grade precancer called Adenocarcinoma in Situ (AIS). Your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a> or cold knife conization (cone) procedure. A cold knife conization procedure is similar to a LEEP but is typically done in the operating room using a scalpel instead of electrocautery. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  13: 'The results you have entered are considered low risk, and the tests can be repeated up to 3 times over a 2 year period before a colposcopy is recommended. However, if you ever had a <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="High-grade pap test results include: ASC-H (Atypical Squamous Cells cannot exclude High-Grade Lesion), AGC (Atypical Glandular Cells), or HSIL (High-grade Squamous Intraepithelial Lesion). High grade biopsy results include: HSIL (High-grade Squamous Intraepithelial Lesion, CIN 2 (Cervical Intraepithelial Neoplasia grade 2, moderate dysplasia), CIN3 (Cervical Intraepithelial Neoplasia grade 3, severe dysplasia), or AIS (adenocarcinoma in situ).">high-grade result</a> your provider may recommend <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  14: 'The results you have entered are considered high risk, and your healthcare provider will likely recommend that you have a procedure called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  15: 'This is a normal screening test result. If you have not had an abnormal result in the past, you can have your next screening test in 3 years. Recommendations for routine screening are based on the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a>. <br> If you had abnormal results in the past, your healthcare provider may recommend repeating your Pap test in 1 year. Recommendations for follow-up after an abnormality are based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
+fudge:
+  not_risk: 'Exact risk estmates are not available for the results you entered. Management is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  prior_abnormal: 'Exact risk estmates are not available for the results you entered. The management described assumes that you had an abnormal result in the past but no high grade abnormality or precancer. If you had a high-grade result in the past, please talk to your healthcare provider about whether or not you need to come back sooner or have additional testing. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  hpvx2: 'Exact risk estmates are not available for the results you entered. Colposcopy usually is recommended because you had 2 positive HPV tests in a row. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  highgradelowgrade: 'Exact risk estmates are not available for the results you entered. Follow-up in 1 year is recommended by the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. You indicated that you had a high-grade abnormal Pap test followed by a colposcopy that did not find pre-cancer. In this situation, HPV testing with or without Pap testing is recommended 1 and 2 years following your diagnosis and then every 3 years for 25 years. After 25 years you can return to routine screening every 5 years.'
+  only_pap: 'Follow-up is recommended more often for pap tests if they are used alone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  uspstf: 'The <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a> and <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a> cervical cancer screening guidelines recommends screening every 3 years if Pap tests are used alone.'
+  _2012: 'The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/23635684/">2012 ASCCP guidelines</a>.'
+  _2019: 'The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. Note, risks may be higher <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/33035473/">if you have not been screened in more than 5 years</a>. Risks may also be higher if your last result was a colposocpy with biopsy done more than 1 year ago.'
+  screning: 'The recommendation for routine screening using HPV testing or cotesting every 5 years for people without abnormal results in the past is based on the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventative Services Task Force</a>, <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines</a>, and <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a>.'
+  _2019fudge: 'Risks are lower if your most recent test was a negative HPV test or normal colposcopy. Risks are higher if your most recent HPV test was positive, you recently had a biopsy showing precancer, or if you have not been screened in more than 5 years. The management described is based on the <a  target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  _2019hpv18: 'HPV18 or HPV45 can be associated with precancerous abnormalities of the inside of the cervix. For this reason, colposcopy is always recommended when HPV18 or HPV45 is present. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  err11vs3: 'Depending on prior results, the most likely recommendation would be to return for an HPV test, with or without a Pap test, in 1 year or 3 years. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.'
+  err1colpovs1: 'Depending on prior results, the most likely recommendation would be to return in 1 year or have a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
+  err1colpo: 'Depending on prior results, your provider may recommend a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>'
+management:
+  _5yearfollowup: "<h5>5-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 5 years. It is safe to wait 5 years because your risk of developing a pre-cancer or cancer over the next 5 years is less than 1 in 1000."
+  _3yearfollowup: "<h5>3-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 3 years. It is safe to wait 3 years because your risk of developing a pre-cancer or cancer over the next 5 years is less than 1 in 200."
+  _1yearfollowup: "<h5>1-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 1 year. It is very important that you return in 1 year for your next exam. If you switch healthcare providers during this time, make sure you tell them that you had abnormal results and you need to be re-tested in 1 year."
+  colposcopy: '<h5>Colposcopy</h5> The results you have entered indicate that your healthcare provider will likely recommend that you have a procedure called a colposcopy. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.'
+  colposcopy_treatment: '<h5>Colposcopy or Treatment</h5> The results that you entered indicate that you may have precancer. They do not indicate cancer, but your healthcare provider may recommend doing a either a diagnostic procedure, called a colposcopy, or a treatment procedure, called a LEEP. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure. For a LEEP, your provider will use local anesthesia and remove a small piece of the cervix where the abnormal cells are located. A LEEP provides the information of a biopsy (making sure you don’t have cancer) and will also treat your precancer at the same time. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">here</a> for more information about a LEEP procedure.'
+  treatment: '<h5>Treatment</h5> The results that you entered indicate that you probably have precancer. They do not indicate cancer, but your healthcare provider may recommend doing a treatment procedure, called a LEEP. The LEEP will both provide the information of a biopsy (making sure you don’t have cancer) and will also treat your precancer at the same time. A LEEP procedure is usually done in the office using local anesthesia. If you prefer, you may have a colposcopy with biopsy first. Click for more information about a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a> or <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>.'
+  agc: 'The results that you entered indicate atypical glandular cells. These can sometimes indicate precancer in the inside of the cervix or in the uterus. Your provider may recommend a colposcopy. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. If you have risk factors for precancer or cancer of the uterus, like diabetes, high blood pressure, irregular periods, or being overweight, your provider may recommend taking a sample of the cells inside the uterus, called an endometrial biospsy. An endometrial biopsy is done by inserting a small instrument into the uterus that gently removes the cells. Click <a target="_blank" target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.'
+  cin2: 'You indicated that you had a biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia, and you chose not to undergo treatment. If you do not choose treatment, your provider will likely recommend that you come back 6 months and 1 year after you had the biopsy showing CIN2 for another Pap test, HPV test, and colposcopy with biopsy. If your results go back to normal, you can have an HPV test with or without a Pap test every year for the next 3 years. If your Pap or HPV test is abnormal, a colposcopy is recommended. If you continue to have CIN2 for 2 years, a LEEP will likely be recommended. If your biopsy worsens (a result of CIN3 or severe dysplasia), then a LEEP would likely be recommended at that time. You can choose to have a LEEP at anytime. A LEEP works over 90% of the time to prevent cancer. Some studies show that women who get pregnant after they have recovered from their LEEP are a little more likely to have a premature baby. However, other studies did not show any pregnancy complications after having a LEEP. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">here</a> for more information on LEEP.'
+  err1_missing_data: "The results you entered do not give a management recommendation because a key piece of information is missing. Please use your patient portal or contact your provider to get your records."
+  err2_colpo_prev: 'You entered a past result that is normally managed with colposcopy, but you did not indicate that you had a colposcopy. Please talk to your provider about whether you should have a colposcopy now. Colposcopy is usually recommended if you have 2 positive HPV tests in a row. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.'
+  err3_lack_prec: "You have entered results that could be managed differently depending on whether you have HPV or not. Talk to your provider about whether an HPV test would be helpful to see what your follow-up should be."
+  hpv_test: "You have entered results that your provider may manage with either an HPV test now or a repeat Pap test in 1 year."
+  _6month_followup: "You indicated that you had treatment for a pre-cancer and you are being followed with Pap tests without HPV tests. When Pap tests are used alone, they need to be repeated every 6 months until you have 5 negative results in a row. Then you will need your Pap test done every year until 25 years have passed since your procedure. If HPV tests are used, your follow-up can be less frequent."
+  ascusnohpv: "Exact risk estimates are not available for this combination of results. Your provider may recommend either colposcopy or to repeat an HPV test (with or without a Pap test) in 1 year."
+  pap_needed: "You indicated that your most recent result was a positive HPV test, but no Pap test was done. To accurately estimate your risk of precancer, a Pap test is needed. Please discuss wtih your provider about having a Pap test or other additional testing. If you had a previous abnormal result, your provider may recommend colposcopy and a Pap test at the same time."
+questions:
+  0:
+    text: "Which of the following was your most recent test?"
+    short: "Recommendation result type"
+    answers:
+      0: "HPV Test/Pap Test"
+      1: "Cervical Biopsy (Colposcopy)"
+  1:
+    text: 'What is your current biopsy result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>'
+    short: "Current Biopsy Result"
+    answers:
+      0: "Normal"
+      1: "CIN1"
+      2: "CIN2"
+      3: "CIN3 or HSIL"
+      4: "AIS"
+  2:
+    text: "What was your Pap result before the biopsy?"
+    short: "Pap Result Before Biopsy"
+    answers:
+      0: "Normal/NILM"
+      1: "ASC-US"
+      2: "LSIL"
+      3: "AGC"
+      4: "HSIL"
+      5: "ASC-H"
+  3:
+    text: "How old are you?"
+    short: "Age"
+    answers:
+      0: "Under 25 years old"
+      1: "25 years old or over"
+  6:
+    text: "Are you pregnant?"
+    short: "Pregnant"
+    answers:
+      0: "Yes"
+      1: "Not currently but maybe in the future"
+      2: "Not currently or in the future"
+  8:
+    text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>'
+    short: "Current Pap Result"
+    answers:
+      0: "Normal/NILM"
+      1: "ASC-US"
+      2: "LSIL"
+      3: "AGC"
+      4: "HSIL"
+      5: "ASC-H"
+  9:
+    text: 'What is your current HPV result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>'
+    short: "Current HPV Result"
+    answers:
+      0: "Positive"
+      1: "Negative"
+      2: "No Test"
+  10:
+    text: "What is the HPV type?"
+    short: "Current HPV Type"
+    answers:
+      0: "16"
+      1: "18 or 45"
+      2: "Other"
+      3: "I don't know/Not typed"
+  11:
+    text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>'
+    short: "Current Pap"
+    answers:
+      0: "Normal/NILM"
+      1: "ASC-US"
+      2: "LSIL"
+      3: "AGC"
+      4: "HSIL"
+      5: "ASC-H"
+      6: "Not Available/No Test"
+  13:
+    text: 'Do you have a record of your most recent previous result?<br><span style="font-size: 0.75em; font-weight: normal"">If your most recent result was a biopsy that was more than 12 months ago or an HPV test alone, or Pap/HPV cotest that was more than 5 years ago, please select "No."</span>'
+    short: "Has Previous Result"
+    answers:
+      0: "Yes"
+      1: "No"
+  14:
+    text: "Was your most recent previous result a biopsy?"
+    short: "Previous Result was Biopsy"
+    answers:
+      0: "Yes"
+      1: "No"
+  15:
+    text: "What was that biopsy result?"
+    short: "Biopsy Result"
+    answers:
+      0: "High Grade"
+      1: "Normal"
+      2: "Low Grade"
+      3: "Not Sure"
+      4: "Not Recorded"
+  16: 
+    text: "Were you treated?"
+    short: "Treated"
+    answers:
+      0: "Yes"
+      1: "No"
+  17:
+    text: "What was your Pap result before the biopsy?"
+    short: "Pap Result before Biopsy"
+    answers:
+      0: "Normal/NILM"
+      1: "ASC-US"
+      2: "LSIL"
+      3: "AGC"
+      4: "HSIL"
+      5: "ASC-H"
+      6: "Not Available/No Test"
+  18:
+    text: "What was your previous HPV result?"
+    short: "Previous HPV Result"
+    answers:
+      0: "Positive"
+      1: "Negative"
+      2: "No Test"
+  19: 
+    text: "What was your previous Pap result?"
+    short: "Previous Pap Result"
+    answers:
+      0: "Normal/NILM"
+      1: "ASC-US"
+      2: "LSIL"
+      3: "AGC"
+      4: "HSIL"
+      5: "ASC-H"
+      6: "Not Available/No Test"
+  21:
+    text: "Have you had an abnormal result before this one in the past 7 years or a treatment for precancer in the past 25 years?"
+    short: "Abnormal Result Previously"
+    answers:
+      0: "Yes"
+      1: "No"
+  22:
+    text: "Excluding any answer you provided earlier, have you had an abnormal result in the past 7 years or a treatment for precancer in the past 25 years?"
+    short: "Abnormal Result Past Seven Years"
+    answers:
+      0: "Yes"
+      1: "No/Not sure"
+  23: 
