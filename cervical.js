@@ -4,6 +4,7 @@
 // bootstrap
 // .popover jQuery extension
 // Loaded from the Drupal library
+
 (function ($) {
   
   $('[data-toggle="popover"]').popover();
@@ -14,6 +15,7 @@
     endNum,
     myData,
     initialDOM;
+  var strings = drupalSettings.cervical_screening.strings;
     
   // function init(){
   function init(reset){
@@ -234,43 +236,43 @@
       "</label>";
     if (answerText == "LSIL") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="LSIL stands for Low-grade Squamous Intraepithelial Lesion. Note that some results say: Low-grade Squamous Intraepithelial Lesion, a higher grade lesion may be present. If you have this result, please enter ASC-H, not LSIL.">ⓘ</a>';
-    } else if (answerText == "High Grade") {
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.lsil + '">ⓘ</a>';
+    } else if (answerText == "High Grade" || answerText == "Alto grado") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="High grade biopsy results include: HSIL (High-grade Squamous Intraepithelial Lesion), CIN 2 (Cervical Intraepithelial Neoplasia grade 2), CIN3 (Cervical Intraepithelial Neoplasia grade 3), or AIS (adenocarcinoma in situ).">ⓘ</a>';
-    } else if (answerText == "Low Grade") {
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.high_grade +'">ⓘ</a>';
+    } else if (answerText == "Low Grade" || answerText == "Bajo grado") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Low grade biopsy results include: normal, negative for dysplasia, CIN 1 (Cervical Intraepithelial Neoplasia grade 1) or LSIL (Low-grade Squamous Intraepithelial Lesion).">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.low_grade + '">ⓘ</a>';
     } else if (answerText == "Normal/NILM") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="NILM stands for Negative for Intraepithelial Lesion or Malignancy and indicates a normal result.">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.nilm + '">ⓘ</a>';
     } else if (answerText == "Normal") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Pathology result might say Negative for Dysplasia, which indicates a normal result.">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.normal + '">ⓘ</a>';
     } else if (answerText == "CIN1") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN1 stands for Cervical Intraepithelial Neoplasia grade 1, and could also be called Low-Grade Squamous Intraepithelial Lesion (LSIL)">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.c1n1 + '">ⓘ</a>';
     } else if (answerText == "CIN2") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN2 stands for Cervical Intraepithelial Neoplasia grade 2.">ⓘ</a>';
-    } else if (answerText == "CIN3 or HSIL") {
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.c1n2 + '">ⓘ</a>';
+    } else if (answerText == "CIN3 or HSIL" || answerText == "CIN3 o HSIL") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="CIN3 stands for Cervical Intraepithelial Neoplasia grade 3 and could also be called Cervical Intraepithelial Neoplasia grade 2/3 (CIN2/3), or High Grade Squamous Intraepithelial Lesion.">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.c1n3 + '">ⓘ</a>';
     } else if (answerText == "AIS") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="AIS stands for Adenocarcinoma In Situ">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.ais + '">ⓘ</a>';
     } else if (answerText == "ASC-US") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="ASC-US stands for Atypical Squamous Cells of Undetermined Significance">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.asc_us + '">ⓘ</a>';
     } else if (answerText == "AGC") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="AGC stands for Atypical Glandular Cells">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.agc + '">ⓘ</a>';
     } else if (answerText == "HSIL") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="HSIL stands for High-grade Squamous Intraepithelial Lesion">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.hsil + '">ⓘ</a>';
     } else if (answerText == "ASC-H") {
       newRadio +=
-        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="ASC-H stands for Atypical Squamous Cells cannot exclude High Grade Lesion">ⓘ</a>';
+        ' <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="' + strings.help_text.asc_h + '">ⓘ</a>';
     }
     newRadio += "</li>";
     return newRadio;
@@ -278,67 +280,67 @@
 
   function getEnd() {
     if (endNum == "end1") {
-      return 'You had a low grade Pap test result, and your colposcopy confirmed that you have only low grade changes. These results are very reassuring that you do not have any high grade or precancerous changes. Your healthcare provider will likely recommend that you return in 1 year for a repeat Pap and/or HPV test. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[1];
     } else if (endNum == "end2") {
-      return 'Your Pap test result showed atypical glandular cells, but your colposcopy showed only a low grade change. If the pathologist who looked at your Pap test thought that your atypical glandular cells were concerning for a pre-cancer or cancer, your healthcare provider may recommend an additional procedure called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP Procedure</a>. If the pathologist who looked at your Pap test thought the cells looked mostly benign (normal), your healthcare provider will likely recommend a Pap test and HPV test (called a cotest) in 1 year. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[2];
     } else if (endNum == "end3") {
-      return 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. At your age, these changes often go away by themselves. Your healthcare provider will likely recommend a Pap test in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[3];
     } else if (endNum == "end4") {
-      return 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. These changes may go away by themselves. Your healthcare provider will likely recommend an HPV test with or without a Pap test in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[4];
     } else if (endNum == "end5") {
-      return 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. At your age, these changes may go away by themselves. Your healthcare provider will likely recommend a Pap test and colposcopy in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[5];
     } else if (endNum == "end6") {
-      return 'Although your Pap test showed that there may have been a precancerous change, your provider did not find one on your colposcopy. These changes can sometimes go away by themselves. Your healthcare provider will likely recommend an HPV test with or without a Pap test and a colposcopy in 1 year to see if the abnormal cells are gone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[6];
     } else if (endNum == "end7") {
-      return 'Your biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia. At your age, these abnormal changes often go away without treatment. Your healthcare provider will likely recommend that you have another colposcopy exam and Pap test in 6 months. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[7];
     } else if (endNum == "end8") {
-      return 'Your biopsy shows a high-grade result, which would usually be treated if you were not pregnant. Because you are pregnant, your healthcare provider will likely follow you with colposcopy examinations during your pregnancy. Treatment will likely not be recommended during pregnancy. It is very important to see your healthcare provider after you have the baby to see if you need treatment at that time. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[8];
     } else if (endNum == "end9") {
-      return 'Your biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia. Sometimes these abnormal changes go away without treatment, and other times they are treated with a  <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. A LEEP works over 90% of the time to prevent cancer. Some studies show that women who get pregnant after they have recovered from their LEEP are a little more likely to have a premature baby. However, other studies did not show any pregnancy complications after having a LEEP. Your healthcare provider may offer you a choice of whether to have a LEEP right away or whether to come back in 6 months for another Pap test, HPV test, and colposcopy with biopsy. If you choose observation, you will come back every 6 months for testing. If your results go back to normal, your testing will become less frequent. If you continue to have CIN2 for 2 years, a LEEP will likely be recommended. If your biopsy worsens (a result of CIN3 or severe dysplasia), then a LEEP would likely be recommended sooner. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[9];
     } else if (endNum == "end10") {
-      return 'Your biopsy showed high-grade precancer, which can be called histologic high-grade squamous intrepithelial lesion (HSIL),  Cervical Intraepithelial Neoplasia Grade 2 or 3 (CIN2 or CIN3) or moderate to severe dysplasia. Unless you are pregnant, your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[10];
     } else if (endNum == "end11") {
-      return 'Your biopsy showed high-grade precancer, which can be called histologic high-grade squamous intraepithelial lesion (HSIL), Cervical Intraepithelial Neoplasia Grade 2 (CIN2) or moderate dysplasia. Since you are not currently pregnant and do not desire pregnancy in the future, your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[11];
     } else if (endNum == "end12") {
-      return 'Your biopsy showed high-grade precancer called Adenocarcinoma in Situ (AIS). Your healthcare provider will likely recommend a treatment procedure to remove the abnormal cells. This procedure is called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP</a> or cold knife conization (cone) procedure. A cold knife conization procedure is similar to a LEEP but is typically done in the operating room using a scalpel instead of electrocautery. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[12];
     } else if (endNum == "end13") {
-      return 'The results you have entered are considered low risk, and the tests can be repeated up to 3 times over a 2 year period before a colposcopy is recommended. However, if you ever had a <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="High-grade pap test results include: ASC-H (Atypical Squamous Cells cannot exclude High-Grade Lesion), AGC (Atypical Glandular Cells), or HSIL (High-grade Squamous Intraepithelial Lesion). High grade biopsy results include: HSIL (High-grade Squamous Intraepithelial Lesion, CIN 2 (Cervical Intraepithelial Neoplasia grade 2, moderate dysplasia), CIN3 (Cervical Intraepithelial Neoplasia grade 3, severe dysplasia), or AIS (adenocarcinoma in situ).">high-grade result</a> your provider may recommend <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[13];
     } else if (endNum == "end14") {
-      return 'The results you have entered are considered high risk, and your healthcare provider will likely recommend that you have a procedure called a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.result[14];
     } else if (endNum == "end15") {
-      return 'This is a normal screening test result. If you have not had an abnormal result in the past, you can have your next screening test in 3 years. Recommendations for routine screening are based on the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a>. <br> If you had abnormal results in the past, your healthcare provider may recommend repeating your Pap test in 1 year. Recommendations for follow-up after an abnormality are based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>';
+      return strings.result[15];
     }
   }
 
   function getFudgeFactorText(dataText) {
     if (dataText == "not risk") {
-      return 'Exact risk estmates are not available for the results you entered. Management is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.fudge.not_risk;
     } else if (dataText == "prior abnormal") {
-      return 'Exact risk estmates are not available for the results you entered. The management described assumes that you had an abnormal result in the past but no high grade abnormality or precancer. If you had a high-grade result in the past, please talk to your healthcare provider about whether or not you need to come back sooner or have additional testing. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.fudge.prior_abnormal;
     } else if (dataText == "HPVx2") {
-      return 'Exact risk estmates are not available for the results you entered. Colposcopy usually is recommended because you had 2 positive HPV tests in a row. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.fudge.hpvx2;
     } else if (dataText == "highgradelowgrade") {
-      return 'Exact risk estmates are not available for the results you entered. Follow-up in 1 year is recommended by the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. You indicated that you had a high-grade abnormal Pap test followed by a colposcopy that did not find pre-cancer. In this situation, HPV testing with or without Pap testing is recommended 1 and 2 years following your diagnosis and then every 3 years for 25 years. After 25 years you can return to routine screening every 5 years.';
+      return strings.fudge.highgradelowgrade;
     } else if (dataText == "only pap") {
-      return 'Follow-up is recommended more often for pap tests if they are used alone. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.fudge.only_pap;
     } else if (dataText == "USPSTF") {
-      return 'The <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventive Services Task Force</a> and <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a> cervical cancer screening guidelines recommends screening every 3 years if Pap tests are used alone.';
+      return strings.fudge.uspstf;
     } else if (dataText == "2012") {
-      return 'The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/23635684/">2012 ASCCP guidelines</a>.';
+      return strings.fudge._2012;
     } else if (dataText == "2019") {
-      return 'The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. Note, risks may be higher <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/33035473/">if you have not been screened in more than 5 years</a>. Risks may also be higher if your last result was a colposocpy with biopsy done more than 1 year ago.';
+      return strings.fudge._2019;
     } else if (dataText == "screening") {
-      return 'The recommendation for routine screening using HPV testing or cotesting every 5 years for people without abnormal results in the past is based on the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">US Preventative Services Task Force</a>, <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines</a>, and <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a>.';
+      return strings.fudge.screening;
     } else if (dataText == "2019fudge") {
-      return 'Risks are lower if your most recent test was a negative HPV test or normal colposcopy. Risks are higher if your most recent HPV test was positive, you recently had a biopsy showing precancer, or if you have not been screened in more than 5 years. The management described is based on the <a  target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.fudge._2019fudge;
     } else if (dataText == "2019HPV18") {
-      return 'HPV18 or HPV45 can be associated with precancerous abnormalities of the inside of the cervix. For this reason, colposcopy is always recommended when HPV18 or HPV45 is present. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>. ';
+      return strings.fudge._2019hpv18;
     } else if (dataText == "Err1 (1 vs 3 yr)") {
-      return 'Depending on prior results, the most likely recommendation would be to return for an HPV test, with or without a Pap test, in 1 year or 3 years. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>.';
+      return strings.fudge.err11vs3;
     } else if (dataText == "Err1 (colpo vs 1yr)") {
-      return 'Depending on prior results, the most likely recommendation would be to return in 1 year or have a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>';
+      return strings.fudge.err1colpovs1
     } else if (dataText == "Err1 (colpo)") {
-      return 'Depending on prior results, your provider may recommend a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results">colposcopy</a>. The management described is based on the <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">2019 ASCCP Risk-Based Management Consensus Guidelines</a>';
+      return strings.err1colpo;
     } else if (dataText == "") {
       return "";
     }
@@ -346,35 +348,35 @@
 
   function getManagementText(dataText) {
     if (dataText == "5-year follow-up") {
-      return "<h5>5-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 5 years. It is safe to wait 5 years because your risk of developing a pre-cancer or cancer over the next 5 years is less than 1 in 1000.";
+      return strings.management._5yearfollowup;
     } else if (dataText == "3-year follow-up") {
-      return "<h5>3-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 3 years. It is safe to wait 3 years because your risk of developing a pre-cancer or cancer over the next 5 years is less than 1 in 200.";
+      return strings.management._3yearfollowup;
     } else if (dataText == "1-year follow-up") {
-      return "<h5>1-year Follow-up</h5> Based on the results you entered, your healthcare provider will likely recommend that you have your next HPV test (with or without a Pap test) in 1 year. It is very important that you return in 1 year for your next exam. If you switch healthcare providers during this time, make sure you tell them that you had abnormal results and you need to be re-tested in 1 year.";
+      return strings.management._1yearfollowup;
     } else if (dataText == "Colposcopy") {
-      return '<h5>Colposcopy</h5> The results you have entered indicate that your healthcare provider will likely recommend that you have a procedure called a colposcopy. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.';
+      return strings.management.colposcopy;
     } else if (dataText == "Colposcopy/Treatment") {
-      return '<h5>Colposcopy or Treatment</h5> The results that you entered indicate that you may have precancer. They do not indicate cancer, but your healthcare provider may recommend doing a either a diagnostic procedure, called a colposcopy, or a treatment procedure, called a LEEP. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure. For a LEEP, your provider will use local anesthesia and remove a small piece of the cervix where the abnormal cells are located. A LEEP provides the information of a biopsy (making sure you don’t have cancer) and will also treat your precancer at the same time. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">here</a> for more information about a LEEP procedure.';
+      return strings.management.colposcopy_treatment;
     } else if (dataText == "Treatment") {
-      return '<h5>Treatment</h5> The results that you entered indicate that you probably have precancer. They do not indicate cancer, but your healthcare provider may recommend doing a treatment procedure, called a LEEP. The LEEP will both provide the information of a biopsy (making sure you don’t have cancer) and will also treat your precancer at the same time. A LEEP procedure is usually done in the office using local anesthesia. If you prefer, you may have a colposcopy with biopsy first. Click for more information about a <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">colposcopy</a> or <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">LEEP procedure</a>.';
+      return strings.management.treatment;
     } else if (dataText == "AGC") {
-      return 'The results that you entered indicate atypical glandular cells. These can sometimes indicate precancer in the inside of the cervix or in the uterus. Your provider may recommend a colposcopy. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. If you have risk factors for precancer or cancer of the uterus, like diabetes, high blood pressure, irregular periods, or being overweight, your provider may recommend taking a sample of the cells inside the uterus, called an endometrial biospsy. An endometrial biopsy is done by inserting a small instrument into the uterus that gently removes the cells. Click <a target="_blank" target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.';
+      return strings.management.agc;
     } else if (dataText == "CIN2") {
-      return 'You indicated that you had a biopsy showed a high-grade result called Cervical Intraepithelial Lesion Grade 2 (CIN2), sometimes called moderate dysplasia, and you chose not to undergo treatment. If you do not choose treatment, your provider will likely recommend that you come back 6 months and 1 year after you had the biopsy showing CIN2 for another Pap test, HPV test, and colposcopy with biopsy. If your results go back to normal, you can have an HPV test with or without a Pap test every year for the next 3 years. If your Pap or HPV test is abnormal, a colposcopy is recommended. If you continue to have CIN2 for 2 years, a LEEP will likely be recommended. If your biopsy worsens (a result of CIN3 or severe dysplasia), then a LEEP would likely be recommended at that time. You can choose to have a LEEP at anytime. A LEEP works over 90% of the time to prevent cancer. Some studies show that women who get pregnant after they have recovered from their LEEP are a little more likely to have a premature baby. However, other studies did not show any pregnancy complications after having a LEEP. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#treatment-for-high-grade-cervical-cell-changesnbsp">here</a> for more information on LEEP.';
+      return strings.management.cin2;
     } else if (dataText == "Error 1 (missing data)") {
-      return "The results you entered do not give a management recommendation because a key piece of information is missing. Please use your patient portal or contact your provider to get your records.";
+      return strings.management.err1_missing_data;
     } else if (dataText == "Error 2 (colposcopy previously indicated)") {
-      return 'You entered a past result that is normally managed with colposcopy, but you did not indicate that you had a colposcopy. Please talk to your provider about whether you should have a colposcopy now. Colposcopy is usually recommended if you have 2 positive HPV tests in a row. A colposcopy is an examination in the office where your provider will examine the cervix using magnification and may take a small biopsy. Click <a target="_blank" href="https://www.cancer.gov/types/cervical/understanding-abnormal-hpv-and-pap-test-results#follow-up-tests-and-procedures-after-an-abnormal-pap-or-hpv-test">here</a> for more information about a colposcopy procedure.';
+      return strings.management.err2_colpo_prev;
     } else if (dataText == "Error 3 (lack of precision)") {
-      return "You have entered results that could be managed differently depending on whether you have HPV or not. Talk to your provider about whether an HPV test would be helpful to see what your follow-up should be.";
+      return strings.management.err3_lack_prec;
     } else if (dataText == "HPV testing or repeat Pap in 1 year") {
-      return "You have entered results that your provider may manage with either an HPV test now or a repeat Pap test in 1 year.";
+      return strings.management.hpv_test;
     } else if (dataText == "6-month follow up") {
-      return "You indicated that you had treatment for a pre-cancer and you are being followed with Pap tests without HPV tests. When Pap tests are used alone, they need to be repeated every 6 months until you have 5 negative results in a row. Then you will need your Pap test done every year until 25 years have passed since your procedure. If HPV tests are used, your follow-up can be less frequent.";
+      return strings.management._6month_followup;
     } else if (dataText == "ASCUSnoHPV") {
-      return "Exact risk estimates are not available for this combination of results. Your provider may recommend either colposcopy or to repeat an HPV test (with or without a Pap test) in 1 year.";
+      return strings.management.ascusnohpv;
     } else if (dataText == "Pap needed") {
-      return "You indicated that your most recent result was a positive HPV test, but no Pap test was done. To accurately estimate your risk of precancer, a Pap test is needed. Please discuss wtih your provider about having a Pap test or other additional testing. If you had a previous abnormal result, your provider may recommend colposcopy and a Pap test at the same time.";
+      return strings.management.pap_needed;
     }
   }
 
@@ -391,269 +393,267 @@
   var questions = [
     //0
     {
-      text: "For which result type do you want a recommendation?",
-      short: "Recommendation Result Type",
+      text: strings.questions[0].text,
+      short: strings.questions[0].short,
       answers: [
-        { text: "HPV Test/Pap Test", nextQuestion: 7 },
-        { text: "Cervical Biopsy (Colposcopy)", nextQuestion: 1 },
+        { text: strings.questions[0].answers[0], nextQuestion: 7 },
+        { text: strings.questions[0].answers[1], nextQuestion: 1 },
       ],
     },
     //1
     {
-      text: 'What is your current biopsy result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
-      short: "Current Biopsy Result",
+      text: strings.questions[1].text,
+      short: strings.questions[1].short,
       answers: [
-        { text: "Normal", nextQuestion: 2 },
-        { text: "CIN1", nextQuestion: 2 },
-        { text: "CIN2", nextQuestion: 5 },
-        { text: "CIN3 or HSIL", nextQuestion: "end10" },
-        { text: "AIS", nextQuestion: "end12" },
+        { text: strings.questions[1].answers[0], nextQuestion: 2 },
+        { text: strings.questions[1].answers[1], nextQuestion: 2 },
+        { text: strings.questions[1].answers[2], nextQuestion: 5 },
+        { text: strings.questions[1].answers[3], nextQuestion: "end10" },
+        { text: strings.questions[1].answers[4], nextQuestion: "end12" },
       ],
     },
     //2
     {
-      text: "What was your Pap result before the biopsy?",
-      short: "Pap Result Before Biopsy",
+      text: strings.questions[2].text,
+      short: strings.questions[2].short,
       answers: [
-        { text: "Normal/NILM", nextQuestion: "end1" },
-        { text: "ASC-US", nextQuestion: "end1" },
-        { text: "LSIL", nextQuestion: "end1" },
-        { text: "AGC", nextQuestion: "end2" },
-        { text: "HSIL", nextQuestion: 4 },
-        { text: "ASC-H", nextQuestion: 3 },
+        { text: strings.questions[2].answers[0], nextQuestion: "end1" },
+        { text: strings.questions[2].answers[1], nextQuestion: "end1" },
+        { text: strings.questions[2].answers[2], nextQuestion: "end1" },
+        { text: strings.questions[2].answers[3], nextQuestion: "end2" },
+        { text: strings.questions[2].answers[4], nextQuestion: 4 },
+        { text: strings.questions[2].answers[5], nextQuestion: 3 },
       ],
     },
     //3
     {
-      text: "How old are you?",
-      short: "Age",
+      text: strings.questions[3].text,
+      short: strings.questions[3].short,
       answers: [
-        { text: "Under 25 years old", nextQuestion: "end3" },
-        { text: "25 years old or over", nextQuestion: "end4" },
+        { text: strings.questions[3].answers[0], nextQuestion: "end3" },
+        { text: strings.questions[3].answers[1], nextQuestion: "end4" },
       ],
     },
-    //4
+    //4 - text duplicate of 3
     {
-      text: "How old are you?",
-      short: "Age",
+      text: strings.questions[3].text,
+      short: strings.questions[3].short,
       answers: [
-        { text: "Under 25 years old", nextQuestion: "end5" },
-        { text: "25 years old or over", nextQuestion: "end6" },
+        { text: strings.questions[3].answers[0], nextQuestion: "end5" },
+        { text: strings.questions[3].answers[1], nextQuestion: "end6" },
       ],
     },
-    //5
+    //5 - text duplicate of 3
     {
-      text: "How old are you?",
-      short: "Age",
+      text: strings.questions[3].text,
+      short: strings.questions[3].short,
       answers: [
-        { text: "Under 25 years old", nextQuestion: "end7" },
-        { text: "25 years old or over", nextQuestion: 6 },
+        { text: strings.questions[3].answers[0], nextQuestion: "end7" },
+        { text: strings.questions[3].answers[1], nextQuestion: 6 },
       ],
     },
     //6
     {
-      text: "Are you pregnant?",
-      short: "Pregnant",
+      text: strings.questions[6].text,
+      short: strings.questions[6].short,
       answers: [
-        { text: "Yes", nextQuestion: "end8" },
-        { text: "Not currently but maybe in the future", nextQuestion: "end9" },
-        { text: "Not currently or in the future", nextQuestion: "end11" },
+        { text: strings.questions[6].answers[0], nextQuestion: "end8" },
+        { text: strings.questions[6].answers[1], nextQuestion: "end9" },
+        { text: strings.questions[6].answers[2], nextQuestion: "end11" },
       ],
     },
-    //7
+    //7 - text duplicate of 3
     {
-      text: "How old are you?",
-      short: "Age",
+      text: strings.questions[3].text,
+      short: strings.questions[3].short,
       answers: [
-        { text: "Under 25 years old", nextQuestion: 8 },
-        { text: "25 years old or over", nextQuestion: "database" },
+        { text: strings.questions[3].answers[0], nextQuestion: 8 },
+        { text: strings.questions[3].answers[1], nextQuestion: "database" },
       ],
     },
     //8
     {
-      text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
-      short: "Current Pap Result",
+      text: strings.questions[8].text,
+      short: strings.questions[8].short,
       answers: [
-        { text: "Normal/NILM", nextQuestion: "end15" },
-        { text: "ASC-US", nextQuestion: "end13" },
-        { text: "LSIL", nextQuestion: "end13" },
-        { text: "AGC", nextQuestion: "end14" },
-        { text: "HSIL", nextQuestion: "end14" },
-        { text: "ASC-H", nextQuestion: "end14" },
+        { text: strings.questions[8].answers[0], nextQuestion: "end15" },
+        { text: strings.questions[8].answers[1], nextQuestion: "end13" },
+        { text: strings.questions[8].answers[2], nextQuestion: "end13" },
+        { text: strings.questions[8].answers[3], nextQuestion: "end14" },
+        { text: strings.questions[8].answers[4], nextQuestion: "end14" },
+        { text: strings.questions[8].answers[5], nextQuestion: "end14" },
       ],
     },
     //9
     {
-      text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
-      short: "Current HPV Result",
+      text: strings.questions[9].text,
+      short: strings.questions[9].short,
       answers: [
-        { text: "Positive", nextQuestion: 10, dataVal: 1 },
-        { text: "Negative", nextQuestion: 11, dataVal: 0 },
-        { text: "No Test", nextQuestion: 11, dataVal: -1 },
+        { text: strings.questions[9].answers[0], nextQuestion: 10, dataVal: 1 },
+        { text: strings.questions[9].answers[1], nextQuestion: 11, dataVal: 0 },
+        { text: strings.questions[9].answers[2], nextQuestion: 11, dataVal: -1 },
       ],
     },
     //10
     {
-      text: "What is the HPV type?",
-      short: "Current HPV Type",
+      text: strings.questions[10].text,
+      short: strings.questions[10].short,
       answers: [
-        { text: "16", nextQuestion: 12, dataVal: 16 },
-        { text: "18 or 45", nextQuestion: 12, dataVal: 18 },
-        { text: "Other", nextQuestion: 11, dataVal: 0 },
-        { text: "I don't know/Not typed", nextQuestion: 11, dataVal: -1 },
+        { text: strings.questions[10].answers[0], nextQuestion: 12, dataVal: 16 },
+        { text: strings.questions[10].answers[1], nextQuestion: 12, dataVal: 18 },
+        { text: strings.questions[10].answers[2], nextQuestion: 11, dataVal: 0 },
+        { text: strings.questions[10].answers[3], nextQuestion: 11, dataVal: -1 },
       ],
     },
-    //11
+    //11 - near duplicate of 8 with one additional answer choice
     {
-      text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
-      short: "Current Pap",
+      text: strings.questions[11].text,
+      short: strings.questions[11].short,
       answers: [
-        { text: "Normal/NILM", nextQuestion: 13, dataVal: "NILM" },
-        { text: "ASC-US", nextQuestion: 13, dataVal: "ASCUS" },
-        { text: "LSIL", nextQuestion: 13, dataVal: "LSIL" },
-        { text: "AGC", nextQuestion: "end", dataVal: "AGC" },
-        { text: "HSIL", nextQuestion: "end", dataVal: "HSIL" },
-        { text: "ASC-H", nextQuestion: "end", dataVal: "ASCH" },
-        { text: "Not Available/No Test", nextQuestion: 13, dataVal: "None" },
+        { text: strings.questions[11].answers[0], nextQuestion: 13, dataVal: "NILM" },
+        { text: strings.questions[11].answers[1], nextQuestion: 13, dataVal: "ASCUS" },
+        { text: strings.questions[11].answers[2], nextQuestion: 13, dataVal: "LSIL" },
+        { text: strings.questions[11].answers[3], nextQuestion: "end", dataVal: "AGC" },
+        { text: strings.questions[11].answers[4], nextQuestion: "end", dataVal: "HSIL" },
+        { text: strings.questions[11].answers[5], nextQuestion: "end", dataVal: "ASCH" },
+        { text: strings.questions[11].answers[6], nextQuestion: 13, dataVal: "None" },
       ],
     },
-    //12
+    //12 - text duplicate of 11
     {
-      text: 'What is your current Pap result? <br><span style="font-size: 0.75em; font-weight: normal">Click ⓘ for more information</span>',
-      short: "Current Pap",
+      text: strings.questions[11].text,
+      short: strings.questions[11].short,
       answers: [
-        { text: "Normal/NILM", nextQuestion: "end", dataVal: "NILM" },
-        { text: "ASC-US", nextQuestion: "end", dataVal: "ASCUS" },
-        { text: "LSIL", nextQuestion: "end", dataVal: "LSIL" },
-        { text: "AGC", nextQuestion: "end", dataVal: "AGC" },
-        { text: "HSIL", nextQuestion: "end", dataVal: "HSIL" },
-        { text: "ASC-H", nextQuestion: "end", dataVal: "ASCH" },
-        { text: "Not Available/No Test", nextQuestion: "end", dataVal: "None" },
+        { text: strings.questions[11].answers[0], nextQuestion: "end", dataVal: "NILM" },
+        { text: strings.questions[11].answers[1], nextQuestion: "end", dataVal: "ASCUS" },
+        { text: strings.questions[11].answers[2], nextQuestion: "end", dataVal: "LSIL" },
+        { text: strings.questions[11].answers[3], nextQuestion: "end", dataVal: "AGC" },
+        { text: strings.questions[11].answers[4], nextQuestion: "end", dataVal: "HSIL" },
+        { text: strings.questions[11].answers[5], nextQuestion: "end", dataVal: "ASCH" },
+        { text: strings.questions[11].answers[6], nextQuestion: "end", dataVal: "None" },
       ],
     },
     //13
     {
-      text: 'Do you have a record of your most recent previous result?<br><span style="font-size: 0.75em; font-weight: normal"">If your most recent result was a biopsy that was more than 12 months ago or an HPV test alone, or Pap/HPV cotest that was more than 5 years ago, please select "No."</span>',
-      short: "Has Previous Result",
+      text: strings.questions[13].text,
+      short: strings.questions[13].short,
       answers: [
-        { text: "Yes", nextQuestion: 14, dataVal: 1 },
-        { text: "No", nextQuestion: 22, dataVal: 0 },
+        { text: strings.questions[13].answers[0], nextQuestion: 14, dataVal: 1 },
+        { text: strings.questions[13].answers[1], nextQuestion: 22, dataVal: 0 },
       ],
     },
     //14
     {
-      text: "Was your most recent previous result a biopsy?",
-      short: "Previous Result was Biopsy",
+      text: strings.questions[14].text,
+      short: strings.questions[14].short,
       answers: [
-        { text: "Yes", nextQuestion: 15, dataVal: 1 },
-        { text: "No", nextQuestion: 18, dataVal: 0 },
+        { text: strings.questions[14].answers[0], nextQuestion: 15, dataVal: 1 },
+        { text: strings.questions[14].answers[1], nextQuestion: 18, dataVal: 0 },
       ],
     },
     //15
     {
-      text: "What was that biopsy result?",
-      short: "Biopsy Result",
+      text: strings.questions[15].text,
+      short: strings.questions[15].short,
       answers: [
-        { text: "High Grade", nextQuestion: 16, dataVal: "high grade" },
-        { text: "Normal", nextQuestion: 17, dataVal: "normal" },
-        { text: "Low Grade", nextQuestion: 17, dataVal: "low grade" },
-        { text: "Not Sure", nextQuestion: 17, dataVal: "not sure" },
-        { text: "Not Recorded", nextQuestion: 17, dataVal: "no records" },
+        { text: strings.questions[15].answers[0], nextQuestion: 16, dataVal: "high grade" },
+        { text: strings.questions[15].answers[1], nextQuestion: 17, dataVal: "normal" },
+        { text: strings.questions[15].answers[2], nextQuestion: 17, dataVal: "low grade" },
+        { text: strings.questions[15].answers[3], nextQuestion: 17, dataVal: "not sure" },
+        { text: strings.questions[15].answers[4], nextQuestion: 17, dataVal: "no records" },
       ],
     },
     //16
     {
-      text: "Were you treated?",
-      short: "Treated",
+      text: strings.questions[16].text,
+      short: strings.questions[16].short,
       answers: [
-        { text: "Yes", nextQuestion: "end", dataVal: 1 },
-        { text: "No", nextQuestion: "end", dataVal: 0 },
+        { text: strings.questions[16].answers[0], nextQuestion: "end", dataVal: 1 },
+        { text: strings.questions[16].answers[1], nextQuestion: "end", dataVal: 0 },
       ],
     },
     //17
     {
-      text: "What was your Pap result before the biopsy?",
-      short: "Pap Result before Biopsy",
+      text: strings.questions[17].text,
+      short: strings.questions[17].short,
       answers: [
-        { text: "Normal/NILM", nextQuestion: "end", dataVal: "NILM" },
-        { text: "ASC-US", nextQuestion: "end", dataVal: "ASCUS" },
-        { text: "LSIL", nextQuestion: "end", dataVal: "LSIL" },
-        { text: "AGC", nextQuestion: "end", dataVal: "AGC" },
-        { text: "HSIL", nextQuestion: "end", dataVal: "HSIL" },
-        { text: "ASC-H", nextQuestion: "end", dataVal: "ASCH" },
-        { text: "Not Available/No Test", nextQuestion: "end", dataVal: "None" },
+        { text: strings.questions[17].answers[0], nextQuestion: "end", dataVal: "NILM" },
+        { text: strings.questions[17].answers[1], nextQuestion: "end", dataVal: "ASCUS" },
+        { text: strings.questions[17].answers[2], nextQuestion: "end", dataVal: "LSIL" },
+        { text: strings.questions[17].answers[3], nextQuestion: "end", dataVal: "AGC" },
+        { text: strings.questions[17].answers[4], nextQuestion: "end", dataVal: "HSIL" },
+        { text: strings.questions[17].answers[5], nextQuestion: "end", dataVal: "ASCH" },
+        { text: strings.questions[17].answers[6], nextQuestion: "end", dataVal: "None" },
       ],
     },
     //18
     {
-      text: "What was your previous HPV result?",
-      short: "Previous HPV Result",
+      text: strings.questions[18].text,
+      short: strings.questions[18].short,
       answers: [
-        { text: "Positive", nextQuestion: 20, dataVal: 1 },
-        { text: "Negative", nextQuestion: 19, dataVal: 0 },
-        { text: "No Test", nextQuestion: 23, dataVal: -1 },
+        { text: strings.questions[18].answers[0], nextQuestion: 20, dataVal: 1 },
+        { text: strings.questions[18].answers[1], nextQuestion: 19, dataVal: 0 },
+        { text: strings.questions[18].answers[2], nextQuestion: 23, dataVal: -1 },
       ],
     },
     //19
     {
-      text: "What was your previous Pap result?",
-      short: "Previous Pap Result",
+      text: strings.questions[19].text,
+      short: strings.questions[19].short,
       answers: [
-        { text: "Normal/NILM", nextQuestion: 21, dataVal: "NILM" },
-        { text: "ASC-US", nextQuestion: "end", dataVal: "ASCUS" },
-        { text: "LSIL", nextQuestion: "end", dataVal: "LSIL" },
-        { text: "AGC", nextQuestion: "end", dataVal: "AGC" },
-        { text: "HSIL", nextQuestion: "end", dataVal: "HSIL" },
-        { text: "ASC-H", nextQuestion: "end", dataVal: "ASCH" },
-        { text: "Not Available/No Test", nextQuestion: 21, dataVal: "None" },
+        { text: strings.questions[19].answers[0], nextQuestion: 21, dataVal: "NILM" },
+        { text: strings.questions[19].answers[1], nextQuestion: "end", dataVal: "ASCUS" },
+        { text: strings.questions[19].answers[2], nextQuestion: "end", dataVal: "LSIL" },
+        { text: strings.questions[19].answers[3], nextQuestion: "end", dataVal: "AGC" },
+        { text: strings.questions[19].answers[4], nextQuestion: "end", dataVal: "HSIL" },
+        { text: strings.questions[19].answers[5], nextQuestion: "end", dataVal: "ASCH" },
+        { text: strings.questions[19].answers[6], nextQuestion: 21, dataVal: "None" },
       ],
     },
-    //20
+    //20 - text duplicate of 19
     {
-      text: "What was your previous Pap result?",
-      short: "Previous Pap Result",
+      text: strings.questions[19].text,
+      short: strings.questions[19].short,
       answers: [
-        { text: "Normal/NILM", nextQuestion: "end", dataVal: "NILM" },
-        { text: "ASC-US", nextQuestion: "end", dataVal: "ASCUS" },
-        { text: "LSIL", nextQuestion: "end", dataVal: "LSIL" },
-        { text: "AGC", nextQuestion: "end", dataVal: "AGC" },
-        { text: "HSIL", nextQuestion: "end", dataVal: "HSIL" },
-        { text: "ASC-H", nextQuestion: "end", dataVal: "ASCH" },
-        { text: "Not Available/No Test", nextQuestion: "end", dataVal: "None" },
+        { text: strings.questions[19].answers[0], nextQuestion: "end", dataVal: "NILM" },
+        { text: strings.questions[19].answers[1], nextQuestion: "end", dataVal: "ASCUS" },
+        { text: strings.questions[19].answers[2], nextQuestion: "end", dataVal: "LSIL" },
+        { text: strings.questions[19].answers[3], nextQuestion: "end", dataVal: "AGC" },
+        { text: strings.questions[19].answers[4], nextQuestion: "end", dataVal: "HSIL" },
+        { text: strings.questions[19].answers[5], nextQuestion: "end", dataVal: "ASCH" },
+        { text: strings.questions[19].answers[6], nextQuestion: "end", dataVal: "None" },
       ],
     },
     //21
     {
-      text:
-        "Have you had an abnormal result before this one in the past 7 years or a treatment for precancer in the past 25 years?",
-      short: "Abnormal Result Previously",
+      text: strings.questions[21].text,
+      short: strings.questions[21].short,
       answers: [
-        { text: "Yes", nextQuestion: "end", dataVal: 1 },
-        { text: "No", nextQuestion: "end", dataVal: 0 },
+        { text: strings.questions[21].answers[0], nextQuestion: "end", dataVal: 1 },
+        { text: strings.questions[21].answers[1], nextQuestion: "end", dataVal: 0 },
       ],
     },
     //22
     {
-      text:
-        "Excluding any answer you provided earlier, have you had an abnormal result in the past 7 years or a treatment for precancer in the past 25 years?",
-      short: "Abnormal Result Past Ten Years",
+      text: strings.questions[22].text,
+      short: strings.questions[22].short,
       answers: [
-        { text: "Yes", nextQuestion: "end", dataVal: 1 },
-        { text: "No/Not sure", nextQuestion: "end", dataVal: 0 },
+        { text: strings.questions[22].answers[0], nextQuestion: "end", dataVal: 1 },
+        { text: strings.questions[22].answers[1], nextQuestion: "end", dataVal: 0 },
       ],
     },
-    //23
+    //23 - text duplicate of 19
     {
-      text: "What was your previous Pap result?",
-      short: "Previous Pap Result",
+      text: strings.questions[19].text,
+      short: strings.questions[19].short,
       answers: [
-        { text: "Normal/NILM", nextQuestion: 21, dataVal: "NILM" },
-        { text: "ASC-US", nextQuestion: "end", dataVal: "ASCUS" },
-        { text: "LSIL", nextQuestion: "end", dataVal: "LSIL" },
-        { text: "AGC", nextQuestion: "end", dataVal: "AGC" },
-        { text: "HSIL", nextQuestion: "end", dataVal: "HSIL" },
-        { text: "ASC-H", nextQuestion: "end", dataVal: "ASCH" },
-        { text: "Not Available/No Test", nextQuestion: 22, dataVal: "None" },
+        { text: strings.questions[19].answers[0], nextQuestion: 21, dataVal: "NILM" },
+        { text: strings.questions[19].answers[1], nextQuestion: "end", dataVal: "ASCUS" },
+        { text: strings.questions[19].answers[2], nextQuestion: "end", dataVal: "LSIL" },
+        { text: strings.questions[19].answers[3], nextQuestion: "end", dataVal: "AGC" },
+        { text: strings.questions[19].answers[4], nextQuestion: "end", dataVal: "HSIL" },
+        { text: strings.questions[19].answers[5], nextQuestion: "end", dataVal: "ASCH" },
+        { text: strings.questions[19].answers[6], nextQuestion: 22, dataVal: "None" },
       ],
     },
   ];
