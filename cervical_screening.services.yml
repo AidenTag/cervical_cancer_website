@@ -1,0 +1,3 @@
+services:
+  cervical_screening.preprocess:
+    class: Drupal\cervical_screening\Preprocess

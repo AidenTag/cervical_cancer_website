@@ -1,0 +1,16 @@
+<?php
+define('CERVICAL_PREPROCESS_CLASS', 'cervical_screening.preprocess');
+// Hook theme
+function cervical_screening_theme($existing, $type, $theme, $path) {
+    return [
+        'cervical' => [
+            'variables' => [],
+            'path' => $path . '/templates',
+          ]
+        ];
+}
+
+function template_preprocess_cervical(&$variables)
+{
+  \Drupal::service(CERVICAL_PREPROCESS_CLASS)->preprocessCervical($variables);
+}

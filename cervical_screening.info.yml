@@ -1,0 +1,5 @@
+name: 'Cervical Cancer Screening Tool'
+type: module
+description: Information and screening tool for cervical cancer and HPV.
+core: 8.x
+package: 'BMC'
