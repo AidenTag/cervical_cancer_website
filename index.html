@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Screening Information Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel= "stylesheet" type= "text/css" href="base.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+      <!-- HOME -->
+        <div class="container-end" id="home-panel">
+            <div class="box">
+                <div>
+                    <h1>Cervical Cancer Risk Assessor</h1>
+                    <br>
+                    <br>
+                    <h3>Welcome</h3>
+                    <p>This website provides information designed for patients and the general public to better understand cervical cancer screening and HPV vaccination.</p>
+                </div>
+                <h4>Please choose one of the following options:</h5>
+                <div class="buttons" style="text-align: center; margin-top: 2rem;">
+                    <a class="btn btn-primary" style="margin: 1rem 0rem;" id="todisclaimer" role="button">
+                        Understanding Your Test Results
+                    </a>
+                    <a class="btn btn-primary" style="margin: 1rem 0rem; background: rgb(73, 186, 209); border-color: rgb(73, 186, 209);" id="toselfcollection-welcome" role="button">
+                        HPV Self-Collection Decision Tool
+                    </a>
+                    <a class="btn btn-light" style="margin: 1rem 0rem; border-width: 1px; border-color: #0d6efd; color: #0d6efd;" id="tovaccination" role="button">
+                        HPV Vaccine Information
+                    </a>
+                    <a class="btn btn-light" style="margin: 1rem 0rem; border-color: rgb(73, 186, 209); color: rgb(73, 186, 209);" id="toscreening" role="button">
+                        HPV and Pap Test Information
+                    </a>
+                    <a class="btn btn-light" style="margin: 1rem 0rem; border-color: #28a745; color: #28a745;" id="tohpv-qa" role="button">
+                        HPV Self-Collection Q&A
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- SELF-COLLECTION WELCOME -->
+        <div class="container-end hidden" id="selfcollection-welcome-panel">
+            <div class="box">
+                <h2>Welcome</h2>
+                <p>This tool is designed to help you learn more about cervical cancer screening and whether screening with an HPV self-collected test is a good option for you.</p>
+                <p>Regular screening reduces your risk of cervical cancer.</p>
+                <p>Most people who develop cervical cancer are overdue for screening.</p>
+                <p>We want to help you understand your cervical cancer screening options, and which option is best for you.</p>
+                <a class="btn btn-secondary" href="index.html">Home</a>
+                <a class="btn btn-primary next_btn" role="button" id="toselfcollection-form">See if HPV Self-Collection is an Option for You</a>
+            </div>
+        </div>
+        <!-- SELF-COLLECTION FORM -->
+        <div class="container-end hidden" id="selfcollection-form-panel">
+            <div class="box">
+                <label for="sc_radios" id="sc_questionText" class="h5" style="margin: 0rem;">How old are you?</label> 
+                <input hidden id="sc_questionNum" value="0">
+                <hr class="line">
+                <ul class="" id="sc_radios">
+                    <li>
+                        <input id="sc_0" name="sc_question" type="radio" value="0"> 
+                        <label for="sc_0">25 years old or older</label>
+                    </li>
+                    <li>
+                        <input id="sc_1" name="sc_question" type="radio" value="1">
+                        <label for="sc_1">Under 25 years old</label>
+                    </li>
+                </ul>
+                <button class="btn btn-secondary" id="sc_back">Back</button>
+                <button type="submit" class="btn btn-primary" id="sc_next">Next</button>        
+            </div>
+            <div class="box">
+                <div>
+                    <p class="h5">Previous Answers:</p>
+                    <hr class="line">
+                    <div id="sc_display"></div>
+                </div>
+            </div>
+        </div>
+        <!-- HPV Q&A -->
+        <div class="container-end hidden" id="hpv-qa-panel">
+            <div class="box">
+                <h2>HPV Q&A</h2>
+                <p>
+                    You are eligible to screen for cervical cancer using a HPV self-collected test. Next, we will provide information about all screening options to help you finalize your screening choice.
+                </p>
+                <p>We hope you find this helpful in making your decision. Please message your health care provider to get screened for cervical cancer!</p>
+
+                <div class="accordion" id="hpv-qa-accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="hpv-q1-header">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#hpv-q1-body" aria-expanded="false" aria-controls="hpv-q1-body">
+                           What is HPV?
+                        </button>
+                     </h2>
+                     <div id="hpv-q1-body" class="accordion-collapse collapse" aria-labelledby="hpv-q1-header" data-parent="#hpv-qa-accordion">
+                        <div class="accordion-body">
+                           <p>HPV is the virus that causes cervical cancer.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="hpv-q2-header">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#hpv-q2-body" aria-expanded="false" aria-controls="hpv-q2-body">
+                           How can I test for HPV?
+                        </button>
+                     </h2>
+                     <div id="hpv-q2-body" class="accordion-collapse collapse" aria-labelledby="hpv-q2-header" data-parent="#hpv-qa-accordion">
+                        <div class="accordion-body">
+                           <p>Testing for HPV is the preferred way to screen for cervical cancer for people age 25 and older. An HPV test can be collected by you (self-collection) or by your health care provider (clinician-collection). If you choose to screen with an self-collected HPV test, you take the sample with a soft swab from the side wall of your vagina without having a speculum exam. If the HPV test is done by your health care provider, they will do a speculum exam and take the sample from your cervix. In both cases, the test is sent to the lab to see if you have HPV.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="hpv-q3-header">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#hpv-q3-body" aria-expanded="false" aria-controls="hpv-q3-body">
+                           How do I do a self-collection?
+                        </button>
+                     </h2>
+                     <div id="hpv-q3-body" class="accordion-collapse collapse" aria-labelledby="hpv-q3-header" data-parent="#hpv-qa-accordion">
+                        <div class="accordion-body">
+                           <img src="howto.png" alt="Self-collection How-to" style="width: 100%;">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="hpv-q4-header">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#hpv-q4-body" aria-expanded="false" aria-controls="hpv-q4-body">
+                           Why would I choose a HPV self-collected test?
+                        </button>
+                     </h2>
+                     <div id="hpv-q4-body" class="accordion-collapse collapse" aria-labelledby="hpv-q4-header" data-parent="#hpv-qa-accordion">
+                        <div class="accordion-body">
+                           <p>You may choose self-collection if you prefer not to have a speculum exam.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="hpv-q5-header">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#hpv-q5-body" aria-expanded="false" aria-controls="hpv-q5-body">
+                           What happens if my self-collected HPV test is positive?
+                        </button>
+                     </h2>
+                     <div id="hpv-q5-body" class="accordion-collapse collapse" aria-labelledby="hpv-q5-header" data-parent="#hpv-qa-accordion">
+                        <div class="accordion-body">
+                           <p>If your HPV test is positive, you will need further testing.</p>
+                           <p>For most people, this is a speculum exam with a Pap test.</p>
+                           <p>But, if you test positive for a very high risk HPV type (HPV 16 or 18) you will need a procedure called a colposcopy in addition to a Pap test.</p>
+                           <p>(add hyperlink to colposcopy information)</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="hpv-q6-header">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#hpv-q6-body" aria-expanded="false" aria-controls="hpv-q6-body">
+                           How likely is it that my test will be positive?
+                        </button>
+                     </h2>
+                     <div id="hpv-q6-body" class="accordion-collapse collapse" aria-labelledby="hpv-q6-header" data-parent="#hpv-qa-accordion">
+                        <div class="accordion-body">
+                           <p>1 or 2 out of every 10 people test positive for HPV.</p>
+                           <p>This risk is significantly less if you were vaccinated for HPV before age 15.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="hpv-q7-header">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#hpv-q7-body" aria-expanded="false" aria-controls="hpv-q7-body">
+                           What happens if my self-collected HPV test is negative?
+                        </button>
+                     </h2>
+                     <div id="hpv-q7-body" class="accordion-collapse collapse" aria-labelledby="hpv-q7-header" data-parent="#hpv-qa-accordion">
+                        <div class="accordion-body">
+                           <p>If your HPV test is negative, you risk for cancer is very low.</p>
+                           <p>You can repeat the test in 3 years.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="hpv-q8-header">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#hpv-q8-body" aria-expanded="false" aria-controls="hpv-q8-body">
+                           Why would I choose a provider-collected HPV test with a speculum exam?
+                        </button>
+                     </h2>
+                     <div id="hpv-q8-body" class="accordion-collapse collapse" aria-labelledby="hpv-q8-header" data-parent="#hpv-qa-accordion">
+                        <div class="accordion-body">
+                           <p>You may choose to have a health care provider perform a speculum exam if you would like a Pap test or a Pap and HPV test done at the same time. Or if you have any other vaginal or cervical issues that want a health care provider to examine.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="btn btn-secondary" href="index.html">Home</a>
+            </div>
+        </div>
+        <!-- DISCLAIMER -->
+        <div class="container-end hidden" id="disclaimer-panel">
+          <div class="box">
+              <h2>Personalized Risk Assessment</h2>
+              The following questions will ask about your abnormal test results and provide your risk of precancer and the next steps in management based on what you entered.
+              <br>
+              <br>
+              <h4 id="disclaimer">DISCLAIMER:</h4>
+              <ul>
+                  <li>The intention of this website is to make the new guidelines for management of abnormal Pap test results, HPV test results, p16/Ki67 Dual Stain results, and cervix biopsy results (colposcopy) understandable to patients. 
+                      This website will walk you through the steps that your doctor or healthcare provider may use when deciding the next steps in management after abnormal results. 
+                      This website does not provide medical advice.</li>
+                  <br>
+                  <li>To use this website, you will need access to your medical record as you will need to enter exact medical terms.</li>
+                  <br>
+                  <li>Note that recommendations may be different if you are <a class="popover-link" tabindex="0" data-toggle="popover" data-trigger="focus" data-content="If you have HIV or immunosuppression for another reason, your provider will likely recommend colposcopy for any abnormal result, and screening at 3-year intervals. ">immunosuppressed</a>, <a class="popover-link" tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Pregnancy does not change your risk of having precancer, and you should still have a colposcopy if that is recommended. However, your provider may not take biopsies, and usually you would not be recommended for treatment until after you had the baby.">pregnant</a>, or have had a <a class="popover-link" tabindex="0" data-toggle="popover" data-trigger="focus" data-content="If you had a hysterectomy with removal of the cervix, you probably do not need screening anymore. If your hysterectomy was done because of pre-cancer, or cancer, then you shoud continue having screening with HPV testing for at least 25 years after your diagnosis.  If your cervix was not removed (sometimes called a supracervical hysterectomy) then you do need to continue to have screening.">hysterectomy</a>.</li>
+                  <br>
+                  <li>
+                      Note that risk numbers are for people who regularly have cervical cancer screening. If you have not been screened in more than 5 years, your risks may be <a href="https://pubmed.ncbi.nlm.nih.gov/33035473/">higher</a>. 
+                  </li>
+                  <br>
+                  <li>For more information on immunosuppresion and cervical cancer screening click <a target="_blank" href="https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/human-papillomavirus-disease?view=full">here</a>.</li>
+                  <li>For more information on managing cervical cancer screening results in pregnancy or after hysterectomy, click <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/32243307/">here</a></li>
+                  <li>For more information on cervical cancer screening after hysterectomy please visit the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">USPSTF guidelines</a> and <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines.</a></li>
+                  <br>
+                  <li>Click for our <a class="" id="todefinitions">Glossary</a> of medical terms.</li>
+              </ul>
+              <a class="btn btn-secondary" href="index.html">Home</a>
+              <a class="btn btn-primary next_btn" role="button" id="toform">Proceed</a>
+          </div>
+      </div> 
+      <!-- FORM -->
+      <div class="container-box hidden" id="form-panel">
+        <div class="box">
+                <label for="radios" id="questionText" class="h5" style="margin: 0rem;">For which result type do you want a recommendation?</label> 
+                <input hidden id="questionNum" value="0">
+                <hr class="line">
+                <ul class="" id="radios">
+                    <li>
+                        <input id="0" name="question" type="radio" value="0"> 
+                        <label for="0">HPV Test/Pap Test</label>
+                    </li>
+                    <li>
+                        <input id="1" name="question" type="radio" value="1">
+                        <label for="1">Cervical Biopsy (Colposcopy)</label>
+                    </li>
+                </ul>
+                <button class="btn btn-secondary" id="back">Back</button>
+                <button type="submit" class="btn btn-primary" id="next">Next</button>        
+        </div>
+        <div class="box">
+            <div>
+                <p class="h5">Previous Answers:</p>
+                <hr class="line">
+                <div id="display"></div>
+            </div>
+        </div>
+      </div>
+      <!-- END -->
+      <div class="container-end hidden" id="end-panel">
+          <div class="box" style="display: grid; align-content: center;">
+              <div>
+                  <div>   
+                      <p class="h4" style="margin: 0rem;">Management</p> 
+                      <hr class="line">
+                      <p id="management"></p>
+                  </div>
+
+                  <div class="hidden fudge">
+                      <p class="h4" style="margin: 0rem;">Note</p> 
+                      <hr class="line">
+                      <p id="fudge"></p>
+                  </div>
+
+                  <h5 class="hidden curr-risk">Current Precancer Risk: <span id="curr-risk"></span></h5>
+                      
+                  <h5 class="hidden five-year-risk">Precancer Risk Over Next 5 Years: <span id="five-year-risk"></span></h5>
+                  <p class="">Click for our <a class="" id="todefinitions2">Glossary</a> of medical terms.</p>
+                  <br>
+                  <a class="btn btn-secondary button next-btn" href="index.html" role="button">Home</a>
+              </div>
+          </div>
+      </div>
+      <!-- SCREENING -->
+      <div class="container-end hidden" id="screening-panel">
+        <div class="box">
+            <h2>Cervical Cancer Screening: HPV and Pap Tests</h2>
+            <br>
+            <h4>What causes cervical cancer?</h4>
+            <p>
+                Cervical cancer is caused by infection with Human Papillomavirus (HPV). HPV is usually transmitted between sexual partners during intercourse, but can also be spread by touching genitals without sex. Most people will be exposed to HPV at some point during their lives. Usually, your body’s immune system can fight off the HPV infection, but sometimes it doesn’t. Cervical cancer can develop if the cells of the cervix (the bottom part of the uterus or womb) are infected with HPV, your body does not fight off the infection, and the infection is not detected for more than 5 years.
+            </p>
+
+            <h4>
+                What is the purpose of cervical cancer screening?
+            </h4>
+            <p>
+                Cervical cancer screening detects pre-cancer. Cervical pre-cancers are abnormal cells that can go on to become cancer if they are not treated. Without treatment, 30-50% of precancers will become cancer. The medical terms used to describe cervical pre-cancer include cervical dysplasia, high-grade lesions, or Cervical Intraepithelial Neoplasia grades 2 or 3. Screening allows us to find and treat cervical pre-cancer so cancer does not develop.
+            </p>
+             
+            <h4>
+                How is cervical cancer screening done?
+            </h4>
+            <p>
+                Cervical cancer screening starts at age 21 years with a Pap test. From age 25 until age 65 years you can
+                screen with a Pap test, an HPV test, or both together.
+            </p>
+             
+            <p>
+                Pap test: A Pap test is collected by your health care provider. They will do a speculum exam and take the
+                sample with a soft brush from your cervix.
+            </p>
+             
+            <p>
+                HPV test: An HPV test can be collected by you (self-collection) or by your health care provider
+                (clinician-collection). If you screen with an HPV test yourself, you take the sample with a soft swab from
+                your vagina without having a speculum exam. If the HPV test is done by your health care provider, they
+                will do a speculum exam and take the sample from your cervix.
+            </p>
+             
+            <p>
+                Pap and HPV test together: This is sometimes called co-testing. It is done by your healthcare provider
+                using a speculum.
+            </p>
+             
+            <h4>
+                What happens if my test is abnormal?
+            </h4>
+            <p>
+                If you have a positive HPV test or an abnormal Pap test, your healthcare provider will recommend
+                follow-up testing. HPV often goes away by itself, but sometimes treatment is needed. it is very important
+                to complete all your follow-up. Getting follow-up will prevent you from developing cancer in the future.
+            </p>
+             
+            <h4>
+                What happens if my test is normal?
+            </h4>
+            <p>
+                HPV tests are very good at detecting precancer, so a negative result is very reassuring. If you have a
+                negative HPV test, your chance of developing a pre-cancer in the next 5 years is less than 1 in 1000. If
+                you have a negative Pap test, your chance of developing a pre-cancer in the next 5 years is 1 in 200. It is
+                recommended to screen again in 3 years after a normal Pap test result or a negative self-collected HPV
+                test result.
+            </p>
+             
+            <p>
+                It is recommended to screen again in 5 years after a negative result on an HPV test collected by your
+                healthcare provider.
+            </p>
+             
+            For more information on cervical cancer screening, please visit the <a target="_blank" href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening">USPSTF guidelines</a>, <a target="_blank" href="https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628">American Cancer Society Guidelines</a> and the <a target="_blank" href="https://www.acog.org/clinical/clinical-guidance/practice-advisory/articles/2021/04/updated-cervical-cancer-screening-guidelines">American College of Obstetricians and Gynecologists</a>.
+            
+            <br>
+            <br>
+            <a class="btn btn-secondary" href="index.html">Home</a>
+            
+        </div>
+    </div>
+    <!-- VACCINATION -->
+    <div class="container-end hidden" id="vaccination-panel">
+      <div class="box">
+          <h2>HPV Vaccination</h2>
+          <br>
+          <h4>What is HPV?</h4>
+Human Papillomavirus (HPV) is a virus. HPV is usually passed between sexual partners during intercourse, but can also be spread by touching genitals without sex. Most people will be exposed to HPV at some point during their lives. Usually, your body’s immune system can fight off the HPV infection, but sometimes it doesn’t. HPV can cause cancers, genital warts, and a rare disease called <a target="_blank" href="https://www.nidcd.nih.gov/health/recurrent-respiratory-papillomatosis">recurrent respiratory papillomatosis</a>. HPV can cause cancer of the cervix (lower part of the uterus or womb), vagina, vulva, penis, anus, and mouth and throat (usually the tonsils and tongue). Over 35,000 cancers caused by HPV are diagnosed in the US every year. Scientists estimate that we can prevent almost 90% of these cancers with HPV vaccination.
+
+<h4>How do HPV vaccines work?</h4>
+HPV vaccines prevent the types of HPV most likely to cause cancer, genital warts, and recurrent respiratory papillomatosis. The vaccines do not contain the virus, so they cannot give you HPV and they cannot cause cancer. HPV vaccines contain a small piece of the virus’s outer shell. They teach your body to recognize the virus and kill it before it can cause damage to your body.
+
+<h4>Are HPV vaccines effective?</h4>
+YES! People who have received HPV vaccines are 90% less likely to get an HPV infection than people who are not vaccinated.  We have also seen decreases in cervical pre-cancer and cervical cancer in young women since we have started routinely giving HPV vaccination.
+
+<h4>Are HPV vaccines safe?</h4>
+YES! HPV vaccines first became available in 2006. They have been used around the world since that time and are monitored continuously for safety in over 180 countries. More than 270 million doses have been given worldwide, with more than 120 million doses given in the US. No serious side effects have been found. The common side effects for HPV vaccines are similar to other vaccines and include a sore arm, and occasionally fatigue or a mild headache. These usually go away after a day or two.
+
+<h4>
+Who should get an HPV vaccine?
+</h4>
+It is recommended that all children receive 2 doses of HPV vaccine before their 13th birthday. The series is usually started at age 9-12 years. HPV vaccine doses are given 6-12 months apart.
+Vaccine series started after the 13th birthday are considered “late,” but can still be effective to prevent HPV infections. Three doses are required if the series is started after the 15th birthday. Late or catch-up vaccination is recommended for everyone through age 26 years.
+
+<h4>
+Will my insurance pay for the HPV vaccine?
+</h4>
+HPV vaccination will be covered by insurance for all children and adolescents through the age of 18. After the age of 18, coverage depends on the individual insurance carrier.
+
+<h4>
+How effective is HPV vaccination at age 27-45 years?
+</h4>
+The CDC estimates that 80% of HPV infections that will go on to cause cancer are acquired by age 26. For this reason, studies in 27-45 year olds did not show a significant decrease in pre-cancer or cancer. The CDC recommends that you talk to your healthcare provider if you are considering HPV vaccination. This is called shared decision-making. You are most likely benefit from HPV vaccination between the age of 27 and 45 if you have had only 1 or 2 lifetime sexual partners but may be exposed to HPV in a new relationship. Some data indicate that HPV vaccination can help to prevent recurrence of pre-cancer after treatment.
+
+<br>
+<br>
+<p>
+For more information on HPV vaccines, please visit: <a target="_blank" href="https://www.cdc.gov/hpv/parents/vaccine.html">CDC</a>, <a target="_blank" href="https://www.acog.org/womens-health/faqs/hpv-vaccination">American College of Obstetricians and Gynecologists</a>, or <a target="_blank" href="https://www.cancer.org/healthy/hpv-vaccine.html">American Cancer Society</a>.
+</p>
+          <a class="btn btn-secondary" href="index.html">Home</a>
+
+      </div>
+  </div> 
+  <!-- DEFINITIONS -->
+  <div class="container-end hidden" id="definitions-panel">
+    <div class="box">
+        <h2>Glossary: Definitions and Abbreviations</h2>
+        <br>
+        <h4>
+            Cervix:
+        </h4> The cervix is the bottom part of the uterus. The cervix is located at the top of the vagina. The cervix is designed to hold a baby inside the uterus during pregnancy. The cervix opens during vaginal birth to allow the baby to come out. The cervix is at risk for developing cancer if screening is not done regularly.
+        <h4>
+            Human Papillomavirus (HPV):
+        </h4> HPV is the virus that causes cervical cancer. Most individuals aged 30-65 are screened for cervical cancer with HPV testing.
+
+        <h4>
+            Negative HPV Test:
+        </h4> A negative test result means that no HPV was found, and your risk of developing cervical cancer in the next few years is very low.
+
+        <h4>
+            Positive HPV test:
+        </h4> A positive test means that HPV was found, and you may need additional testing.
+        <h4>
+            Loop Electrosurgical Excision Procedure (LEEP):
+        </h4> This is a treatment procedure to treat CIN2, CIN3 or HSIL found on a biopsy. A hot wire loop is used to remove the abnormal cells. This can usually be done in the office using local anesthesia.
+        
+        <H4>
+            Cold Knife Conization:
+        </H4> This is a treatment procedure to treat adenocarcinoma in situ (AIS). A scalpel is used to remove the abnormal cells. This is usually done in the operating room using general anesthesia.
+        
+        <H4>
+            Hysterectomy:
+        </H4> A hysterectomy is surgery to remove the uterus (womb). Sometimes the cervix is removed, which is called a total hysterectomy. Sometimes the cervix is not removed, which is called a partial or supracervical hysterectomy.
+        
+        <h4>
+            Immunosuppression:
+        </h4> The cells that fight infections in your body are called your immune system. Immunosuppressed means that your immune system does not fight infections very well. This can happen because of infection with HIV or because of certain medications. Common medications that lower the immune system are medications taken for auto-immune diseases like lupus or rheumatoid arthritis. Other medications are some types of chemotherapy for cancer, or medicines taken after an organ transplant. You are at higher risk for cervical cancer if you are immunosuppressed because your body can't fight off an HPV infection very well. If you are immunosuppressed, guidelines recommend a Pap test every year for 3 years after your diagnosis or first sexual activity, and then a Pap test every 3 years. Pap and HPV tests together every 3 years can be used over the age of 30.
+    </div>
+    <div class="box">
+        <h3>
+            Pap Testing:
+        </h3> Papanicolaou (Pap) testing involves taking a sample of cells from the cervix using a soft brush or swab to check for abnormalities. <p>
+            Pap tests can have several different results:
+        </p>
+    
+        <h4>
+            1. Negative for Intraepithelial Lesion or Malignancy (NILM):
+        </h4>This means your Pap test was normal.
+        
+        <h4>
+        2. Atypical Squamous Cells of Uncertain Significance (ASC-US):
+        </h4>This means some mildly abnormal cells were found. Sometimes an HPV test is performed to help guide management. Usually, if the HPV test is positive, additional testing is recommended. If the HPV test is negative, repeat testing in one or three years is recommended.
+        
+        <h4>
+        3. Low Grade Squamous Intraepithelial Lesion (LSIL):
+        </h4> This means some mildly abnormal cells were found. Sometimes an HPV test is performed to help guide management. Usually, if the HPV test is positive, additional testing is recommended. If the HPV test is negative, repeat testing in one year is recommended.
+        
+        <h4>
+        4. High Grade Squamous Intraepithelial Lesion (HSIL):
+        </h4> This means some very abnormal cells were found. Additional testing is recommended. Usually this is a colposcopy.
+        
+        <h4>
+        5. Atypical Squamous Cells cannot exclude High Grade (ASC-H):
+        </h4> This means a few very abnormal cells were found, but most of the cells were only mildly abnormal. Additional testing is recommended. Usually this is a colposcopy.
+        
+        <h4>
+        6. Atypical Glandular Cells:
+        </h4> This means that abnormal cells were found that may be coming from higher up in the cervix or uterus. Additional testing is recommended. Usually this is a colposcopy. Sometimes a test of the uterus is also recommended.
+     </div>
+     <div class="box">
+        <h3>
+            Colposcopy:
+        </h3> Colposcopy is often recommended after abnormal screening test results. Colposcopy involves examining the cervix with magnification and usually taking two or three small pieces of skin (biopsies) to check for precancer. <p>
+            Biopsies taken at colposcopy can have several different results:
+        </p>
+        <h4>
+        1. Normal:
+        </h4> No abnormal cells were found. Usually, follow-up testing is recommended in one year.
+        
+        <h4>
+        2. Cervical Intraepithelial Lesion grade 1 (CIN1):
+        </h4> Mildly abnormal cells were found. Usually, follow-up testing is recommended in one year.
+        
+        <h4>
+        3. Cervical Intraepithelial Lesion grade 2 (CIN2):
+        </h4> More severely abnormal cells were found. Usually, treatment is recommended to prevent cervical cancer.
+        
+        <h4>
+        4. Cervical Intraepithelial Lesion grade 3 (CIN3):
+        </h4>Severely abnormal cells were found. Treatment is almost always recommended to prevent cervical cancer.
+        
+        <h4>
+        5. High Grade Squamous Intraepithelial Lesion (HSIL):
+        </h4> Severely abnormal cells were found. Treatment is almost always recommended to prevent cervical cancer.
+        
+        <h4>
+        6. Adenocarcinoma in Situ (AIS):
+        </h4> This is a high-grade precancer and is usually managed by a specialist. Treatment is almost always recommended to prevent cervical cancer.
+     
+        
+        <br>
+        <br>
+        <a class="btn btn-secondary" href="index.html">Home</a>
+    </div>    
+</div>  
+        
+    </body>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="base.js"></script>
+
+</html>
